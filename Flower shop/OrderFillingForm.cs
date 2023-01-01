@@ -14,11 +14,12 @@ namespace Flower_shop
 {
     public partial class OrderFillingForm : Form
     {
-        private SqlConnection _sqlConnection;
-        private SqlDataAdapter _adapter;
-        private DataTable _table;
-        private int _sum = 0;
-        
+        private SqlConnection sqlConnection = null;
+
+        SqlDataAdapter adapter = null;
+
+        private DataTable table = null;
+        int sum = 0;
         public OrderFillingForm()
         {
             InitializeComponent();
@@ -26,43 +27,58 @@ namespace Flower_shop
 
         private void pb_Dalee_Click(object sender, EventArgs e)
         {
-            var f = new Svodka_dan();
-            Hide();
+            Svodka_dan f = new Svodka_dan();
+            this.Hide();
             f.ShowDialog();
-            Show();
+            this.Show();
         }
 
         private void pb_Vernyt_Click(object sender, EventArgs e)
         {
-            var f = new Add_Zakaz();
-            Hide();
+            Add_Zakaz f = new Add_Zakaz();
+            this.Hide();
             f.ShowDialog();
-            Show();
+            this.Show();
         }
 
-        private void OrderFillingForm_Load(object sender, EventArgs e)
+        private void Napoln_Zakaz_Load(object sender, EventArgs e)
         {
-            вид_цветовTableAdapter.Fill(this.заказыDataSet.Вид_цветов);
-            цветы_в_заказеTableAdapter.Fill(this.заказыDataSet.Цветы_в_заказе);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Вид_цветов". При необходимости она может быть перемещена или удалена.
+            this.вид_цветовTableAdapter.Fill(this.заказыDataSet.Вид_цветов);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Цветы_в_заказе". При необходимости она может быть перемещена или удалена.
 
-            // Необходио загружаtь данные из таблицы запросом select * from [имя_талицы] where ID_Заказа = [ID_ткещего заказа]
 
-            аксессуары_в_заказеTableAdapter.Fill(this.заказыDataSet.Аксессуары_в_заказе);
-            каталог_цветовTableAdapter.Fill(this.заказыDataSet.Каталог_цветов);
-            каталог_аксессуаровTableAdapter.Fill(this.заказыDataSet.Каталог_аксессуаров);
+            this.цветы_в_заказеTableAdapter.Fill(this.заказыDataSet.Цветы_в_заказе);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Аксессуары_в_заказе". При необходимости она может быть перемещена или удалена.
+
+
+
+           
+                // Необходио загружаtь данные иz таблицы запросом select * from [имя_талицы] where ID_Заказа = [ID_ткещего заказа]
+
+
+            this.аксессуары_в_заказеTableAdapter.Fill(this.заказыDataSet.Аксессуары_в_заказе);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Каталог_цветов". При необходимости она может быть перемещена или удалена.
+            this.каталог_цветовTableAdapter.Fill(this.заказыDataSet.Каталог_цветов);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Каталог_аксессуаров". При необходимости она может быть перемещена или удалена.
+            this.каталог_аксессуаровTableAdapter.Fill(this.заказыDataSet.Каталог_аксессуаров);
 
         }
 
-        private void ButtonDeleteAccessory_Click(object sender, EventArgs e)
+        private void pb_Udal_Aks_Click(object sender, EventArgs e)
         {
             
         }
 
         private void pb_Dob_Kat_Aks_Click(object sender, EventArgs e)
         {
-            var price = 0;
-            
-            _sum += price;
+            int price = 0;
+
+
+
+
+
+            sum += price;
         }
     }
 }

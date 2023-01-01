@@ -19,7 +19,7 @@ namespace Flower_shop
 
         private void pb_Vernyt_Click(object sender, EventArgs e)
         {
-            Napoln_Zakaz f = new Napoln_Zakaz();
+            OrderFillingForm f = new OrderFillingForm();
             this.Hide();
             f.ShowDialog();
             this.Show();

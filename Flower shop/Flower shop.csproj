@@ -122,11 +122,11 @@
     <Compile Include="Каталог цветов.Designer.cs">
       <DependentUpon>Каталог цветов.cs</DependentUpon>
     </Compile>
-    <Compile Include="Наполнение заказа.cs">
+    <Compile Include="OrderFillingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Наполнение заказа.Designer.cs">
-      <DependentUpon>Наполнение заказа.cs</DependentUpon>
+    <Compile Include="OrderFillingForm.Designer.cs">
+      <DependentUpon>OrderFillingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Сводка данных.cs">
       <SubType>Form</SubType>
@@ -187,8 +187,8 @@
     <EmbeddedResource Include="Каталог цветов.resx">
       <DependentUpon>Каталог цветов.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Наполнение заказа.resx">
-      <DependentUpon>Наполнение заказа.cs</DependentUpon>
+    <EmbeddedResource Include="OrderFillingForm.resx">
+      <DependentUpon>OrderFillingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Сводка данных.resx">
       <DependentUpon>Сводка данных.cs</DependentUpon>

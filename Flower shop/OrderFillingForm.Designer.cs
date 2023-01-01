@@ -108,32 +108,29 @@ namespace Flower_shop
             this.dataGrid_Kat_Aks.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid_Kat_Aks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid_Kat_Aks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Kat_Aks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDаксессуараDataGridViewTextBoxColumn,
-            this.наименованиеDataGridViewTextBoxColumn,
-            this.цветDataGridViewTextBoxColumn,
-            this.ценаDataGridViewTextBoxColumn});
+            this.dataGrid_Kat_Aks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.iDаксессуараDataGridViewTextBoxColumn, this.наименованиеDataGridViewTextBoxColumn, this.цветDataGridViewTextBoxColumn, this.ценаDataGridViewTextBoxColumn });
             this.dataGrid_Kat_Aks.DataSource = this.каталогаксессуаровBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid_Kat_Aks.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGrid_Kat_Aks.Location = new System.Drawing.Point(31, 95);
+            this.dataGrid_Kat_Aks.Location = new System.Drawing.Point(27, 95);
+            this.dataGrid_Kat_Aks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGrid_Kat_Aks.Name = "dataGrid_Kat_Aks";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -141,7 +138,7 @@ namespace Flower_shop
             this.dataGrid_Kat_Aks.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGrid_Kat_Aks.RowHeadersVisible = false;
             this.dataGrid_Kat_Aks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Kat_Aks.Size = new System.Drawing.Size(320, 157);
+            this.dataGrid_Kat_Aks.Size = new System.Drawing.Size(322, 159);
             this.dataGrid_Kat_Aks.TabIndex = 0;
             // 
             // iDаксессуараDataGridViewTextBoxColumn
@@ -179,6 +176,7 @@ namespace Flower_shop
             // заказыDataSet
             // 
             this.заказыDataSet.DataSetName = "ЗаказыDataSet";
+            this.заказыDataSet.Namespace = "http://tempuri.org/ЗаказыDataSet.xsd";
             this.заказыDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGrid_Aks_v_zak
@@ -188,33 +186,29 @@ namespace Flower_shop
             this.dataGrid_Aks_v_zak.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid_Aks_v_zak.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid_Aks_v_zak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Aks_v_zak.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDаксессуароввзаказеDataGridViewTextBoxColumn,
-            this.количествоDataGridViewTextBoxColumn,
-            this.Column1,
-            this.iDзаказаDataGridViewTextBoxColumn,
-            this.iDаксессуараDataGridViewTextBoxColumn1});
+            this.dataGrid_Aks_v_zak.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.iDаксессуароввзаказеDataGridViewTextBoxColumn, this.количествоDataGridViewTextBoxColumn, this.Column1, this.iDзаказаDataGridViewTextBoxColumn, this.iDаксессуараDataGridViewTextBoxColumn1 });
             this.dataGrid_Aks_v_zak.DataSource = this.аксессуарывзаказеBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid_Aks_v_zak.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGrid_Aks_v_zak.Location = new System.Drawing.Point(413, 95);
+            this.dataGrid_Aks_v_zak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGrid_Aks_v_zak.Name = "dataGrid_Aks_v_zak";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -222,7 +216,7 @@ namespace Flower_shop
             this.dataGrid_Aks_v_zak.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGrid_Aks_v_zak.RowHeadersVisible = false;
             this.dataGrid_Aks_v_zak.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Aks_v_zak.Size = new System.Drawing.Size(325, 157);
+            this.dataGrid_Aks_v_zak.Size = new System.Drawing.Size(322, 159);
             this.dataGrid_Aks_v_zak.TabIndex = 1;
             // 
             // iDаксессуароввзаказеDataGridViewTextBoxColumn
@@ -274,33 +268,29 @@ namespace Flower_shop
             this.dataGrid_Cvety_v_zak.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid_Cvety_v_zak.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGrid_Cvety_v_zak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Cvety_v_zak.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDцветоввзаказеDataGridViewTextBoxColumn,
-            this.количествоDataGridViewTextBoxColumn1,
-            this.Column2,
-            this.iDцветовDataGridViewTextBoxColumn1,
-            this.iDзаказаDataGridViewTextBoxColumn1});
+            this.dataGrid_Cvety_v_zak.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.iDцветоввзаказеDataGridViewTextBoxColumn, this.количествоDataGridViewTextBoxColumn1, this.Column2, this.iDцветовDataGridViewTextBoxColumn1, this.iDзаказаDataGridViewTextBoxColumn1 });
             this.dataGrid_Cvety_v_zak.DataSource = this.цветывзаказеBindingSource;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid_Cvety_v_zak.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGrid_Cvety_v_zak.Location = new System.Drawing.Point(412, 300);
+            this.dataGrid_Cvety_v_zak.Location = new System.Drawing.Point(413, 300);
+            this.dataGrid_Cvety_v_zak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGrid_Cvety_v_zak.Name = "dataGrid_Cvety_v_zak";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -308,7 +298,7 @@ namespace Flower_shop
             this.dataGrid_Cvety_v_zak.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGrid_Cvety_v_zak.RowHeadersVisible = false;
             this.dataGrid_Cvety_v_zak.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Cvety_v_zak.Size = new System.Drawing.Size(326, 166);
+            this.dataGrid_Cvety_v_zak.Size = new System.Drawing.Size(322, 169);
             this.dataGrid_Cvety_v_zak.TabIndex = 2;
             // 
             // iDцветоввзаказеDataGridViewTextBoxColumn
@@ -365,34 +355,29 @@ namespace Flower_shop
             this.dataGrid_Kat_Cvetov.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid_Kat_Cvetov.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGrid_Kat_Cvetov.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Kat_Cvetov.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDцветовDataGridViewTextBoxColumn,
-            this.Column3,
-            this.наименованиеDataGridViewTextBoxColumn1,
-            this.ценаDataGridViewTextBoxColumn1,
-            this.iDстраныпроизводителяDataGridViewTextBoxColumn,
-            this.iDвидацветовDataGridViewTextBoxColumn});
+            this.dataGrid_Kat_Cvetov.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.iDцветовDataGridViewTextBoxColumn, this.Column3, this.наименованиеDataGridViewTextBoxColumn1, this.ценаDataGridViewTextBoxColumn1, this.iDстраныпроизводителяDataGridViewTextBoxColumn, this.iDвидацветовDataGridViewTextBoxColumn });
             this.dataGrid_Kat_Cvetov.DataSource = this.каталогцветовBindingSource;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle11.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid_Kat_Cvetov.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGrid_Kat_Cvetov.Location = new System.Drawing.Point(31, 300);
+            this.dataGrid_Kat_Cvetov.Location = new System.Drawing.Point(27, 300);
+            this.dataGrid_Kat_Cvetov.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGrid_Kat_Cvetov.Name = "dataGrid_Kat_Cvetov";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SaddleBrown;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -400,7 +385,7 @@ namespace Flower_shop
             this.dataGrid_Kat_Cvetov.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGrid_Kat_Cvetov.RowHeadersVisible = false;
             this.dataGrid_Kat_Cvetov.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Kat_Cvetov.Size = new System.Drawing.Size(320, 166);
+            this.dataGrid_Kat_Cvetov.Size = new System.Drawing.Size(322, 169);
             this.dataGrid_Kat_Cvetov.TabIndex = 3;
             // 
             // iDцветовDataGridViewTextBoxColumn
@@ -457,10 +442,10 @@ namespace Flower_shop
             this.pb_Dalee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Dalee.BackgroundImage")));
             this.pb_Dalee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_Dalee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_Dalee.Location = new System.Drawing.Point(644, 506);
-            this.pb_Dalee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pb_Dalee.Location = new System.Drawing.Point(610, 490);
+            this.pb_Dalee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_Dalee.Name = "pb_Dalee";
-            this.pb_Dalee.Size = new System.Drawing.Size(94, 28);
+            this.pb_Dalee.Size = new System.Drawing.Size(125, 34);
             this.pb_Dalee.TabIndex = 5;
             this.pb_Dalee.TabStop = false;
             this.pb_Dalee.Click += new System.EventHandler(this.pb_Dalee_Click);
@@ -471,10 +456,10 @@ namespace Flower_shop
             this.pb_Dob_Kat_Aks.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Dob_Kat_Aks.BackgroundImage")));
             this.pb_Dob_Kat_Aks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_Dob_Kat_Aks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_Dob_Kat_Aks.Location = new System.Drawing.Point(273, 259);
-            this.pb_Dob_Kat_Aks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pb_Dob_Kat_Aks.Location = new System.Drawing.Point(245, 266);
+            this.pb_Dob_Kat_Aks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_Dob_Kat_Aks.Name = "pb_Dob_Kat_Aks";
-            this.pb_Dob_Kat_Aks.Size = new System.Drawing.Size(78, 20);
+            this.pb_Dob_Kat_Aks.Size = new System.Drawing.Size(104, 25);
             this.pb_Dob_Kat_Aks.TabIndex = 6;
             this.pb_Dob_Kat_Aks.TabStop = false;
             this.pb_Dob_Kat_Aks.Click += new System.EventHandler(this.pb_Dob_Kat_Aks_Click);
@@ -485,10 +470,10 @@ namespace Flower_shop
             this.pb_Dob_Kat_Cvetov.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Dob_Kat_Cvetov.BackgroundImage")));
             this.pb_Dob_Kat_Cvetov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_Dob_Kat_Cvetov.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_Dob_Kat_Cvetov.Location = new System.Drawing.Point(273, 473);
-            this.pb_Dob_Kat_Cvetov.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pb_Dob_Kat_Cvetov.Location = new System.Drawing.Point(248, 478);
+            this.pb_Dob_Kat_Cvetov.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_Dob_Kat_Cvetov.Name = "pb_Dob_Kat_Cvetov";
-            this.pb_Dob_Kat_Cvetov.Size = new System.Drawing.Size(76, 20);
+            this.pb_Dob_Kat_Cvetov.Size = new System.Drawing.Size(101, 25);
             this.pb_Dob_Kat_Cvetov.TabIndex = 7;
             this.pb_Dob_Kat_Cvetov.TabStop = false;
             // 
@@ -498,13 +483,13 @@ namespace Flower_shop
             this.pb_Udal_Aks.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Udal_Aks.BackgroundImage")));
             this.pb_Udal_Aks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_Udal_Aks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_Udal_Aks.Location = new System.Drawing.Point(671, 259);
-            this.pb_Udal_Aks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pb_Udal_Aks.Location = new System.Drawing.Point(646, 263);
+            this.pb_Udal_Aks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_Udal_Aks.Name = "pb_Udal_Aks";
-            this.pb_Udal_Aks.Size = new System.Drawing.Size(67, 20);
+            this.pb_Udal_Aks.Size = new System.Drawing.Size(89, 25);
             this.pb_Udal_Aks.TabIndex = 8;
             this.pb_Udal_Aks.TabStop = false;
-            this.pb_Udal_Aks.Click += new System.EventHandler(this.ButtonDeleteAccessory_Click);
+            this.pb_Udal_Aks.Click += new System.EventHandler(this.pb_Udal_Aks_Click);
             // 
             // pb_Cvety
             // 
@@ -512,10 +497,10 @@ namespace Flower_shop
             this.pb_Cvety.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Cvety.BackgroundImage")));
             this.pb_Cvety.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_Cvety.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_Cvety.Location = new System.Drawing.Point(669, 473);
-            this.pb_Cvety.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pb_Cvety.Location = new System.Drawing.Point(413, 478);
+            this.pb_Cvety.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_Cvety.Name = "pb_Cvety";
-            this.pb_Cvety.Size = new System.Drawing.Size(69, 20);
+            this.pb_Cvety.Size = new System.Drawing.Size(92, 25);
             this.pb_Cvety.TabIndex = 9;
             this.pb_Cvety.TabStop = false;
             // 
@@ -546,7 +531,7 @@ namespace Flower_shop
             // 
             // OrderFillingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(769, 545);
@@ -560,10 +545,11 @@ namespace Flower_shop
             this.Controls.Add(this.dataGrid_Aks_v_zak);
             this.Controls.Add(this.dataGrid_Kat_Aks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OrderFillingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "OrderFillingForm";
-            this.Load += new System.EventHandler(this.OrderFillingForm_Load);
+            this.Load += new System.EventHandler(this.Napoln_Zakaz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Kat_Aks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).EndInit();
@@ -581,7 +567,6 @@ namespace Flower_shop
             ((System.ComponentModel.ISupportInitialize)(this.pb_Cvety)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

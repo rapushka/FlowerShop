@@ -30,7 +30,7 @@ namespace Flower_shop
             DateTime data = Convert.ToDateTime(dateTimePicker1.Value.ToString("d"));
             DateTime data2 = Convert.ToDateTime(dateTimePicker2.Value.ToString("d"));
             заказTableAdapter.InsertQuery(data, tb_name_zak.Text, tb_number_zak.Text, data2, tb_address.Text);
-            Napoln_Zakaz f = new Napoln_Zakaz();
+            OrderFillingForm f = new OrderFillingForm();
             this.Hide();
             f.ShowDialog();
             this.Show();
