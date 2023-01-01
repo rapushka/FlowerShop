@@ -122,11 +122,11 @@
     <Compile Include="Каталог цветов.Designer.cs">
       <DependentUpon>Каталог цветов.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderFillingForm.cs">
+    <Compile Include="Наполнение заказа.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderFillingForm.Designer.cs">
-      <DependentUpon>OrderFillingForm.cs</DependentUpon>
+    <Compile Include="Наполнение заказа.Designer.cs">
+      <DependentUpon>Наполнение заказа.cs</DependentUpon>
     </Compile>
     <Compile Include="Сводка данных.cs">
       <SubType>Form</SubType>
@@ -134,11 +134,11 @@
     <Compile Include="Сводка данных.Designer.cs">
       <DependentUpon>Сводка данных.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderForm.cs">
+    <Compile Include="Заказ.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderForm.Designer.cs">
-      <DependentUpon>OrderForm.cs</DependentUpon>
+    <Compile Include="Заказ.Designer.cs">
+      <DependentUpon>Заказ.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -187,14 +187,14 @@
     <EmbeddedResource Include="Каталог цветов.resx">
       <DependentUpon>Каталог цветов.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderFillingForm.resx">
-      <DependentUpon>OrderFillingForm.cs</DependentUpon>
+    <EmbeddedResource Include="Наполнение заказа.resx">
+      <DependentUpon>Наполнение заказа.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Сводка данных.resx">
       <DependentUpon>Сводка данных.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
-      <DependentUpon>OrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="Заказ.resx">
+      <DependentUpon>Заказ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

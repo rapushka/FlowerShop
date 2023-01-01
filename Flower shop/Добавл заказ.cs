@@ -19,35 +19,42 @@ namespace Flower_shop
 
         private void pb_Vernyt_Click(object sender, EventArgs e)
         {
-            var form = new OrderForm();
-            Close();
-            form.ShowDialog();
-            Show();
+            Заказ f = new Заказ();
+            this.Close();
+            f.ShowDialog();
+            this.Show();
         }
 
-        private void ButtonNext_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var receiptDate = Convert.ToDateTime(receiptDateTimePicker.Value.ToString("d"));
-            var completionDate = Convert.ToDateTime(completionDateTimePicker.Value.ToString("d"));
-            заказTableAdapter.InsertQuery(receiptDate, tb_name_zak.Text, tb_number_zak.Text, completionDate, tb_address.Text);
-            var form = new OrderFillingForm();
-            Hide();
-            form.ShowDialog();
-            Show();
+            DateTime data = Convert.ToDateTime(dateTimePicker1.Value.ToString("d"));
+            DateTime data2 = Convert.ToDateTime(dateTimePicker2.Value.ToString("d"));
+            заказTableAdapter.InsertQuery(data, tb_name_zak.Text, tb_number_zak.Text, data2, tb_address.Text);
+            Napoln_Zakaz f = new Napoln_Zakaz();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+
+            Заказ.DataGrid_Zakaz
+            dataGridView1.CurrentCell = dataGridView1[0, dataGridView.Rows.Count - 1];
+
+
+
+
         }
 
         private void Add_Zakaz_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.OrderForm". При необходимости она может быть перемещена или удалена.
-            заказTableAdapter.Fill(this.заказыDataSet.Заказ);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Заказ". При необходимости она может быть перемещена или удалена.
+            this.заказTableAdapter.Fill(this.заказыDataSet.Заказ);
 
         }
 
         private void заказBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            Validate();
-            заказBindingSource.EndEdit();
-            tableAdapterManager.UpdateAll(this.заказыDataSet);
+            this.Validate();
+            this.заказBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.заказыDataSet);
 
         }
     }

@@ -37,7 +37,7 @@ namespace Flower_shop
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            OrderForm f = new OrderForm();
+            Заказ f = new Заказ();
             this.Close();
             f.ShowDialog();
             this.Show();
@@ -103,7 +103,7 @@ namespace Flower_shop
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            OrderForm f = new OrderForm();
+            Заказ f = new Заказ();
             this.Hide();
             f.ShowDialog();
         }

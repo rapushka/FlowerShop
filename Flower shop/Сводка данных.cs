@@ -19,7 +19,7 @@ namespace Flower_shop
 
         private void pb_Vernyt_Click(object sender, EventArgs e)
         {
-            OrderFillingForm f = new OrderFillingForm();
+            Napoln_Zakaz f = new Napoln_Zakaz();
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -27,7 +27,7 @@ namespace Flower_shop
 
         private void pb_Dalee_Click(object sender, EventArgs e)
         {
-            OrderForm f = new OrderForm();
+            Заказ f = new Заказ();
             this.Hide();
             f.ShowDialog();
             this.Show();

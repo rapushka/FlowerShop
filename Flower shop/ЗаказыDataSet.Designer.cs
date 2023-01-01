@@ -84,8 +84,8 @@ namespace Flower_shop {
                 if ((ds.Tables["Вид_цветов"] != null)) {
                     base.Tables.Add(new Вид_цветовDataTable(ds.Tables["Вид_цветов"]));
                 }
-                if ((ds.Tables["OrderForm"] != null)) {
-                    base.Tables.Add(new ЗаказDataTable(ds.Tables["OrderForm"]));
+                if ((ds.Tables["Заказ"] != null)) {
+                    base.Tables.Add(new ЗаказDataTable(ds.Tables["Заказ"]));
                 }
                 if ((ds.Tables["Каталог_аксессуаров"] != null)) {
                     base.Tables.Add(new Каталог_аксессуаровDataTable(ds.Tables["Каталог_аксессуаров"]));
@@ -260,8 +260,8 @@ namespace Flower_shop {
                 if ((ds.Tables["Вид_цветов"] != null)) {
                     base.Tables.Add(new Вид_цветовDataTable(ds.Tables["Вид_цветов"]));
                 }
-                if ((ds.Tables["OrderForm"] != null)) {
-                    base.Tables.Add(new ЗаказDataTable(ds.Tables["OrderForm"]));
+                if ((ds.Tables["Заказ"] != null)) {
+                    base.Tables.Add(new ЗаказDataTable(ds.Tables["Заказ"]));
                 }
                 if ((ds.Tables["Каталог_аксессуаров"] != null)) {
                     base.Tables.Add(new Каталог_аксессуаровDataTable(ds.Tables["Каталог_аксессуаров"]));
@@ -320,7 +320,7 @@ namespace Flower_shop {
                     this.tableВид_цветов.InitVars();
                 }
             }
-            this.tableЗаказ = ((ЗаказDataTable)(base.Tables["OrderForm"]));
+            this.tableЗаказ = ((ЗаказDataTable)(base.Tables["Заказ"]));
             if ((initTable == true)) {
                 if ((this.tableЗаказ != null)) {
                     this.tableЗаказ.InitVars();
@@ -1135,7 +1135,7 @@ namespace Flower_shop {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ЗаказDataTable() {
-                this.TableName = "OrderForm";
+                this.TableName = "Заказ";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2916,7 +2916,7 @@ namespace Flower_shop {
                         return ((global::System.DateTime)(this[this.tableЗаказ.Дата_приемаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_приема\' в таблице \'OrderForm\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_приема\' в таблице \'Заказ\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -2932,7 +2932,7 @@ namespace Flower_shop {
                         return ((string)(this[this.tableЗаказ.Имя_заказчикаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Имя_заказчика\' в таблице \'OrderForm\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Имя_заказчика\' в таблице \'Заказ\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -2948,7 +2948,7 @@ namespace Flower_shop {
                         return ((string)(this[this.tableЗаказ.Телефон_заказчикаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Телефон_заказчика\' в таблице \'OrderForm\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Телефон_заказчика\' в таблице \'Заказ\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -2964,7 +2964,7 @@ namespace Flower_shop {
                         return ((global::System.DateTime)(this[this.tableЗаказ.Дата_время_выполненияColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_время_выполнения\' в таблице \'OrderForm\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_время_выполнения\' в таблице \'Заказ\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -2980,7 +2980,7 @@ namespace Flower_shop {
                         return ((decimal)(this[this.tableЗаказ.СтоимостьColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Стоимость\' в таблице \'OrderForm\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Стоимость\' в таблице \'Заказ\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -2996,7 +2996,7 @@ namespace Flower_shop {
                         return ((bool)(this[this.tableЗаказ.СтатусColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Статус\' в таблице \'OrderForm\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Статус\' в таблице \'Заказ\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -3012,7 +3012,7 @@ namespace Flower_shop {
                         return ((string)(this[this.tableЗаказ.Адрес_доставкиColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес_доставки\' в таблице \'OrderForm\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес_доставки\' в таблице \'Заказ\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -4752,7 +4752,7 @@ namespace Flower_shop.ЗаказыDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "OrderForm";
+            tableMapping.DataSetTable = "Заказ";
             tableMapping.ColumnMappings.Add("ID_заказа", "ID_заказа");
             tableMapping.ColumnMappings.Add("Дата_приема", "Дата_приема");
             tableMapping.ColumnMappings.Add("Имя_заказчика", "Имя_заказчика");
@@ -4764,7 +4764,7 @@ namespace Flower_shop.ЗаказыDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `OrderForm` WHERE ((`ID_заказа` = ?) AND ((? = 1 AND `Дата_приема` IS NULL) OR (`Дата_приема` = ?)) AND ((? = 1 AND `Дата_время_выполнения` IS NULL) OR (`Дата_время_выполнения` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Заказ` WHERE ((`ID_заказа` = ?) AND ((? = 1 AND `Дата_приема` IS NULL) OR (`Дата_приема` = ?)) AND ((? = 1 AND `Дата_время_выполнения` IS NULL) OR (`Дата_время_выполнения` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID_заказа", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_заказа", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_приема", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приема", global::System.Data.DataRowVersion.Original, true, null));
@@ -4777,7 +4777,7 @@ namespace Flower_shop.ЗаказыDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Статус", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Статус", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `OrderForm` (`Дата_приема`, `Имя_заказчика`, `Телефон_заказчика`, `Дата_в" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Заказ` (`Дата_приема`, `Имя_заказчика`, `Телефон_заказчика`, `Дата_в" +
                 "ремя_выполнения`, `Стоимость`, `Статус`, `Адрес_доставки`) VALUES (?, ?, ?, ?, ?" +
                 ", ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
@@ -4790,7 +4790,7 @@ namespace Flower_shop.ЗаказыDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес_доставки", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес_доставки", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `OrderForm` SET `Дата_приема` = ?, `Имя_заказчика` = ?, `Телефон_заказчика` = ?, `Дата_время_выполнения` = ?, `Стоимость` = ?, `Статус` = ?, `Адрес_доставки` = ? WHERE ((`ID_заказа` = ?) AND ((? = 1 AND `Дата_приема` IS NULL) OR (`Дата_приема` = ?)) AND ((? = 1 AND `Дата_время_выполнения` IS NULL) OR (`Дата_время_выполнения` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Заказ` SET `Дата_приема` = ?, `Имя_заказчика` = ?, `Телефон_заказчика` = ?, `Дата_время_выполнения` = ?, `Стоимость` = ?, `Статус` = ?, `Адрес_доставки` = ? WHERE ((`ID_заказа` = ?) AND ((? = 1 AND `Дата_приема` IS NULL) OR (`Дата_приема` = ?)) AND ((? = 1 AND `Дата_время_выполнения` IS NULL) OR (`Дата_время_выполнения` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_приема", global::System.Data.OleDb.OleDbType.DBTimeStamp, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приема", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя_заказчика", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя_заказчика", global::System.Data.DataRowVersion.Current, false, null));
@@ -4824,11 +4824,11 @@ namespace Flower_shop.ЗаказыDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID_заказа, Дата_приема, Имя_заказчика, Телефон_заказчика, Дата_время_выпол" +
-                "нения, Стоимость, Статус, Адрес_доставки FROM OrderForm";
+                "нения, Стоимость, Статус, Адрес_доставки FROM Заказ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO `OrderForm` (`Дата_приема`, `Имя_заказчика`, `Телефон_заказчика`, `Дата_в" +
+            this._commandCollection[1].CommandText = "INSERT INTO `Заказ` (`Дата_приема`, `Имя_заказчика`, `Телефон_заказчика`, `Дата_в" +
                 "ремя_выполнения`, `Адрес_доставки`) VALUES (?, ?, ?, ?, ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_приема", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приема", global::System.Data.DataRowVersion.Current, false, null));
@@ -4873,7 +4873,7 @@ namespace Flower_shop.ЗаказыDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ЗаказыDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "OrderForm");
+            return this.Adapter.Update(dataSet, "Заказ");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7477,7 +7477,7 @@ namespace Flower_shop.ЗаказыDataSetTableAdapters {
         }
         
         /// <summary>
-        ///Update OrderForm Option
+        ///Update Order Option
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public enum UpdateOrderOption {
