@@ -1,0 +1,26 @@
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\bin\Debug\Flower shop.exe.config
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\bin\Debug\Flower shop.exe
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\bin\Debug\Flower shop.pdb
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавл_аксессуар.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Add_Zakaz.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_вида.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_страны.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_цветов.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Katalog_Cvetov.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Napoln_Zakaz.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Svodka_dan.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Заказ.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Каталог_аксессуаров.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Справочник.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.exe
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.pdb
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\bin\Debug\Заказы.accdb
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_страны.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_вида.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_аксессуара.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_цветов.resources
+C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_заказа.resources

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B669E00-4C7E-4B0B-9C37-2F811D26C1FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Flower_shop</RootNamespace>
+    <AssemblyName>Flower shop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Добавл аксессуар.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавл аксессуар.Designer.cs">
+      <DependentUpon>Добавл аксессуар.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавл заказ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавл заказ.Designer.cs">
+      <DependentUpon>Добавл заказ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавление вида.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавление вида.Designer.cs">
+      <DependentUpon>Добавление вида.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавление страны.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавление страны.Designer.cs">
+      <DependentUpon>Добавление страны.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавление цветов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавление цветов.Designer.cs">
+      <DependentUpon>Добавление цветов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ЗаказыDataSet.cs">
+      <DependentUpon>ЗаказыDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ЗаказыDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ЗаказыDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Изменение аксессуара.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменение аксессуара.Designer.cs">
+      <DependentUpon>Изменение аксессуара.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменение вида.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменение вида.Designer.cs">
+      <DependentUpon>Изменение вида.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменение заказа.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменение заказа.Designer.cs">
+      <DependentUpon>Изменение заказа.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменение страны.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменение страны.Designer.cs">
+      <DependentUpon>Изменение страны.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменение цветов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменение цветов.Designer.cs">
+      <DependentUpon>Изменение цветов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Каталог цветов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Каталог цветов.Designer.cs">
+      <DependentUpon>Каталог цветов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderFillingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderFillingForm.Designer.cs">
+      <DependentUpon>OrderFillingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Сводка данных.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Сводка данных.Designer.cs">
+      <DependentUpon>Сводка данных.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Каталог аксессуаров.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Каталог аксессуаров.Designer.cs">
+      <DependentUpon>Каталог аксессуаров.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Справочник.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Справочник.Designer.cs">
+      <DependentUpon>Справочник.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Добавл аксессуар.resx">
+      <DependentUpon>Добавл аксессуар.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавл заказ.resx">
+      <DependentUpon>Добавл заказ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавление вида.resx">
+      <DependentUpon>Добавление вида.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавление страны.resx">
+      <DependentUpon>Добавление страны.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавление цветов.resx">
+      <DependentUpon>Добавление цветов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменение аксессуара.resx">
+      <DependentUpon>Изменение аксессуара.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменение вида.resx">
+      <DependentUpon>Изменение вида.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменение заказа.resx">
+      <DependentUpon>Изменение заказа.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменение страны.resx">
+      <DependentUpon>Изменение страны.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменение цветов.resx">
+      <DependentUpon>Изменение цветов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Каталог цветов.resx">
+      <DependentUpon>Каталог цветов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderFillingForm.resx">
+      <DependentUpon>OrderFillingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Сводка данных.resx">
+      <DependentUpon>Сводка данных.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Каталог аксессуаров.resx">
+      <DependentUpon>Каталог аксессуаров.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Справочник.resx">
+      <DependentUpon>Справочник.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ЗаказыDataSet.xsc">
+      <DependentUpon>ЗаказыDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ЗаказыDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ЗаказыDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ЗаказыDataSet.xss">
+      <DependentUpon>ЗаказыDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Заказы F1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавление заказа F2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Наполнение заказа F3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Сводка данных F4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Каталог цветов F5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавление вида в каталоге F13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавление страны в каталоге F12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Каталог аксессуаров F7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавление аксессуара F8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавление страны F11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавление вида F10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Справочник F9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавление цветов F6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавить заказ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Изменить.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Удалить.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Каталог цветов.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Каталог аксессуаров.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Наполнение заказа F31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Добавить цветы.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Изменение страны.png" />
+    <Content Include="Заказы.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
