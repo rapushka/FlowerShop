@@ -34,13 +34,6 @@ namespace Flower_shop
             this.Hide();
             f.ShowDialog();
             this.Show();
-
-            Заказ.DataGrid_Zakaz
-            dataGridView1.CurrentCell = dataGridView1[0, dataGridView.Rows.Count - 1];
-
-
-
-
         }
 
         private void Add_Zakaz_Load(object sender, EventArgs e)
