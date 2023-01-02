@@ -10,45 +10,41 @@ using System.Windows.Forms;
 
 namespace Flower_shop
 {
-    public partial class Add_Zakaz : Form
-    {
-        public Add_Zakaz()
-        {
-            InitializeComponent();
-        }
+	public partial class Add_Zakaz : Form
+	{
+		public Add_Zakaz() => InitializeComponent();
 
-        private void pb_Vernyt_Click(object sender, EventArgs e)
-        {
-            Заказ f = new Заказ();
-            this.Close();
-            f.ShowDialog();
-            this.Show();
-        }
+		private void Add_Zakaz_Load(object sender, EventArgs e) => заказTableAdapter.Fill(заказыDataSet.Заказ);
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            DateTime data = Convert.ToDateTime(dateTimePicker1.Value.ToString("d"));
-            DateTime data2 = Convert.ToDateTime(dateTimePicker2.Value.ToString("d"));
-            заказTableAdapter.InsertQuery(data, tb_name_zak.Text, tb_number_zak.Text, data2, tb_address.Text);
-            OrderFillingForm f = new OrderFillingForm();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
+		private void pb_Vernyt_Click(object sender, EventArgs e)
+		{
+			var f = new Заказ();
+			Close();
+			f.ShowDialog();
+			Show();
+		}
 
-        private void Add_Zakaz_Load(object sender, EventArgs e)
-        {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Заказ". При необходимости она может быть перемещена или удалена.
-            this.заказTableAdapter.Fill(this.заказыDataSet.Заказ);
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			заказTableAdapter.InsertQuery
+			(
+				Дата_приема: receiptDateTimePicker.Value,
+				Имя_заказчика: tb_name_zak.Text,
+				Телефон_заказчика: tb_number_zak.Text,
+				Дата_время_выполнения: receiptDateTimePicker.Value,
+				Адрес_доставки: tb_address.Text
+			);
+			var f = new OrderFillingForm();
+			Hide();
+			f.ShowDialog();
+			Show();
+		}
 
-        }
-
-        private void заказBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.заказBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.заказыDataSet);
-
-        }
-    }
+		private void заказBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+		{
+			Validate();
+			заказBindingSource.EndEdit();
+			tableAdapterManager.UpdateAll(заказыDataSet);
+		}
+	}
 }

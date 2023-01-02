@@ -35,8 +35,8 @@ namespace Flower_shop
             this.tb_name_zak = new System.Windows.Forms.TextBox();
             this.tb_number_zak = new System.Windows.Forms.TextBox();
             this.tb_address = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.receiptDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.completionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.заказыDataSet = new Flower_shop.ЗаказыDataSet();
             this.заказBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.заказTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.ЗаказTableAdapter();
@@ -90,27 +90,27 @@ namespace Flower_shop
             this.tb_address.Size = new System.Drawing.Size(192, 24);
             this.tb_address.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // receiptDateTimePicker
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.SaddleBrown;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.SaddleBrown;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(344, 230);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(192, 24);
-            this.dateTimePicker1.TabIndex = 6;
+            this.receiptDateTimePicker.CalendarForeColor = System.Drawing.Color.SaddleBrown;
+            this.receiptDateTimePicker.CalendarTitleForeColor = System.Drawing.Color.SaddleBrown;
+            this.receiptDateTimePicker.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.receiptDateTimePicker.Location = new System.Drawing.Point(344, 230);
+            this.receiptDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.receiptDateTimePicker.Name = "receiptDateTimePicker";
+            this.receiptDateTimePicker.Size = new System.Drawing.Size(192, 24);
+            this.receiptDateTimePicker.TabIndex = 6;
             // 
-            // dateTimePicker2
+            // completionDateTimePicker
             // 
-            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.SaddleBrown;
-            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.SaddleBrown;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(344, 273);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(192, 24);
-            this.dateTimePicker2.TabIndex = 7;
+            this.completionDateTimePicker.CalendarForeColor = System.Drawing.Color.SaddleBrown;
+            this.completionDateTimePicker.CalendarTitleForeColor = System.Drawing.Color.SaddleBrown;
+            this.completionDateTimePicker.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.completionDateTimePicker.Location = new System.Drawing.Point(344, 273);
+            this.completionDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.completionDateTimePicker.Name = "completionDateTimePicker";
+            this.completionDateTimePicker.Size = new System.Drawing.Size(192, 24);
+            this.completionDateTimePicker.TabIndex = 7;
             // 
             // заказыDataSet
             // 
@@ -144,8 +144,8 @@ namespace Flower_shop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 373);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.completionDateTimePicker);
+            this.Controls.Add(this.receiptDateTimePicker);
             this.Controls.Add(this.tb_address);
             this.Controls.Add(this.tb_number_zak);
             this.Controls.Add(this.tb_name_zak);
@@ -170,8 +170,8 @@ namespace Flower_shop
         private System.Windows.Forms.TextBox tb_name_zak;
         private System.Windows.Forms.TextBox tb_number_zak;
         private System.Windows.Forms.TextBox tb_address;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker receiptDateTimePicker;
+        private System.Windows.Forms.DateTimePicker completionDateTimePicker;
         private ЗаказыDataSet заказыDataSet;
         private System.Windows.Forms.BindingSource заказBindingSource;
         private ЗаказыDataSetTableAdapters.ЗаказTableAdapter заказTableAdapter;
