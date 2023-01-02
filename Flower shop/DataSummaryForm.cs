@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using OrderRow = Flower_shop.ЗаказыDataSet.ЗаказRow;
@@ -34,8 +35,20 @@ namespace Flower_shop
 		private void LoadOrder()
 		{
 			_currentOrder = заказTableAdapter.GetData().Last();
-			_currentOrder.Стоимость = _sum;
+			UpdateSum();
 
+			CustomerNameTextBox.Text = _currentOrder.Имя_заказчика;
+			CustomerPhoneTextBox.Text = _currentOrder.Телефон_заказчика;
+			AddressTextBox.Text = _currentOrder.Адрес_доставки;
+
+			ReceiptDateTimePicker.Value = _currentOrder.Дата_приема;
+			CompletionDateTimePicker.Value = _currentOrder.Дата_время_выполнения;
+			SumTextBox.Text = _currentOrder.Стоимость.ToString(CultureInfo.InvariantCulture);
+		}
+
+		private void UpdateSum()
+		{
+			_currentOrder.Стоимость = _sum;
 			заказTableAdapter.Update(_currentOrder);
 		}
 	}
