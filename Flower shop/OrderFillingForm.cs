@@ -1,8 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Forms;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
+using AccessoriesRow = Flower_shop.ЗаказыDataSet.Каталог_аксессуаровRow;
 using FlowersInOrderRow = Flower_shop.ЗаказыDataSet.Цветы_в_заказеRow;
+using FlowerRow = Flower_shop.ЗаказыDataSet.Каталог_цветовRow;
 
 namespace Flower_shop
 {
@@ -41,28 +44,115 @@ namespace Flower_shop
 			FlowersInOrderDataGrid.DataSource = _flowersInOrder;
 		}
 
-		private void AddAccessoryButton_Click(object sender, EventArgs e)
-		{
-			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
-			accessory.Количество = 1;
-			accessory.Каталог_аксессуаровRow
-				= заказыDataSet.Каталог_аксессуаров[AccessoriesDataGrid.IndexOfSelectedRow()];
+		private void AddAccessoryButton_DoubleClick(object sender, EventArgs e) => AddAccessory();
+		private void AddAccessoryButton_Click(object sender, EventArgs e) => AddAccessory();
 
-			_accessoriesInOrder.Add(accessory);
+		private void AddFlowerButton_Click(object sender, EventArgs e) => AddFlower();
+		private void AddFlowerButton_DoubleClick(object sender, EventArgs e) => AddFlower();
+
+		private void RemoveAccessoryButton_Click(object sender, EventArgs e) => RemoveAccessory();
+		private void RemoveAccessoryButton_DoubleClick(object sender, EventArgs e) => RemoveAccessory();
+
+		private void RemoveFlowerButton_Click(object sender, EventArgs e) => RemoveFlower();
+		private void RemoveFlowerButton_DoubleClick(object sender, EventArgs e) => RemoveFlower();
+
+		private void AddAccessory()
+		{
+			var accessoryInOrder = _accessoriesInOrder.SingleOrDefault(IsSame);
+
+			if (accessoryInOrder is null)
+			{
+				AddNewAccessory(SelectedAccessoryFromCatalog());
+			}
+			else
+			{
+				accessoryInOrder.Количество++;
+				_accessoriesInOrder.ResetBindings();
+			}
 		}
 
-		private void AddFlowerButton_Click(object sender, EventArgs e)
+		private void AddFlower()
 		{
-			var flower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
-			flower.Количество = 1;
-			flower.Каталог_цветовRow = заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
+			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSame);
 
-			_flowersInOrder.Add(flower);
+			if (flowerInOrder is null)
+			{
+				AddNewFlower(SelectedFlowerFromCatalog());
+			}
+			else
+			{
+				flowerInOrder.Количество++;
+				_flowersInOrder.ResetBindings();
+			}
 		}
 
-		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
+		private void RemoveAccessory()
+		{
+			var accessoryInOrder = _accessoriesInOrder.SingleOrDefault(IsSame);
 
-		private void RemoveFlowerButton_Click(object sender, EventArgs e) { }
+			if (accessoryInOrder is null)
+			{
+				return;
+			}
+
+			accessoryInOrder.Количество--;
+
+			if (accessoryInOrder.Количество <= 0)
+			{
+				_accessoriesInOrder.Remove(accessoryInOrder);
+			}
+
+			_accessoriesInOrder.ResetBindings();
+		}
+
+		private void RemoveFlower()
+		{
+			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSame);
+
+			if (flowerInOrder is null)
+			{
+				return;
+			}
+
+			flowerInOrder.Количество--;
+
+			if (flowerInOrder.Количество <= 0)
+			{
+				_flowersInOrder.Remove(flowerInOrder);
+			}
+
+			_flowersInOrder.ResetBindings();
+		}
+
+		private bool IsSame(AccessoriesInOrderRow accessoryInOrder)
+			=> accessoryInOrder.Каталог_аксессуаровRow.ID_аксессуара == SelectedAccessoryFromCatalog().ID_аксессуара;
+
+		private bool IsSame(FlowersInOrderRow flowerInOrder)
+			=> flowerInOrder.Каталог_цветовRow.ID_цветов == SelectedFlowerFromCatalog().ID_цветов;
+
+		private void AddNewAccessory(AccessoriesRow accessoryFromCatalog)
+		{
+			var newAccessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
+			newAccessory.Количество = 1;
+			newAccessory.Каталог_аксессуаровRow = accessoryFromCatalog;
+
+			_accessoriesInOrder.Add(newAccessory);
+		}
+
+		private void AddNewFlower(FlowerRow flowerFromCatalog)
+		{
+			var newFlower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
+			newFlower.Количество = 1;
+			newFlower.Каталог_цветовRow = flowerFromCatalog;
+
+			_flowersInOrder.Add(newFlower);
+		}
+
+		private AccessoriesRow SelectedAccessoryFromCatalog()
+			=> заказыDataSet.Каталог_аксессуаров[AccessoriesDataGrid.IndexOfSelectedRow()];
+
+		private FlowerRow SelectedFlowerFromCatalog()
+			=> заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
 
 		private void SaveToDataBase()
 		{

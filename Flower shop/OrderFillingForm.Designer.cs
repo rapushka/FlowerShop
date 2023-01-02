@@ -76,7 +76,7 @@ namespace Flower_shop
 			this.pb_Dalee = new System.Windows.Forms.PictureBox();
 			this.AddAccessoryButton = new System.Windows.Forms.PictureBox();
 			this.AddFlowerButton = new System.Windows.Forms.PictureBox();
-			this.RemoveAccesoryButton = new System.Windows.Forms.PictureBox();
+			this.RemoveAccessoryButton = new System.Windows.Forms.PictureBox();
 			this.RemoveFlowerButton = new System.Windows.Forms.PictureBox();
 			this.каталог_аксессуаровTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_аксессуаровTableAdapter();
 			this.каталог_цветовTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_цветовTableAdapter();
@@ -97,7 +97,7 @@ namespace Flower_shop
 			((System.ComponentModel.ISupportInitialize)(this.pb_Dalee)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.AddAccessoryButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.AddFlowerButton)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.RemoveAccesoryButton)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.RemoveAccessoryButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.RemoveFlowerButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource1)).BeginInit();
 			this.SuspendLayout();
@@ -501,13 +501,14 @@ namespace Flower_shop
 			this.AddAccessoryButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddAccessoryButton.BackgroundImage")));
 			this.AddAccessoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.AddAccessoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.AddAccessoryButton.Location = new System.Drawing.Point(245, 229);
+			this.AddAccessoryButton.Location = new System.Drawing.Point(248, 263);
 			this.AddAccessoryButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.AddAccessoryButton.Name = "AddAccessoryButton";
 			this.AddAccessoryButton.Size = new System.Drawing.Size(104, 25);
 			this.AddAccessoryButton.TabIndex = 6;
 			this.AddAccessoryButton.TabStop = false;
 			this.AddAccessoryButton.Click += new System.EventHandler(this.AddAccessoryButton_Click);
+			this.AddAccessoryButton.DoubleClick += new System.EventHandler(this.AddAccessoryButton_DoubleClick);
 			// 
 			// AddFlowerButton
 			// 
@@ -515,27 +516,29 @@ namespace Flower_shop
 			this.AddFlowerButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddFlowerButton.BackgroundImage")));
 			this.AddFlowerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.AddFlowerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.AddFlowerButton.Location = new System.Drawing.Point(248, 444);
+			this.AddFlowerButton.Location = new System.Drawing.Point(248, 478);
 			this.AddFlowerButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.AddFlowerButton.Name = "AddFlowerButton";
 			this.AddFlowerButton.Size = new System.Drawing.Size(101, 25);
 			this.AddFlowerButton.TabIndex = 7;
 			this.AddFlowerButton.TabStop = false;
 			this.AddFlowerButton.Click += new System.EventHandler(this.AddFlowerButton_Click);
+			this.AddFlowerButton.DoubleClick += new System.EventHandler(this.AddFlowerButton_DoubleClick);
 			// 
-			// RemoveAccesoryButton
+			// RemoveAccessoryButton
 			// 
-			this.RemoveAccesoryButton.BackColor = System.Drawing.Color.Transparent;
-			this.RemoveAccesoryButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RemoveAccesoryButton.BackgroundImage")));
-			this.RemoveAccesoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.RemoveAccesoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.RemoveAccesoryButton.Location = new System.Drawing.Point(646, 229);
-			this.RemoveAccesoryButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.RemoveAccesoryButton.Name = "RemoveAccesoryButton";
-			this.RemoveAccesoryButton.Size = new System.Drawing.Size(89, 25);
-			this.RemoveAccesoryButton.TabIndex = 8;
-			this.RemoveAccesoryButton.TabStop = false;
-			this.RemoveAccesoryButton.Click += new System.EventHandler(this.RemoveAccessoryButton_Click);
+			this.RemoveAccessoryButton.BackColor = System.Drawing.Color.Transparent;
+			this.RemoveAccessoryButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RemoveAccessoryButton.BackgroundImage")));
+			this.RemoveAccessoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.RemoveAccessoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.RemoveAccessoryButton.Location = new System.Drawing.Point(413, 263);
+			this.RemoveAccessoryButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.RemoveAccessoryButton.Name = "RemoveAccessoryButton";
+			this.RemoveAccessoryButton.Size = new System.Drawing.Size(89, 25);
+			this.RemoveAccessoryButton.TabIndex = 8;
+			this.RemoveAccessoryButton.TabStop = false;
+			this.RemoveAccessoryButton.Click += new System.EventHandler(this.RemoveAccessoryButton_Click);
+			this.RemoveAccessoryButton.DoubleClick += new System.EventHandler(this.RemoveAccessoryButton_DoubleClick);
 			// 
 			// RemoveFlowerButton
 			// 
@@ -543,13 +546,14 @@ namespace Flower_shop
 			this.RemoveFlowerButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RemoveFlowerButton.BackgroundImage")));
 			this.RemoveFlowerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.RemoveFlowerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.RemoveFlowerButton.Location = new System.Drawing.Point(643, 444);
+			this.RemoveFlowerButton.Location = new System.Drawing.Point(413, 478);
 			this.RemoveFlowerButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.RemoveFlowerButton.Name = "RemoveFlowerButton";
 			this.RemoveFlowerButton.Size = new System.Drawing.Size(92, 25);
 			this.RemoveFlowerButton.TabIndex = 9;
 			this.RemoveFlowerButton.TabStop = false;
 			this.RemoveFlowerButton.Click += new System.EventHandler(this.RemoveFlowerButton_Click);
+			this.RemoveFlowerButton.DoubleClick += new System.EventHandler(this.RemoveFlowerButton_DoubleClick);
 			// 
 			// каталог_аксессуаровTableAdapter
 			// 
@@ -583,7 +587,7 @@ namespace Flower_shop
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(769, 545);
 			this.Controls.Add(this.RemoveFlowerButton);
-			this.Controls.Add(this.RemoveAccesoryButton);
+			this.Controls.Add(this.RemoveAccessoryButton);
 			this.Controls.Add(this.AddFlowerButton);
 			this.Controls.Add(this.AddAccessoryButton);
 			this.Controls.Add(this.pb_Dalee);
@@ -610,7 +614,7 @@ namespace Flower_shop
 			((System.ComponentModel.ISupportInitialize)(this.pb_Dalee)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.AddAccessoryButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.AddFlowerButton)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.RemoveAccesoryButton)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.RemoveAccessoryButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.RemoveFlowerButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource1)).EndInit();
 			this.ResumeLayout(false);
@@ -626,7 +630,7 @@ namespace Flower_shop
         private System.Windows.Forms.PictureBox pb_Dalee;
         private System.Windows.Forms.PictureBox AddAccessoryButton;
         private System.Windows.Forms.PictureBox AddFlowerButton;
-        private System.Windows.Forms.PictureBox RemoveAccesoryButton;
+        private System.Windows.Forms.PictureBox RemoveAccessoryButton;
         private System.Windows.Forms.PictureBox RemoveFlowerButton;
         private ЗаказыDataSet заказыDataSet;
         private System.Windows.Forms.BindingSource каталогаксессуаровBindingSource;
