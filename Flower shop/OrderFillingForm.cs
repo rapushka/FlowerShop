@@ -53,20 +53,18 @@ namespace Flower_shop
 
 		private void AddAccessory()
 		{
-			var indexOfSelectedRow = dataGrid_Kat_Aks.Rows.IndexOf(dataGrid_Kat_Aks.SelectedRows[0]);
-
 			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			accessory.Количество = 1;
-			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров[indexOfSelectedRow];
+			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров[dataGrid_Kat_Aks.IndexOfSelectedRow()];
 
 			_accessoriesInOrder.Add(accessory);
 		}
 
 		private void SaveToDataBase()
 		{
-			foreach (var a in _accessoriesInOrder)
+			foreach (var accessory in _accessoriesInOrder)
 			{
-				InsertAccessoryInOrder(a);
+				InsertAccessoryInOrder(accessory);
 			}
 		}
 	}

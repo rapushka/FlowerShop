@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utils\Extensions\DataGridExtensions.cs" />
     <Compile Include="Добавл аксессуар.cs">
       <SubType>Form</SubType>
     </Compile>
