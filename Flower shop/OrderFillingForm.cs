@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Forms;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
 using FlowersInOrderRow = Flower_shop.ЗаказыDataSet.Цветы_в_заказеRow;
+using FlowerRow = Flower_shop.ЗаказыDataSet.Каталог_цветовRow;
 
 namespace Flower_shop
 {
@@ -53,12 +55,32 @@ namespace Flower_shop
 
 		private void AddFlowerButton_Click(object sender, EventArgs e)
 		{
-			var flower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
-			flower.Количество = 1;
-			flower.Каталог_цветовRow = заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
+			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSameFlower);
 
-			_flowersInOrder.Add(flower);
+			if (flowerInOrder is null)
+			{
+				AddNewFlower(SelectedFlowerFromCatalog());
+			}
+			else
+			{
+				flowerInOrder.Количество++;
+			}
 		}
+
+		private bool IsSameFlower(FlowersInOrderRow flowerInOrder)
+			=> flowerInOrder.Каталог_цветовRow.ID_цветов == SelectedFlowerFromCatalog().ID_цветов;
+
+		private void AddNewFlower(FlowerRow flowerFromCatalog)
+		{
+			var newFlower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
+			newFlower.Количество = 1;
+			newFlower.Каталог_цветовRow = flowerFromCatalog;
+
+			_flowersInOrder.Add(newFlower);
+		}
+
+		private FlowerRow SelectedFlowerFromCatalog()
+			=> заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
 
 		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
 
