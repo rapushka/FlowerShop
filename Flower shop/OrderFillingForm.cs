@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
@@ -22,6 +23,7 @@ namespace Flower_shop
 		private void NextButton_Click(object sender, EventArgs e)
 		{
 			var form = new DataSummaryForm(_orderId);
+			SaveToDataBase();
 			Close();
 			form.ShowDialog();
 		}
@@ -35,22 +37,6 @@ namespace Flower_shop
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
 			AccessoriesInOrderDataGrid.DataSource = _accessoriesInOrder;
-
-			AddAccessory();
-		}
-
-		private void AddAccessory()
-		{
-			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
-			accessory.Количество = 13;
-			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров.Last();
-
-			_accessoriesInOrder.Add(accessory);
-
-			foreach (var a in _accessoriesInOrder)
-			{
-				InsertAccessoryInOrder(a);
-			}
 		}
 
 		private void InsertAccessoryInOrder(AccessoriesInOrderRow accessory)
@@ -63,6 +49,25 @@ namespace Flower_shop
 
 		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
 
-		private void AddAccessoryButton_Click(object sender, EventArgs e) { }
+		private void AddAccessoryButton_Click(object sender, EventArgs e) => AddAccessory();
+
+		private void AddAccessory()
+		{
+			var indexOfSelectedRow = dataGrid_Kat_Aks.Rows.IndexOf(dataGrid_Kat_Aks.SelectedRows[0]);
+
+			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
+			accessory.Количество = 1;
+			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров[indexOfSelectedRow];
+
+			_accessoriesInOrder.Add(accessory);
+		}
+
+		private void SaveToDataBase()
+		{
+			foreach (var a in _accessoriesInOrder)
+			{
+				InsertAccessoryInOrder(a);
+			}
+		}
 	}
 }
