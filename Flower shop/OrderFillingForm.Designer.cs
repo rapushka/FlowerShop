@@ -84,6 +84,7 @@ namespace Flower_shop
 			this.цветы_в_заказеTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Цветы_в_заказеTableAdapter();
 			this.каталогаксессуаровBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this.вид_цветовTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Вид_цветовTableAdapter();
+			this.TotalAmountLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.AccessoriesDataGrid)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).BeginInit();
@@ -580,12 +581,22 @@ namespace Flower_shop
 			// 
 			this.вид_цветовTableAdapter.ClearBeforeFill = true;
 			// 
+			// TotalAmountLabel
+			// 
+			this.TotalAmountLabel.AutoSize = true;
+			this.TotalAmountLabel.Location = new System.Drawing.Point(394, 508);
+			this.TotalAmountLabel.Name = "TotalAmountLabel";
+			this.TotalAmountLabel.Size = new System.Drawing.Size(28, 16);
+			this.TotalAmountLabel.TabIndex = 10;
+			this.TotalAmountLabel.Text = "000";
+			// 
 			// OrderFillingForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(769, 545);
+			this.Controls.Add(this.TotalAmountLabel);
 			this.Controls.Add(this.RemoveFlowerButton);
 			this.Controls.Add(this.RemoveAccessoryButton);
 			this.Controls.Add(this.AddFlowerButton);
@@ -618,6 +629,7 @@ namespace Flower_shop
 			((System.ComponentModel.ISupportInitialize)(this.RemoveFlowerButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
@@ -664,5 +676,6 @@ namespace Flower_shop
         private System.Windows.Forms.DataGridViewTextBoxColumn наименованиеDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn цветDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ценаDataGridViewTextBoxColumn;
-    }
+		private System.Windows.Forms.Label TotalAmountLabel;
+	}
 }
