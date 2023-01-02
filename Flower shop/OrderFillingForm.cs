@@ -88,12 +88,7 @@ namespace Flower_shop
 
 		private void RemoveAccessory()
 		{
-			var accessoryInOrder = _accessoriesInOrder.SingleOrDefault(IsSame);
-
-			if (accessoryInOrder is null)
-			{
-				return;
-			}
+			var accessoryInOrder = SelectedAccessoryInOrder();
 
 			accessoryInOrder.Количество--;
 
@@ -107,12 +102,7 @@ namespace Flower_shop
 
 		private void RemoveFlower()
 		{
-			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSame);
-
-			if (flowerInOrder is null)
-			{
-				return;
-			}
+			var flowerInOrder = _flowersInOrder.Single(SelectedFlower);
 
 			flowerInOrder.Количество--;
 
@@ -123,6 +113,9 @@ namespace Flower_shop
 
 			_flowersInOrder.ResetBindings();
 		}
+
+		private bool SelectedFlower(FlowersInOrderRow flower) 
+			=> flower.Каталог_цветовRow.ID_цветов == FlowersInOrderDataGrid.SelectedFlowerId();
 
 		private bool IsSame(AccessoriesInOrderRow accessoryInOrder)
 			=> accessoryInOrder.Каталог_аксессуаровRow.ID_аксессуара == SelectedAccessoryFromCatalog().ID_аксессуара;
@@ -147,6 +140,9 @@ namespace Flower_shop
 
 			_flowersInOrder.Add(newFlower);
 		}
+
+		private AccessoriesInOrderRow SelectedAccessoryInOrder()
+			=> заказыDataSet.Аксессуары_в_заказе[AccessoriesInOrderDataGrid.IndexOfSelectedRow()];
 
 		private AccessoriesRow SelectedAccessoryFromCatalog()
 			=> заказыDataSet.Каталог_аксессуаров[AccessoriesDataGrid.IndexOfSelectedRow()];
