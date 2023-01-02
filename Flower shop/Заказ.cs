@@ -19,7 +19,7 @@ namespace Flower_shop
 
         private void pb_Dod_Zakaz_Click(object sender, EventArgs e)
         {
-            Add_Zakaz f = new Add_Zakaz();
+            OrderAddingForm f = new OrderAddingForm();
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -90,7 +90,7 @@ namespace Flower_shop
 
         private void pb_Dod_Cvety_Click(object sender, EventArgs e)
         {
-            Add_Zakaz f = new Add_Zakaz();
+            OrderAddingForm f = new OrderAddingForm();
             this.Hide();
             f.ShowDialog();
             this.Show();

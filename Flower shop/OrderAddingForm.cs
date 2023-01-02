@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Flower_shop
 {
-	public partial class Add_Zakaz : Form
+	public partial class OrderAddingForm : Form
 	{
-		public Add_Zakaz() => InitializeComponent();
+		public OrderAddingForm() => InitializeComponent();
 
 		private void Add_Zakaz_Load(object sender, EventArgs e) => заказTableAdapter.Fill(заказыDataSet.Заказ);
 
@@ -29,14 +22,15 @@ namespace Flower_shop
 			заказTableAdapter.InsertQuery
 			(
 				Дата_приема: receiptDateTimePicker.Value,
-				Имя_заказчика: tb_name_zak.Text,
-				Телефон_заказчика: tb_number_zak.Text,
+				Имя_заказчика: cutomerNameTextBox.Text,
+				Телефон_заказчика: customerPhoneTextBox.Text,
 				Дата_время_выполнения: receiptDateTimePicker.Value,
-				Адрес_доставки: tb_address.Text
+				Адрес_доставки: customerAddressTextBox.Text
 			);
-			var f = new OrderFillingForm();
+			
+			var form = new OrderFillingForm();
 			Hide();
-			f.ShowDialog();
+			form.ShowDialog();
 			Show();
 		}
 

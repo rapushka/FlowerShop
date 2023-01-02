@@ -1,7 +1,7 @@
 ﻿
 namespace Flower_shop
 {
-    partial class Add_Zakaz
+    partial class OrderAddingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,11 @@ namespace Flower_shop
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Zakaz));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderAddingForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tb_name_zak = new System.Windows.Forms.TextBox();
-            this.tb_number_zak = new System.Windows.Forms.TextBox();
-            this.tb_address = new System.Windows.Forms.TextBox();
+            this.cutomerNameTextBox = new System.Windows.Forms.TextBox();
+            this.customerPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.customerAddressTextBox = new System.Windows.Forms.TextBox();
             this.receiptDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.completionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.заказыDataSet = new Flower_shop.ЗаказыDataSet();
@@ -60,35 +60,35 @@ namespace Flower_shop
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // tb_name_zak
+            // cutomerNameTextBox
             // 
-            this.tb_name_zak.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_name_zak.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_name_zak.Location = new System.Drawing.Point(344, 87);
-            this.tb_name_zak.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tb_name_zak.Name = "tb_name_zak";
-            this.tb_name_zak.Size = new System.Drawing.Size(192, 24);
-            this.tb_name_zak.TabIndex = 2;
+            this.cutomerNameTextBox.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cutomerNameTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cutomerNameTextBox.Location = new System.Drawing.Point(344, 87);
+            this.cutomerNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cutomerNameTextBox.Name = "cutomerNameTextBox";
+            this.cutomerNameTextBox.Size = new System.Drawing.Size(192, 24);
+            this.cutomerNameTextBox.TabIndex = 2;
             // 
-            // tb_number_zak
+            // customerPhoneTextBox
             // 
-            this.tb_number_zak.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_number_zak.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_number_zak.Location = new System.Drawing.Point(344, 128);
-            this.tb_number_zak.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tb_number_zak.Name = "tb_number_zak";
-            this.tb_number_zak.Size = new System.Drawing.Size(192, 24);
-            this.tb_number_zak.TabIndex = 3;
+            this.customerPhoneTextBox.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.customerPhoneTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.customerPhoneTextBox.Location = new System.Drawing.Point(344, 128);
+            this.customerPhoneTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customerPhoneTextBox.Name = "customerPhoneTextBox";
+            this.customerPhoneTextBox.Size = new System.Drawing.Size(192, 24);
+            this.customerPhoneTextBox.TabIndex = 3;
             // 
-            // tb_address
+            // customerAddressTextBox
             // 
-            this.tb_address.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_address.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_address.Location = new System.Drawing.Point(344, 170);
-            this.tb_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tb_address.Name = "tb_address";
-            this.tb_address.Size = new System.Drawing.Size(192, 24);
-            this.tb_address.TabIndex = 4;
+            this.customerAddressTextBox.Font = new System.Drawing.Font("Gilroy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.customerAddressTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.customerAddressTextBox.Location = new System.Drawing.Point(344, 170);
+            this.customerAddressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customerAddressTextBox.Name = "customerAddressTextBox";
+            this.customerAddressTextBox.Size = new System.Drawing.Size(192, 24);
+            this.customerAddressTextBox.TabIndex = 4;
             // 
             // receiptDateTimePicker
             // 
@@ -138,7 +138,7 @@ namespace Flower_shop
             this.tableAdapterManager.Страна_производительTableAdapter = null;
             this.tableAdapterManager.Цветы_в_заказеTableAdapter = null;
             // 
-            // Add_Zakaz
+            // OrderAddingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,16 +146,16 @@ namespace Flower_shop
             this.ClientSize = new System.Drawing.Size(599, 373);
             this.Controls.Add(this.completionDateTimePicker);
             this.Controls.Add(this.receiptDateTimePicker);
-            this.Controls.Add(this.tb_address);
-            this.Controls.Add(this.tb_number_zak);
-            this.Controls.Add(this.tb_name_zak);
+            this.Controls.Add(this.customerAddressTextBox);
+            this.Controls.Add(this.customerPhoneTextBox);
+            this.Controls.Add(this.cutomerNameTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Add_Zakaz";
+            this.Name = "OrderAddingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add_Zakaz";
+            this.Text = "OrderAddingForm";
             this.Load += new System.EventHandler(this.Add_Zakaz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).EndInit();
@@ -167,9 +167,9 @@ namespace Flower_shop
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox tb_name_zak;
-        private System.Windows.Forms.TextBox tb_number_zak;
-        private System.Windows.Forms.TextBox tb_address;
+        private System.Windows.Forms.TextBox cutomerNameTextBox;
+        private System.Windows.Forms.TextBox customerPhoneTextBox;
+        private System.Windows.Forms.TextBox customerAddressTextBox;
         private System.Windows.Forms.DateTimePicker receiptDateTimePicker;
         private System.Windows.Forms.DateTimePicker completionDateTimePicker;
         private ЗаказыDataSet заказыDataSet;
