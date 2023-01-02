@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
@@ -22,17 +21,9 @@ namespace Flower_shop
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
-			var f = new Svodka_dan();
+			var form = new DataSummaryForm(_orderId);
 			Hide();
-			f.ShowDialog();
-			Show();
-		}
-
-		private void ReturnButton_Click(object sender, EventArgs e)
-		{
-			var f = new OrderAddingForm();
-			Hide();
-			f.ShowDialog();
+			form.ShowDialog();
 			Show();
 		}
 
@@ -44,8 +35,8 @@ namespace Flower_shop
 			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
-			dataGrid_Aks_v_zak.DataSource = _accessoriesInOrder;
-			
+			AccessoriesInOrderDataGrid.DataSource = _accessoriesInOrder;
+
 			AddAccessory();
 		}
 
@@ -56,7 +47,7 @@ namespace Flower_shop
 			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров.Last();
 
 			_accessoriesInOrder.Add(accessory);
-			
+
 			foreach (var a in _accessoriesInOrder)
 			{
 				InsertAccessoryInOrder(a);

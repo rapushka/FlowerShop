@@ -1,7 +1,7 @@
 ﻿
 namespace Flower_shop
 {
-    partial class Svodka_dan
+    partial class DataSummaryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Flower_shop
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Svodka_dan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataSummaryForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -349,7 +349,7 @@ namespace Flower_shop
             // 
             this.каталог_цветовTableAdapter.ClearBeforeFill = true;
             // 
-            // Svodka_dan
+            // DataSummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -365,9 +365,9 @@ namespace Flower_shop
             this.Controls.Add(this.dataGrid_Aks_v_zak);
             this.Controls.Add(this.pb_Dalee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Svodka_dan";
+            this.Name = "DataSummaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Svodka_dan";
+            this.Text = "DataSummaryForm";
             this.Load += new System.EventHandler(this.Svodka_dan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Dalee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Aks_v_zak)).EndInit();

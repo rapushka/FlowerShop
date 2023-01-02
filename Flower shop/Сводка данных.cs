@@ -10,40 +10,34 @@ using System.Windows.Forms;
 
 namespace Flower_shop
 {
-    public partial class Svodka_dan : Form
-    {
-        public Svodka_dan()
-        {
-            InitializeComponent();
-        }
+	public partial class DataSummaryForm : Form
+	{
+		private int _orderId;
 
-        private void pb_Vernyt_Click(object sender, EventArgs e)
-        {
-            // OrderFillingForm f = new OrderFillingForm();
-            // this.Hide();
-            // f.ShowDialog();
-            // this.Show();
-        }
+		public DataSummaryForm(int orderId)
+		{
+			_orderId = orderId;
 
-        private void pb_Dalee_Click(object sender, EventArgs e)
-        {
-            Заказ f = new Заказ();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
+			InitializeComponent();
+		}
 
-        private void Svodka_dan_Load(object sender, EventArgs e)
-        {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Каталог_цветов". При необходимости она может быть перемещена или удалена.
-            this.каталог_цветовTableAdapter.Fill(this.заказыDataSet.Каталог_цветов);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Каталог_аксессуаров". При необходимости она может быть перемещена или удалена.
-            this.каталог_аксессуаровTableAdapter.Fill(this.заказыDataSet.Каталог_аксессуаров);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Цветы_в_заказе". При необходимости она может быть перемещена или удалена.
-            this.цветы_в_заказеTableAdapter.Fill(this.заказыDataSet.Цветы_в_заказе);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Аксессуары_в_заказе". При необходимости она может быть перемещена или удалена.
-            this.аксессуары_в_заказеTableAdapter.Fill(this.заказыDataSet.Аксессуары_в_заказе);
+		private void pb_Dalee_Click(object sender, EventArgs e)
+		{
+			Close();
+			return;
 
-        }
-    }
+			var form = new Заказ();
+			Hide();
+			form.ShowDialog();
+			Show();
+		}
+
+		private void Svodka_dan_Load(object sender, EventArgs e)
+		{
+			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
+			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
+			цветы_в_заказеTableAdapter.Fill(заказыDataSet.Цветы_в_заказе);
+			аксессуары_в_заказеTableAdapter.Fill(заказыDataSet.Аксессуары_в_заказе);
+		}
+	}
 }

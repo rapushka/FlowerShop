@@ -50,7 +50,7 @@ namespace Flower_shop
             this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.каталогаксессуаровBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.заказыDataSet = new Flower_shop.ЗаказыDataSet();
-            this.dataGrid_Aks_v_zak = new System.Windows.Forms.DataGridView();
+            this.AccessoriesInOrderDataGrid = new System.Windows.Forms.DataGridView();
             this.iDаксессуароввзаказеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.количествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -87,7 +87,7 @@ namespace Flower_shop
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Kat_Aks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Aks_v_zak)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccessoriesInOrderDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.аксессуарывзаказеBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Cvety_v_zak)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогцветовBindingSource)).BeginInit();
@@ -179,11 +179,11 @@ namespace Flower_shop
             this.заказыDataSet.Namespace = "http://tempuri.org/ЗаказыDataSet.xsd";
             this.заказыDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGrid_Aks_v_zak
+            // AccessoriesInOrderDataGrid
             // 
-            this.dataGrid_Aks_v_zak.AutoGenerateColumns = false;
-            this.dataGrid_Aks_v_zak.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGrid_Aks_v_zak.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.AccessoriesInOrderDataGrid.AutoGenerateColumns = false;
+            this.AccessoriesInOrderDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AccessoriesInOrderDataGrid.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -191,10 +191,10 @@ namespace Flower_shop
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_Aks_v_zak.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGrid_Aks_v_zak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Aks_v_zak.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.iDаксессуароввзаказеDataGridViewTextBoxColumn, this.количествоDataGridViewTextBoxColumn, this.Column1, this.iDзаказаDataGridViewTextBoxColumn, this.iDаксессуараDataGridViewTextBoxColumn1 });
-            this.dataGrid_Aks_v_zak.DataSource = this.аксессуарывзаказеBindingSource;
+            this.AccessoriesInOrderDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.AccessoriesInOrderDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AccessoriesInOrderDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.iDаксессуароввзаказеDataGridViewTextBoxColumn, this.количествоDataGridViewTextBoxColumn, this.Column1, this.iDзаказаDataGridViewTextBoxColumn, this.iDаксессуараDataGridViewTextBoxColumn1 });
+            this.AccessoriesInOrderDataGrid.DataSource = this.аксессуарывзаказеBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -202,10 +202,10 @@ namespace Flower_shop
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid_Aks_v_zak.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGrid_Aks_v_zak.Location = new System.Drawing.Point(413, 95);
-            this.dataGrid_Aks_v_zak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGrid_Aks_v_zak.Name = "dataGrid_Aks_v_zak";
+            this.AccessoriesInOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.AccessoriesInOrderDataGrid.Location = new System.Drawing.Point(413, 95);
+            this.AccessoriesInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AccessoriesInOrderDataGrid.Name = "AccessoriesInOrderDataGrid";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -213,11 +213,11 @@ namespace Flower_shop
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkSalmon;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_Aks_v_zak.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGrid_Aks_v_zak.RowHeadersVisible = false;
-            this.dataGrid_Aks_v_zak.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid_Aks_v_zak.Size = new System.Drawing.Size(322, 159);
-            this.dataGrid_Aks_v_zak.TabIndex = 1;
+            this.AccessoriesInOrderDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.AccessoriesInOrderDataGrid.RowHeadersVisible = false;
+            this.AccessoriesInOrderDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.AccessoriesInOrderDataGrid.Size = new System.Drawing.Size(322, 159);
+            this.AccessoriesInOrderDataGrid.TabIndex = 1;
             // 
             // iDаксессуароввзаказеDataGridViewTextBoxColumn
             // 
@@ -542,7 +542,7 @@ namespace Flower_shop
             this.Controls.Add(this.pb_Dalee);
             this.Controls.Add(this.dataGrid_Kat_Cvetov);
             this.Controls.Add(this.dataGrid_Cvety_v_zak);
-            this.Controls.Add(this.dataGrid_Aks_v_zak);
+            this.Controls.Add(this.AccessoriesInOrderDataGrid);
             this.Controls.Add(this.dataGrid_Kat_Aks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -553,7 +553,7 @@ namespace Flower_shop
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Kat_Aks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Aks_v_zak)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccessoriesInOrderDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.аксессуарывзаказеBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Cvety_v_zak)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогцветовBindingSource)).EndInit();
@@ -572,7 +572,7 @@ namespace Flower_shop
         #endregion
 
         private System.Windows.Forms.DataGridView dataGrid_Kat_Aks;
-        private System.Windows.Forms.DataGridView dataGrid_Aks_v_zak;
+        private System.Windows.Forms.DataGridView AccessoriesInOrderDataGrid;
         private System.Windows.Forms.DataGridView dataGrid_Cvety_v_zak;
         private System.Windows.Forms.DataGridView dataGrid_Kat_Cvetov;
         private System.Windows.Forms.PictureBox pb_Dalee;
