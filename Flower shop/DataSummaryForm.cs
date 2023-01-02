@@ -27,10 +27,7 @@ namespace Flower_shop
 
 		private void DataSummaryForm_Load(object sender, EventArgs e)
 		{
-			// TODO: This line of code loads data into the 'заказыDataSet.Заказ' table. You can move, or remove it, as needed.
-			this.заказTableAdapter.Fill(this.заказыDataSet.Заказ);
-			// TODO: This line of code loads data into the 'заказыDataSet.Заказ' table. You can move, or remove it, as needed.
-			this.заказTableAdapter.Fill(this.заказыDataSet.Заказ);
+			заказTableAdapter.Fill(заказыDataSet.Заказ);
 			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 			цветы_в_заказеTableAdapter.Fill(заказыDataSet.Цветы_в_заказе);
