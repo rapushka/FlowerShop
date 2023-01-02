@@ -88,7 +88,7 @@ namespace Flower_shop
             this.pb_Dalee.Size = new System.Drawing.Size(94, 28);
             this.pb_Dalee.TabIndex = 7;
             this.pb_Dalee.TabStop = false;
-            this.pb_Dalee.Click += new System.EventHandler(this.pb_Dalee_Click);
+            this.pb_Dalee.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // dataGrid_Aks_v_zak
             // 
@@ -368,7 +368,7 @@ namespace Flower_shop
             this.Name = "DataSummaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DataSummaryForm";
-            this.Load += new System.EventHandler(this.Svodka_dan_Load);
+            this.Load += new System.EventHandler(this.DataSummaryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Dalee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Aks_v_zak)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).EndInit();

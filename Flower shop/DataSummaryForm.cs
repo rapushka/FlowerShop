@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Flower_shop
@@ -21,18 +14,12 @@ namespace Flower_shop
 			InitializeComponent();
 		}
 
-		private void pb_Dalee_Click(object sender, EventArgs e)
+		private void NextButton_Click(object sender, EventArgs e)
 		{
 			Close();
-			return;
-
-			var form = new Заказ();
-			Hide();
-			form.ShowDialog();
-			Show();
 		}
 
-		private void Svodka_dan_Load(object sender, EventArgs e)
+		private void DataSummaryForm_Load(object sender, EventArgs e)
 		{
 			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);

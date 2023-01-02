@@ -130,11 +130,11 @@
     <Compile Include="OrderFillingForm.Designer.cs">
       <DependentUpon>OrderFillingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Сводка данных.cs">
+    <Compile Include="DataSummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Сводка данных.Designer.cs">
-      <DependentUpon>Сводка данных.cs</DependentUpon>
+    <Compile Include="DataSummaryForm.Designer.cs">
+      <DependentUpon>DataSummaryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Заказ.cs">
       <SubType>Form</SubType>
@@ -192,8 +192,8 @@
     <EmbeddedResource Include="OrderFillingForm.resx">
       <DependentUpon>OrderFillingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Сводка данных.resx">
-      <DependentUpon>Сводка данных.cs</DependentUpon>
+    <EmbeddedResource Include="DataSummaryForm.resx">
+      <DependentUpon>DataSummaryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Заказ.resx">
       <DependentUpon>Заказ.cs</DependentUpon>
