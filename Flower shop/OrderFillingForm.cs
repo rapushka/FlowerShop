@@ -41,16 +41,28 @@ namespace Flower_shop
 			FlowersInOrderDataGrid.DataSource = _flowersInOrder;
 		}
 
-		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
-
 		private void AddAccessoryButton_Click(object sender, EventArgs e)
 		{
 			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			accessory.Количество = 1;
-			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров[AccessoriesDataGrid.IndexOfSelectedRow()];
+			accessory.Каталог_аксессуаровRow
+				= заказыDataSet.Каталог_аксессуаров[AccessoriesDataGrid.IndexOfSelectedRow()];
 
 			_accessoriesInOrder.Add(accessory);
 		}
+
+		private void AddFlowerButton_Click(object sender, EventArgs e)
+		{
+			var flower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
+			flower.Количество = 1;
+			flower.Каталог_цветовRow = заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
+
+			_flowersInOrder.Add(flower);
+		}
+
+		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
+
+		private void RemoveFlowerButton_Click(object sender, EventArgs e) { }
 
 		private void SaveToDataBase()
 		{
