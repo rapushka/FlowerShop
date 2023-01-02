@@ -1,7 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
 
@@ -49,9 +47,7 @@ namespace Flower_shop
 
 		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
 
-		private void AddAccessoryButton_Click(object sender, EventArgs e) => AddAccessory();
-
-		private void AddAccessory()
+		private void AddAccessoryButton_Click(object sender, EventArgs e)
 		{
 			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			accessory.Количество = 1;
