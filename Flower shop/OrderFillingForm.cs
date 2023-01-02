@@ -64,6 +64,7 @@ namespace Flower_shop
 			else
 			{
 				flowerInOrder.Количество++;
+				_flowersInOrder.ResetBindings();
 			}
 		}
 
