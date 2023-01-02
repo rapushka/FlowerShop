@@ -37,14 +37,6 @@ namespace Flower_shop
 			AccessoriesInOrderDataGrid.DataSource = _accessoriesInOrder;
 		}
 
-		private void InsertAccessoryInOrder(AccessoriesInOrderRow accessory)
-			=> аксессуары_в_заказеTableAdapter.Insert
-			(
-				accessory.Количество,
-				_orderId,
-				accessory.Каталог_аксессуаровRow.ID_аксессуара
-			);
-
 		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
 
 		private void AddAccessoryButton_Click(object sender, EventArgs e)
@@ -63,5 +55,13 @@ namespace Flower_shop
 				InsertAccessoryInOrder(accessory);
 			}
 		}
+
+		private void InsertAccessoryInOrder(AccessoriesInOrderRow accessory)
+			=> аксессуары_в_заказеTableAdapter.Insert
+			(
+				accessory.Количество,
+				_orderId,
+				accessory.Каталог_аксессуаровRow.ID_аксессуара
+			);
 	}
 }

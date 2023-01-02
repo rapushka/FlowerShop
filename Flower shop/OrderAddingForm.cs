@@ -8,17 +8,9 @@ namespace Flower_shop
 	{
 		public OrderAddingForm() => InitializeComponent();
 
-		private void Add_Zakaz_Load(object sender, EventArgs e) => заказTableAdapter.Fill(заказыDataSet.Заказ);
+		private void OrderAddingForm_Load(object sender, EventArgs e) => заказTableAdapter.Fill(заказыDataSet.Заказ);
 
-		private void pb_Vernyt_Click(object sender, EventArgs e)
-		{
-			var f = new Заказ();
-			Close();
-			f.ShowDialog();
-			Show();
-		}
-
-		private void pictureBox1_Click(object sender, EventArgs e)
+		private void NextButton_Click(object sender, EventArgs e)
 		{
 			заказTableAdapter.InsertQuery
 			(
@@ -28,17 +20,11 @@ namespace Flower_shop
 				Дата_время_выполнения: receiptDateTimePicker.Value,
 				Адрес_доставки: customerAddressTextBox.Text
 			);
-			var lastOrder = заказTableAdapter.GetData().Last();
-			var form = new OrderFillingForm(lastOrder.ID_заказа);
+			var newOrder = заказTableAdapter.GetData().Last();
+
+			var form = new OrderFillingForm(newOrder.ID_заказа);
 			Close();
 			form.ShowDialog();
-		}
-
-		private void заказBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-		{
-			Validate();
-			заказBindingSource.EndEdit();
-			tableAdapterManager.UpdateAll(заказыDataSet);
 		}
 	}
 }
