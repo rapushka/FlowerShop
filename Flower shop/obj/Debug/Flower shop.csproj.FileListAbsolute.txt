@@ -24,3 +24,30 @@ C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Из�
 C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_аксессуара.resources
 C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_цветов.resources
 C:\Users\Lenovo\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_заказа.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\bin\Debug\Заказы.accdb
+C:\Users\nikol\source\repos\Flower shop\Flower shop\bin\Debug\Flower shop.exe.config
+C:\Users\nikol\source\repos\Flower shop\Flower shop\bin\Debug\Flower shop.exe
+C:\Users\nikol\source\repos\Flower shop\Flower shop\bin\Debug\Flower shop.pdb
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.AssemblyReference.cache
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.SuggestedBindingRedirects.cache
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавл_аксессуар.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Add_Zakaz.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_вида.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_страны.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_цветов.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_аксессуара.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_вида.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_заказа.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_страны.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_цветов.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Katalog_Cvetov.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.OrderFillingForm.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Svodka_dan.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Заказ.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Properties.Resources.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Каталог_аксессуаров.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Справочник.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.GenerateResource.cache
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.CoreCompileInputs.cache
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.exe
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.pdb
