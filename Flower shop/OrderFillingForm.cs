@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
+using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
 
 namespace Flower_shop
 {
 	public partial class OrderFillingForm : Form
 	{
 		private readonly int _orderId;
+		private readonly BindingList<AccessoriesInOrderRow> _accessoriesInOrder;
 
 		public OrderFillingForm(int orderId)
 		{
 			_orderId = orderId;
+			_accessoriesInOrder = new BindingList<AccessoriesInOrderRow>();
 
 			InitializeComponent();
 		}
@@ -41,6 +44,8 @@ namespace Flower_shop
 			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
+			dataGrid_Aks_v_zak.DataSource = _accessoriesInOrder;
+			
 			AddAccessory();
 		}
 
@@ -50,16 +55,15 @@ namespace Flower_shop
 			accessory.Количество = 13;
 			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров.Last();
 
-			var list = new List<ЗаказыDataSet.Аксессуары_в_заказеRow>();
-
-			var bindingList = new BindingList<ЗаказыDataSet.Аксессуары_в_заказеRow>(list);
-			var source = new BindingSource(bindingList, dataMember: null);
-			dataGrid_Aks_v_zak.DataSource = source;
-
-			bindingList.Add(accessory);
+			_accessoriesInOrder.Add(accessory);
+			
+			foreach (var a in _accessoriesInOrder)
+			{
+				InsertAccessoryInOrder(a);
+			}
 		}
 
-		private void InsertAccessoryInOrder(ЗаказыDataSet.Аксессуары_в_заказеRow accessory)
+		private void InsertAccessoryInOrder(AccessoriesInOrderRow accessory)
 			=> аксессуары_в_заказеTableAdapter.Insert
 			(
 				accessory.Количество,
