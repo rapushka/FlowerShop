@@ -51,16 +51,14 @@ namespace Flower_shop
 		private void AddFlowerButton_DoubleClick(object sender, EventArgs e) => AddFlower();
 
 		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
-
-		private void RemoveAccessoryButton_DoubleClick(object sender, EventArgs e) { }
+		private void RemoveAccessoryButton_DoubleClick(object sender, EventArgs e) => RemoveAccessory();
 
 		private void RemoveFlowerButton_Click(object sender, EventArgs e) => RemoveFlower();
-
 		private void RemoveFlowerButton_DoubleClick(object sender, EventArgs e) => RemoveFlower();
 
 		private void AddAccessory()
 		{
-			var accessoryInOrder = _accessoriesInOrder.SingleOrDefault(IsSameAccessory);
+			var accessoryInOrder = _accessoriesInOrder.SingleOrDefault(IsSame);
 
 			if (accessoryInOrder is null)
 			{
@@ -75,7 +73,7 @@ namespace Flower_shop
 
 		private void AddFlower()
 		{
-			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSameFlower);
+			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSame);
 
 			if (flowerInOrder is null)
 			{
@@ -88,9 +86,28 @@ namespace Flower_shop
 			}
 		}
 
+		private void RemoveAccessory()
+		{
+			var accessoryInOrder = _accessoriesInOrder.SingleOrDefault(IsSame);
+
+			if (accessoryInOrder is null)
+			{
+				return;
+			}
+
+			accessoryInOrder.Количество--;
+
+			if (accessoryInOrder.Количество <= 0)
+			{
+				_accessoriesInOrder.Remove(accessoryInOrder);
+			}
+
+			_accessoriesInOrder.ResetBindings();
+		}
+
 		private void RemoveFlower()
 		{
-			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSameFlower);
+			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSame);
 
 			if (flowerInOrder is null)
 			{
@@ -107,10 +124,10 @@ namespace Flower_shop
 			_flowersInOrder.ResetBindings();
 		}
 
-		private bool IsSameAccessory(AccessoriesInOrderRow accessoryInOrder)
+		private bool IsSame(AccessoriesInOrderRow accessoryInOrder)
 			=> accessoryInOrder.Каталог_аксессуаровRow.ID_аксессуара == SelectedAccessoryFromCatalog().ID_аксессуара;
 
-		private bool IsSameFlower(FlowersInOrderRow flowerInOrder)
+		private bool IsSame(FlowersInOrderRow flowerInOrder)
 			=> flowerInOrder.Каталог_цветовRow.ID_цветов == SelectedFlowerFromCatalog().ID_цветов;
 
 		private void AddNewAccessory(AccessoriesRow accessoryFromCatalog)
