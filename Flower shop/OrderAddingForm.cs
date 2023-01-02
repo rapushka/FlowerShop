@@ -17,7 +17,7 @@ namespace Flower_shop
 				Дата_приема: receiptDateTimePicker.Value,
 				Имя_заказчика: cutomerNameTextBox.Text,
 				Телефон_заказчика: customerPhoneTextBox.Text,
-				Дата_время_выполнения: receiptDateTimePicker.Value,
+				Дата_время_выполнения: completionDateTimePicker.Value,
 				Адрес_доставки: customerAddressTextBox.Text
 			);
 			var newOrder = заказTableAdapter.GetData().Last();
