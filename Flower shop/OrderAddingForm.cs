@@ -30,9 +30,8 @@ namespace Flower_shop
 			);
 			var lastOrder = заказTableAdapter.GetData().Last();
 			var form = new OrderFillingForm(lastOrder.ID_заказа);
-			Hide();
+			Close();
 			form.ShowDialog();
-			Show();
 		}
 
 		private void заказBindingNavigatorSaveItem_Click(object sender, EventArgs e)

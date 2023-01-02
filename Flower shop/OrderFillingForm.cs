@@ -22,9 +22,8 @@ namespace Flower_shop
 		private void NextButton_Click(object sender, EventArgs e)
 		{
 			var form = new DataSummaryForm(_orderId);
-			Hide();
+			Close();
 			form.ShowDialog();
-			Show();
 		}
 
 		private void OrderFillingForm_Load(object sender, EventArgs e)

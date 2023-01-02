@@ -40,7 +40,6 @@ C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изм
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изменение_цветов.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Katalog_Cvetov.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.OrderFillingForm.resources
-C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Svodka_dan.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Заказ.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Properties.Resources.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Каталог_аксессуаров.resources
@@ -51,3 +50,4 @@ C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.exe
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.pdb
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.OrderAddingForm.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\bin\Debug\Заказы.accdb
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.DataSummaryForm.resources
