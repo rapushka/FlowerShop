@@ -112,7 +112,24 @@ namespace Flower_shop
 
 		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
 
-		private void RemoveFlowerButton_Click(object sender, EventArgs e) { }
+		private void RemoveFlowerButton_Click(object sender, EventArgs e)
+		{
+			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSameFlower);
+
+			if (flowerInOrder is null)
+			{
+				return;
+			}
+
+			flowerInOrder.Количество--;
+
+			if (flowerInOrder.Количество <= 0)
+			{
+				_flowersInOrder.Remove(flowerInOrder);
+			}
+			
+			_flowersInOrder.ResetBindings();
+		}
 
 		private void SaveToDataBase()
 		{
