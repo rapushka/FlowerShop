@@ -17,7 +17,7 @@ namespace Flower_shop
 			InitializeComponent();
 		}
 
-		private void pb_Dalee_Click(object sender, EventArgs e)
+		private void NextButton_Click(object sender, EventArgs e)
 		{
 			var f = new Svodka_dan();
 			Hide();
@@ -25,7 +25,7 @@ namespace Flower_shop
 			Show();
 		}
 
-		private void pb_Vernyt_Click(object sender, EventArgs e)
+		private void ReturnButton_Click(object sender, EventArgs e)
 		{
 			var f = new OrderAddingForm();
 			Hide();
@@ -33,7 +33,7 @@ namespace Flower_shop
 			Show();
 		}
 
-		private void Napoln_Zakaz_Load(object sender, EventArgs e)
+		private void OrderFillingForm_Load(object sender, EventArgs e)
 		{
 			вид_цветовTableAdapter.Fill(заказыDataSet.Вид_цветов);
 			цветы_в_заказеTableAdapter.Fill(заказыDataSet.Цветы_в_заказе);
@@ -67,8 +67,8 @@ namespace Flower_shop
 				accessory.Каталог_аксессуаровRow.ID_аксессуара
 			);
 
-		private void pb_Udal_Aks_Click(object sender, EventArgs e) { }
+		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
 
-		private void pb_Dob_Kat_Aks_Click(object sender, EventArgs e) { }
+		private void AddAccessoryButton_Click(object sender, EventArgs e) { }
 	}
 }

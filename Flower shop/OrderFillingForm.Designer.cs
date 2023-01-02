@@ -448,7 +448,7 @@ namespace Flower_shop
             this.pb_Dalee.Size = new System.Drawing.Size(125, 34);
             this.pb_Dalee.TabIndex = 5;
             this.pb_Dalee.TabStop = false;
-            this.pb_Dalee.Click += new System.EventHandler(this.pb_Dalee_Click);
+            this.pb_Dalee.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // pb_Dob_Kat_Aks
             // 
@@ -462,7 +462,7 @@ namespace Flower_shop
             this.pb_Dob_Kat_Aks.Size = new System.Drawing.Size(104, 25);
             this.pb_Dob_Kat_Aks.TabIndex = 6;
             this.pb_Dob_Kat_Aks.TabStop = false;
-            this.pb_Dob_Kat_Aks.Click += new System.EventHandler(this.pb_Dob_Kat_Aks_Click);
+            this.pb_Dob_Kat_Aks.Click += new System.EventHandler(this.AddAccessoryButton_Click);
             // 
             // pb_Dob_Kat_Cvetov
             // 
@@ -489,7 +489,7 @@ namespace Flower_shop
             this.pb_Udal_Aks.Size = new System.Drawing.Size(89, 25);
             this.pb_Udal_Aks.TabIndex = 8;
             this.pb_Udal_Aks.TabStop = false;
-            this.pb_Udal_Aks.Click += new System.EventHandler(this.pb_Udal_Aks_Click);
+            this.pb_Udal_Aks.Click += new System.EventHandler(this.RemoveAccessoryButton_Click);
             // 
             // pb_Cvety
             // 
@@ -549,7 +549,7 @@ namespace Flower_shop
             this.Name = "OrderFillingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "OrderFillingForm";
-            this.Load += new System.EventHandler(this.Napoln_Zakaz_Load);
+            this.Load += new System.EventHandler(this.OrderFillingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Kat_Aks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).EndInit();
