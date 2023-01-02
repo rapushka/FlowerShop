@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
+using FlowersInOrderRow = Flower_shop.ЗаказыDataSet.Цветы_в_заказеRow;
 
 namespace Flower_shop
 {
@@ -9,11 +10,13 @@ namespace Flower_shop
 	{
 		private readonly int _orderId;
 		private readonly BindingList<AccessoriesInOrderRow> _accessoriesInOrder;
+		private readonly BindingList<FlowersInOrderRow> _flowersInOrder;
 
 		public OrderFillingForm(int orderId)
 		{
 			_orderId = orderId;
 			_accessoriesInOrder = new BindingList<AccessoriesInOrderRow>();
+			_flowersInOrder = new BindingList<FlowersInOrderRow>();
 
 			InitializeComponent();
 		}
@@ -35,6 +38,7 @@ namespace Flower_shop
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
 			AccessoriesInOrderDataGrid.DataSource = _accessoriesInOrder;
+			FlowersInOrderDataGrid.DataSource = _flowersInOrder;
 		}
 
 		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
@@ -43,7 +47,7 @@ namespace Flower_shop
 		{
 			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			accessory.Количество = 1;
-			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров[dataGrid_Kat_Aks.IndexOfSelectedRow()];
+			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров[AccessoriesDataGrid.IndexOfSelectedRow()];
 
 			_accessoriesInOrder.Add(accessory);
 		}

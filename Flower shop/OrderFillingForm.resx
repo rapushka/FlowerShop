@@ -118,34 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="каталогаксессуаровBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 55</value>
+    <value>503, 60</value>
+  </metadata>
+  <metadata name="заказыDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="аксессуарывзаказеBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>512, 55</value>
+    <value>17, 103</value>
   </metadata>
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="каталогцветовBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>282, 55</value>
+    <value>798, 60</value>
   </metadata>
   <metadata name="цветывзаказеBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>773, 55</value>
+    <value>306, 103</value>
   </metadata>
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="видцветовBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 93</value>
+    <value>860, 103</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pb_Dalee.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFIAAAAVCAYAAADVcblPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAqlJREFUWEftV9GR0zAQTQl0ACWIDyBnflJCOoBPJr4b0gF0wHVw1wElXAkpgRJS
+        EAAACxABrSO9dQAAAqlJREFUWEftV9GR0zAQTQl0ACWIDyBnflJCOoBPJr4b0gF0wHVw1wElXAkpgRJS
         wvHe3lsjrS3HQxz4iN/Mjq3VarX7tJLl1YIFCxYsmIbdu5Rub9JTVd6nrUyvEvtNeqXXcdyu0waEHe/W
         6XMU6nd4yvTq8GWd3rQ36ReLTao6jDQYq1mgXcPJFRNJkMRJZKryDmoWqBHJKm4/pD2e39nPlVNXAfjd
         5hXuMmRvOwP+TDBO6h641XxuPmtzz4lJZDIxBP6kZoFIJJOgLeQIuVfSP2uT0JZ9GuNSHBckwvtIjJEk
@@ -159,10 +162,10 @@
         fU7x6/NTpPo/YADnELlA4Ipy66g5CpKOLXTxv4YFV4vV6jdkBBC8HWw3WQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pb_Dob_Kat_Aks.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AddAccessoryButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEUAAAAPCAYAAACyTgIjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAn5JREFUWEftleFtGzEMhT1CN2hHUH+0Pbt/MkI2aH8GsQ1kg3aDeoN0g+sG7gYe
+        EAAACxABrSO9dQAAAn5JREFUWEftleFtGzEMhT1CN2hHUH+0Pbt/MkI2aH8GsQ1kg3aDeoN0g+sG7gYe
         wSPcCOn7eOSBVmTAjoEURvsAwZJIkY/PlG72mni4KW98ej1YL8pja6y6cuMuZwMh1l35upqX7XJe9lcn
         jIg/IcDBmJf+XkW5y8mg+NWifEMIxdhcIuxfBaL4dMKyKz9fIooE2SGGL68XKmLw6YSWKPcfSpHvFn8r
         Xh3hJgPXhWvH3HzVJXddeWdGR3SSYuy8m7b4uhkut9jYj0HMuH7eyd/NOcHOfNRZ2YnbGmEPjkcB6bUO
@@ -176,10 +179,10 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pb_Dob_Kat_Cvetov.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AddFlowerButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEUAAAAPCAYAAACyTgIjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAn5JREFUWEftleFtGzEMhT1CN2hHUH+0Pbt/MkI2aH8GsQ1kg3aDeoN0g+sG7gYe
+        EAAACxABrSO9dQAAAn5JREFUWEftleFtGzEMhT1CN2hHUH+0Pbt/MkI2aH8GsQ1kg3aDeoN0g+sG7gYe
         wSPcCOn7eOSBVmTAjoEURvsAwZJIkY/PlG72mni4KW98ej1YL8pja6y6cuMuZwMh1l35upqX7XJe9lcn
         jIg/IcDBmJf+XkW5y8mg+NWifEMIxdhcIuxfBaL4dMKyKz9fIooE2SGGL68XKmLw6YSWKPcfSpHvFn8r
         Xh3hJgPXhWvH3HzVJXddeWdGR3SSYuy8m7b4uhkut9jYj0HMuH7eyd/NOcHOfNRZ2YnbGmEPjkcB6bUO
@@ -193,10 +196,10 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pb_Udal_Aks.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RemoveAccesoryButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADsAAAANCAYAAAAXBhYDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAhtJREFUSEvdld9RwzAMxjMCG8AI5gFI8tQROgKPXJse3aBsQDeADcoGjNAROkJG
+        EAAACxABrSO9dQAAAhtJREFUSEvdld9RwzAMxjMCG8AI5gFI8tQROgKPXJse3aBsQDeADcoGjNAROkJG
         AP0Uyec4SWmPF8p357Nl/Yk+2XKKxV0ITRk2xQSaKsyXVVibePkQMgchPDOxB9Xdh7mJlw+Iygl+mhjB
         PmRN/D+A7KIMjyYq8r2nMtxAPh+mLtazcNXUYcOe+Lay3tMGplZgk/szTF2sqvBKa5moQHab5iFsc1+G
         H5bMux9vop1uSzLITkyVhkUt/S1B0THM58vUxUoKI3svaQxiMquBgLUQOngMs4kxiE9cEz0GRVMbYrvf
@@ -208,10 +211,10 @@
         lwcqZMsBjun+DoriG+gSZAD/p55UAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pb_Cvety.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RemoveFlowerButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADsAAAANCAYAAAAXBhYDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAhtJREFUSEvdld9RwzAMxjMCG8AI5gFI8tQROgKPXJse3aBsQDeADcoGjNAROkJG
+        EAAACxABrSO9dQAAAhtJREFUSEvdld9RwzAMxjMCG8AI5gFI8tQROgKPXJse3aBsQDeADcoGjNAROkJG
         AP0Uyec4SWmPF8p357Nl/Yk+2XKKxV0ITRk2xQSaKsyXVVibePkQMgchPDOxB9Xdh7mJlw+Iygl+mhjB
         PmRN/D+A7KIMjyYq8r2nMtxAPh+mLtazcNXUYcOe+Lay3tMGplZgk/szTF2sqvBKa5moQHab5iFsc1+G
         H5bMux9vop1uSzLITkyVhkUt/S1B0THM58vUxUoKI3svaQxiMquBgLUQOngMs4kxiE9cEz0GRVMbYrvf
@@ -223,8 +226,23 @@
         lwcqZMsBjun+DoriG+gSZAD/p55UAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="каталог_аксессуаровTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>175, 17</value>
+  </metadata>
+  <metadata name="каталог_цветовTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>469, 17</value>
+  </metadata>
+  <metadata name="аксессуары_в_заказеTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>725, 17</value>
+  </metadata>
+  <metadata name="цветы_в_заказеTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 60</value>
+  </metadata>
   <metadata name="каталогаксессуаровBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1000, 55</value>
+    <value>557, 103</value>
+  </metadata>
+  <metadata name="вид_цветовTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>274, 60</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>98</value>
@@ -232,7 +250,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAwEAAAIdCAYAAABlfHFBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAA/7JJREFUeF7s/eefHFd2pov2n3Q/3PM7kubMHLnWzEgtjfxIaql7pJHUMj3t2d30
+        EAAACxABrSO9dQAA/7JJREFUeF7s/eefHFd2pov2n3Q/3PM7kubMHLnWzEgtjfxIaql7pJHUMj3t2d30
         niBIkARoQMJ777333oOgA+hJeBSA8iZN1b7vu/ZaO1bsjKwqgCC7pasPzy99ZERkZOb7xFo74msjNy+G
         kRufhZHrn4Zw7eMwcvXDMHL5gxAuXwjh0vkQLr4XRj5/J4x89nYY+fQtcC6MfPKmcjaEj8+GkY/PhJGP
         yOmCD0/JZRgvH4+XMxVUPW80TkU+quJkwYfkRAXHQ/jAc8xxNIT3jSORC+RwxqEQznsOZhwI4b3xkL/O
