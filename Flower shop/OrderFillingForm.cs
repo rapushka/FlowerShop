@@ -33,7 +33,7 @@ namespace Flower_shop
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
-			var form = new DataSummaryForm(_orderId, Sum());
+			var form = new DataSummaryForm(Sum());
 			SaveToDataBase();
 			Close();
 			form.ShowDialog();

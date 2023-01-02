@@ -7,23 +7,18 @@ namespace Flower_shop
 {
 	public partial class DataSummaryForm : Form
 	{
-		private readonly int _orderId;
 		private readonly decimal _sum;
-		
+
 		private OrderRow _currentOrder;
 
-		public DataSummaryForm(int orderId, decimal sum)
+		public DataSummaryForm(decimal sum)
 		{
-			_orderId = orderId;
 			_sum = sum;
 
 			InitializeComponent();
 		}
 
-		private void NextButton_Click(object sender, EventArgs e)
-		{
-			Close();
-		}
+		private void NextButton_Click(object sender, EventArgs e) => Close();
 
 		private void DataSummaryForm_Load(object sender, EventArgs e)
 		{
@@ -41,7 +36,7 @@ namespace Flower_shop
 			_currentOrder = заказTableAdapter.GetData().Last();
 			_currentOrder.Стоимость = _sum;
 
-			MessageBox.Show(_currentOrder.Имя_заказчика);
+			заказTableAdapter.Update(_currentOrder);
 		}
 	}
 }
