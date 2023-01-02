@@ -53,7 +53,11 @@ namespace Flower_shop
 			_accessoriesInOrder.Add(accessory);
 		}
 
-		private void AddFlowerButton_Click(object sender, EventArgs e)
+		private void AddFlowerButton_Click(object sender, EventArgs e) => AddFlower();
+
+		private void AddFlowerButton_DoubleClick(object sender, EventArgs e) => AddFlower();
+
+		private void AddFlower()
 		{
 			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSameFlower);
 
