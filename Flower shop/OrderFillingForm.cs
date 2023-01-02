@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
+using FlowersInOrderRow = Flower_shop.ЗаказыDataSet.Цветы_в_заказеRow;
 
 namespace Flower_shop
 {
@@ -9,11 +10,13 @@ namespace Flower_shop
 	{
 		private readonly int _orderId;
 		private readonly BindingList<AccessoriesInOrderRow> _accessoriesInOrder;
+		private readonly BindingList<FlowersInOrderRow> _flowersInOrder;
 
 		public OrderFillingForm(int orderId)
 		{
 			_orderId = orderId;
 			_accessoriesInOrder = new BindingList<AccessoriesInOrderRow>();
+			_flowersInOrder = new BindingList<FlowersInOrderRow>();
 
 			InitializeComponent();
 		}
@@ -35,33 +38,52 @@ namespace Flower_shop
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
 			AccessoriesInOrderDataGrid.DataSource = _accessoriesInOrder;
+			FlowersInOrderDataGrid.DataSource = _flowersInOrder;
 		}
-
-		private void InsertAccessoryInOrder(AccessoriesInOrderRow accessory)
-			=> аксессуары_в_заказеTableAdapter.Insert
-			(
-				accessory.Количество,
-				_orderId,
-				accessory.Каталог_аксессуаровRow.ID_аксессуара
-			);
-
-		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
 
 		private void AddAccessoryButton_Click(object sender, EventArgs e)
 		{
 			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			accessory.Количество = 1;
-			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров[dataGrid_Kat_Aks.IndexOfSelectedRow()];
+			accessory.Каталог_аксессуаровRow
+				= заказыDataSet.Каталог_аксессуаров[AccessoriesDataGrid.IndexOfSelectedRow()];
 
 			_accessoriesInOrder.Add(accessory);
 		}
 
+		private void AddFlowerButton_Click(object sender, EventArgs e)
+		{
+			var flower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
+			flower.Количество = 1;
+			flower.Каталог_цветовRow = заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
+
+			_flowersInOrder.Add(flower);
+		}
+
+		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
+
+		private void RemoveFlowerButton_Click(object sender, EventArgs e) { }
+
 		private void SaveToDataBase()
 		{
-			foreach (var accessory in _accessoriesInOrder)
-			{
-				InsertAccessoryInOrder(accessory);
-			}
+			_accessoriesInOrder.ForEach(InsertAccessory);
+			_flowersInOrder.ForEach(InsertFlower);
 		}
+
+		private void InsertAccessory(AccessoriesInOrderRow accessory)
+			=> аксессуары_в_заказеTableAdapter.Insert
+			(
+				Количество: accessory.Количество,
+				ID_заказа: _orderId,
+				ID_аксессуара: accessory.Каталог_аксессуаровRow.ID_аксессуара
+			);
+
+		private void InsertFlower(FlowersInOrderRow flower)
+			=> цветы_в_заказеTableAdapter.Insert
+			(
+				Количество: flower.Количество,
+				ID_заказа: _orderId,
+				ID_цветов: flower.Каталог_цветовRow.ID_цветов
+			);
 	}
 }
