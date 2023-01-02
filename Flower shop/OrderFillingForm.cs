@@ -219,11 +219,10 @@ namespace Flower_shop
 				ID_цветов: flower.Каталог_цветовRow.ID_цветов
 			);
 
-		private void UpdateLabelValue()
-		{
-			TotalAmountLabel.Text = (_accessoriesInOrder.Sum((a) => a.Количество * a.Каталог_аксессуаровRow.Цена)
-			                         + _flowersInOrder.Sum((a) => a.Количество * a.Каталог_цветовRow.Цена))
-				.ToString(CultureInfo.InvariantCulture);
-		}
+		private void UpdateLabelValue() => TotalAmountLabel.Text = Sum().ToString(CultureInfo.InvariantCulture);
+
+		private decimal Sum()
+			=> _accessoriesInOrder.Sum((a) => a.Количество * a.Каталог_аксессуаровRow.Цена)
+			   + _flowersInOrder.Sum((a) => a.Количество * a.Каталог_цветовRow.Цена);
 	}
 }
