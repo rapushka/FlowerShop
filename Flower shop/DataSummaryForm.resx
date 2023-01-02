@@ -121,7 +121,7 @@
   <data name="pb_Dalee.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFIAAAAVCAYAAADVcblPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAqlJREFUWEftV9GR0zAQTQl0ACWIDyBnflJCOoBPJr4b0gF0wHVw1wElXAkpgRJS
+        EQAACxEBf2RfkQAAAqlJREFUWEftV9GR0zAQTQl0ACWIDyBnflJCOoBPJr4b0gF0wHVw1wElXAkpgRJS
         wvHe3lsjrS3HQxz4iN/Mjq3VarX7tJLl1YIFCxYsmIbdu5Rub9JTVd6nrUyvEvtNeqXXcdyu0waEHe/W
         6XMU6nd4yvTq8GWd3rQ36ReLTao6jDQYq1mgXcPJFRNJkMRJZKryDmoWqBHJKm4/pD2e39nPlVNXAfjd
         5hXuMmRvOwP+TDBO6h641XxuPmtzz4lJZDIxBP6kZoFIJJOgLeQIuVfSP2uT0JZ9GuNSHBckwvtIjJEk
@@ -174,10 +174,19 @@
   <metadata name="каталог_цветовTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
+  <metadata name="заказBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>273, 95</value>
+  </metadata>
+  <metadata name="заказTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>465, 95</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>201</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA1gAAAHxCAYAAABwEx2nAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAA/7JJREFUeF7s/eeDJMd1JXzzT9oP7/PsI62RdrUyu6K0K68VJcpQnqREiaCHIby3
+        DgAACw4BQL7hQQAA/7JJREFUeF7s/eeDJMd1JXzzT9oP7/PsI62RdrUyu6K0K68VJcpQnqREiaCHIby3
         Azfee++9995ggMHAE8BMe1tV7bvjPefGvZE3TVV3DwYktYsPZ7K7uiorM6sqK35zIyK/NN7TGca72sJ4
         5+0w1nErjLV/EkZv/ySM3voojH76YRj5+P0w/JN3w/BH74ShD2+GofdvhMZ7b4XGu2+G+jvXQ/3mG6H2
         9tVQu3ElDL51OQy+eSkMvHEh9F87H/qvngt9V8+GvitnQt/l06Hv0unQe+lU6L14MvQwF46HnvPMsdBz

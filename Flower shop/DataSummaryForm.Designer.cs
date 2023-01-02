@@ -37,15 +37,9 @@ namespace Flower_shop
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.pb_Dalee = new System.Windows.Forms.PictureBox();
 			this.dataGrid_Aks_v_zak = new System.Windows.Forms.DataGridView();
-			this.iDаксессуароввзаказеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.каталогаксессуаровBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.заказыDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.заказыDataSet = new Flower_shop.ЗаказыDataSet();
-			this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-			this.количествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.iDзаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.iDаксессуараDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.аксессуарывзаказеBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dataGrid_Cvety_v_zak = new System.Windows.Forms.DataGridView();
 			this.iDцветоввзаказеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +59,11 @@ namespace Flower_shop
 			this.цветы_в_заказеTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Цветы_в_заказеTableAdapter();
 			this.каталог_аксессуаровTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_аксессуаровTableAdapter();
 			this.каталог_цветовTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_цветовTableAdapter();
+			this.заказBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.заказTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.ЗаказTableAdapter();
+			this.iDзаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.pb_Dalee)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGrid_Aks_v_zak)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).BeginInit();
@@ -74,6 +73,7 @@ namespace Flower_shop
 			((System.ComponentModel.ISupportInitialize)(this.dataGrid_Cvety_v_zak)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогцветовBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.цветывзаказеBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.заказBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pb_Dalee
@@ -105,12 +105,9 @@ namespace Flower_shop
 			this.dataGrid_Aks_v_zak.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGrid_Aks_v_zak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGrid_Aks_v_zak.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDаксессуароввзаказеDataGridViewTextBoxColumn,
-            this.Column2,
-            this.Column3,
-            this.количествоDataGridViewTextBoxColumn,
             this.iDзаказаDataGridViewTextBoxColumn,
-            this.iDаксессуараDataGridViewTextBoxColumn});
+            this.Column2,
+            this.Column3});
 			this.dataGrid_Aks_v_zak.DataSource = this.аксессуарывзаказеBindingSource;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -121,34 +118,13 @@ namespace Flower_shop
 			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dataGrid_Aks_v_zak.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dataGrid_Aks_v_zak.Location = new System.Drawing.Point(664, 107);
-			this.dataGrid_Aks_v_zak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGrid_Aks_v_zak.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGrid_Aks_v_zak.Name = "dataGrid_Aks_v_zak";
 			this.dataGrid_Aks_v_zak.RowHeadersVisible = false;
 			this.dataGrid_Aks_v_zak.RowHeadersWidth = 51;
 			this.dataGrid_Aks_v_zak.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGrid_Aks_v_zak.Size = new System.Drawing.Size(432, 178);
 			this.dataGrid_Aks_v_zak.TabIndex = 8;
-			// 
-			// iDаксессуароввзаказеDataGridViewTextBoxColumn
-			// 
-			this.iDаксессуароввзаказеDataGridViewTextBoxColumn.DataPropertyName = "ID_аксессуаров_в_заказе";
-			this.iDаксессуароввзаказеDataGridViewTextBoxColumn.HeaderText = "ID_аксессуаров_в_заказе";
-			this.iDаксессуароввзаказеDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.iDаксессуароввзаказеDataGridViewTextBoxColumn.Name = "iDаксессуароввзаказеDataGridViewTextBoxColumn";
-			this.iDаксессуароввзаказеDataGridViewTextBoxColumn.Visible = false;
-			this.iDаксессуароввзаказеDataGridViewTextBoxColumn.Width = 125;
-			// 
-			// Column2
-			// 
-			this.Column2.DataPropertyName = "ID_аксессуара";
-			this.Column2.DataSource = this.каталогаксессуаровBindingSource;
-			this.Column2.DisplayMember = "Наименование";
-			this.Column2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-			this.Column2.HeaderText = "Наименование";
-			this.Column2.MinimumWidth = 6;
-			this.Column2.Name = "Column2";
-			this.Column2.ValueMember = "ID_аксессуара";
-			this.Column2.Width = 120;
 			// 
 			// каталогаксессуаровBindingSource
 			// 
@@ -164,44 +140,6 @@ namespace Flower_shop
 			// 
 			this.заказыDataSet.DataSetName = "ЗаказыDataSet";
 			this.заказыDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// Column3
-			// 
-			this.Column3.DataPropertyName = "ID_аксессуара";
-			this.Column3.DataSource = this.каталогаксессуаровBindingSource;
-			this.Column3.DisplayMember = "Цвет";
-			this.Column3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-			this.Column3.HeaderText = "Цвет";
-			this.Column3.MinimumWidth = 6;
-			this.Column3.Name = "Column3";
-			this.Column3.ValueMember = "ID_аксессуара";
-			this.Column3.Width = 125;
-			// 
-			// количествоDataGridViewTextBoxColumn
-			// 
-			this.количествоDataGridViewTextBoxColumn.DataPropertyName = "Количество";
-			this.количествоDataGridViewTextBoxColumn.HeaderText = "Количество";
-			this.количествоDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.количествоDataGridViewTextBoxColumn.Name = "количествоDataGridViewTextBoxColumn";
-			this.количествоDataGridViewTextBoxColumn.Width = 101;
-			// 
-			// iDзаказаDataGridViewTextBoxColumn
-			// 
-			this.iDзаказаDataGridViewTextBoxColumn.DataPropertyName = "ID_заказа";
-			this.iDзаказаDataGridViewTextBoxColumn.HeaderText = "ID_заказа";
-			this.iDзаказаDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.iDзаказаDataGridViewTextBoxColumn.Name = "iDзаказаDataGridViewTextBoxColumn";
-			this.iDзаказаDataGridViewTextBoxColumn.Visible = false;
-			this.iDзаказаDataGridViewTextBoxColumn.Width = 125;
-			// 
-			// iDаксессуараDataGridViewTextBoxColumn
-			// 
-			this.iDаксессуараDataGridViewTextBoxColumn.DataPropertyName = "ID_аксессуара";
-			this.iDаксессуараDataGridViewTextBoxColumn.HeaderText = "ID_аксессуара";
-			this.iDаксессуараDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.iDаксессуараDataGridViewTextBoxColumn.Name = "iDаксессуараDataGridViewTextBoxColumn";
-			this.iDаксессуараDataGridViewTextBoxColumn.Visible = false;
-			this.iDаксессуараDataGridViewTextBoxColumn.Width = 125;
 			// 
 			// аксессуарывзаказеBindingSource
 			// 
@@ -239,7 +177,7 @@ namespace Flower_shop
 			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.dataGrid_Cvety_v_zak.DefaultCellStyle = dataGridViewCellStyle4;
 			this.dataGrid_Cvety_v_zak.Location = new System.Drawing.Point(664, 337);
-			this.dataGrid_Cvety_v_zak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGrid_Cvety_v_zak.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGrid_Cvety_v_zak.Name = "dataGrid_Cvety_v_zak";
 			this.dataGrid_Cvety_v_zak.RowHeadersVisible = false;
 			this.dataGrid_Cvety_v_zak.RowHeadersWidth = 51;
@@ -348,7 +286,7 @@ namespace Flower_shop
 			// 
 			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBox2.Location = new System.Drawing.Point(375, 462);
-			this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(203, 26);
 			this.textBox2.TabIndex = 15;
@@ -369,6 +307,47 @@ namespace Flower_shop
 			// 
 			this.каталог_цветовTableAdapter.ClearBeforeFill = true;
 			// 
+			// заказBindingSource
+			// 
+			this.заказBindingSource.DataMember = "Заказ";
+			this.заказBindingSource.DataSource = this.заказыDataSet;
+			// 
+			// заказTableAdapter
+			// 
+			this.заказTableAdapter.ClearBeforeFill = true;
+			// 
+			// iDзаказаDataGridViewTextBoxColumn
+			// 
+			this.iDзаказаDataGridViewTextBoxColumn.DataPropertyName = "ID_заказа";
+			this.iDзаказаDataGridViewTextBoxColumn.HeaderText = "ID_заказа";
+			this.iDзаказаDataGridViewTextBoxColumn.MinimumWidth = 6;
+			this.iDзаказаDataGridViewTextBoxColumn.Name = "iDзаказаDataGridViewTextBoxColumn";
+			this.iDзаказаDataGridViewTextBoxColumn.Visible = false;
+			this.iDзаказаDataGridViewTextBoxColumn.Width = 125;
+			// 
+			// Column2
+			// 
+			this.Column2.DataPropertyName = "ID_аксессуара";
+			this.Column2.DataSource = this.каталогаксессуаровBindingSource;
+			this.Column2.DisplayMember = "Наименование";
+			this.Column2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+			this.Column2.HeaderText = "Наименование";
+			this.Column2.MinimumWidth = 6;
+			this.Column2.Name = "Column2";
+			this.Column2.ValueMember = "ID_аксессуара";
+			this.Column2.Width = 120;
+			// 
+			// Column3
+			// 
+			this.Column3.DataPropertyName = "ID_аксессуара";
+			this.Column3.DataSource = this.каталогаксессуаровBindingSource;
+			this.Column3.DisplayMember = "Цвет";
+			this.Column3.HeaderText = "Цвет";
+			this.Column3.MinimumWidth = 6;
+			this.Column3.Name = "Column3";
+			this.Column3.ValueMember = "ID_аксессуара";
+			this.Column3.Width = 125;
+			// 
 			// DataSummaryForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -387,7 +366,7 @@ namespace Flower_shop
 			this.Controls.Add(this.pb_Dalee);
 			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "DataSummaryForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "DataSummaryForm";
@@ -401,6 +380,7 @@ namespace Flower_shop
 			((System.ComponentModel.ISupportInitialize)(this.dataGrid_Cvety_v_zak)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогцветовBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.цветывзаказеBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.заказBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -432,11 +412,10 @@ namespace Flower_shop
         private System.Windows.Forms.DataGridViewTextBoxColumn количествоDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDцветовDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDзаказаDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDаксессуароввзаказеDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn количествоDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDзаказаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDаксессуараDataGridViewTextBoxColumn;
-    }
+		private System.Windows.Forms.BindingSource заказBindingSource;
+		private ЗаказыDataSetTableAdapters.ЗаказTableAdapter заказTableAdapter;
+		private System.Windows.Forms.DataGridViewTextBoxColumn iDзаказаDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
+		private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
+	}
 }
