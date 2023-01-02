@@ -30,18 +30,18 @@ namespace Flower_shop
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderFillingForm));
 			this.AccessoriesDataGrid = new System.Windows.Forms.DataGridView();
 			this.iDаксессуараDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +76,7 @@ namespace Flower_shop
 			this.pb_Dalee = new System.Windows.Forms.PictureBox();
 			this.AddAccessoryButton = new System.Windows.Forms.PictureBox();
 			this.AddFlowerButton = new System.Windows.Forms.PictureBox();
-			this.RemoveAccesoryButton = new System.Windows.Forms.PictureBox();
+			this.RemoveAccessoryButton = new System.Windows.Forms.PictureBox();
 			this.RemoveFlowerButton = new System.Windows.Forms.PictureBox();
 			this.каталог_аксессуаровTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_аксессуаровTableAdapter();
 			this.каталог_цветовTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_цветовTableAdapter();
@@ -97,7 +97,7 @@ namespace Flower_shop
 			((System.ComponentModel.ISupportInitialize)(this.pb_Dalee)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.AddAccessoryButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.AddFlowerButton)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.RemoveAccesoryButton)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.RemoveAccessoryButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.RemoveFlowerButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource1)).BeginInit();
 			this.SuspendLayout();
@@ -106,14 +106,14 @@ namespace Flower_shop
 			// 
 			this.AccessoriesDataGrid.AutoGenerateColumns = false;
 			this.AccessoriesDataGrid.BackgroundColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle37.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.AccessoriesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.AccessoriesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.AccessoriesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.AccessoriesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDаксессуараDataGridViewTextBoxColumn,
@@ -121,25 +121,25 @@ namespace Flower_shop
             this.цветDataGridViewTextBoxColumn,
             this.ценаDataGridViewTextBoxColumn});
 			this.AccessoriesDataGrid.DataSource = this.каталогаксессуаровBindingSource;
-			dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle38.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.AccessoriesDataGrid.DefaultCellStyle = dataGridViewCellStyle38;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.AccessoriesDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
 			this.AccessoriesDataGrid.Location = new System.Drawing.Point(27, 95);
 			this.AccessoriesDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.AccessoriesDataGrid.Name = "AccessoriesDataGrid";
-			dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle39.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.AccessoriesDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.AccessoriesDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.AccessoriesDataGrid.RowHeadersVisible = false;
 			this.AccessoriesDataGrid.RowHeadersWidth = 51;
 			this.AccessoriesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -194,14 +194,14 @@ namespace Flower_shop
 			this.AccessoriesInOrderDataGrid.AutoGenerateColumns = false;
 			this.AccessoriesInOrderDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.AccessoriesInOrderDataGrid.BackgroundColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle40.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.AccessoriesInOrderDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.AccessoriesInOrderDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.AccessoriesInOrderDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.AccessoriesInOrderDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDаксессуароввзаказеDataGridViewTextBoxColumn,
@@ -210,25 +210,25 @@ namespace Flower_shop
             this.iDзаказаDataGridViewTextBoxColumn,
             this.iDаксессуараDataGridViewTextBoxColumn1});
 			this.AccessoriesInOrderDataGrid.DataSource = this.аксессуарывзаказеBindingSource;
-			dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle41.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.AccessoriesInOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle41;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.AccessoriesInOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle5;
 			this.AccessoriesInOrderDataGrid.Location = new System.Drawing.Point(413, 95);
 			this.AccessoriesInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.AccessoriesInOrderDataGrid.Name = "AccessoriesInOrderDataGrid";
-			dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle42.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.AccessoriesInOrderDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.AccessoriesInOrderDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.AccessoriesInOrderDataGrid.RowHeadersVisible = false;
 			this.AccessoriesInOrderDataGrid.RowHeadersWidth = 51;
 			this.AccessoriesInOrderDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -287,14 +287,14 @@ namespace Flower_shop
 			this.FlowersInOrderDataGrid.AutoGenerateColumns = false;
 			this.FlowersInOrderDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.FlowersInOrderDataGrid.BackgroundColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle43.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.FlowersInOrderDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.FlowersInOrderDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
 			this.FlowersInOrderDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.FlowersInOrderDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDцветоввзаказеDataGridViewTextBoxColumn,
@@ -303,25 +303,25 @@ namespace Flower_shop
             this.iDцветовDataGridViewTextBoxColumn1,
             this.iDзаказаDataGridViewTextBoxColumn1});
 			this.FlowersInOrderDataGrid.DataSource = this.цветывзаказеBindingSource;
-			dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle44.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.FlowersInOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle44;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.FlowersInOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle8;
 			this.FlowersInOrderDataGrid.Location = new System.Drawing.Point(413, 300);
 			this.FlowersInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.FlowersInOrderDataGrid.Name = "FlowersInOrderDataGrid";
-			dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle45.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.FlowersInOrderDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.FlowersInOrderDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
 			this.FlowersInOrderDataGrid.RowHeadersVisible = false;
 			this.FlowersInOrderDataGrid.RowHeadersWidth = 51;
 			this.FlowersInOrderDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -385,14 +385,14 @@ namespace Flower_shop
 			this.FlowersDataGrid.AutoGenerateColumns = false;
 			this.FlowersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.FlowersDataGrid.BackgroundColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle46.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.FlowersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
+			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.FlowersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
 			this.FlowersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.FlowersDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDцветовDataGridViewTextBoxColumn,
@@ -402,25 +402,25 @@ namespace Flower_shop
             this.iDстраныпроизводителяDataGridViewTextBoxColumn,
             this.iDвидацветовDataGridViewTextBoxColumn});
 			this.FlowersDataGrid.DataSource = this.каталогцветовBindingSource;
-			dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle47.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.FlowersDataGrid.DefaultCellStyle = dataGridViewCellStyle47;
+			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle11.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.FlowersDataGrid.DefaultCellStyle = dataGridViewCellStyle11;
 			this.FlowersDataGrid.Location = new System.Drawing.Point(27, 300);
 			this.FlowersDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.FlowersDataGrid.Name = "FlowersDataGrid";
-			dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			dataGridViewCellStyle48.ForeColor = System.Drawing.Color.SaddleBrown;
-			dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.DarkSalmon;
-			dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.FlowersDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
+			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SaddleBrown;
+			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.FlowersDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
 			this.FlowersDataGrid.RowHeadersVisible = false;
 			this.FlowersDataGrid.RowHeadersWidth = 51;
 			this.FlowersDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -525,19 +525,20 @@ namespace Flower_shop
 			this.AddFlowerButton.Click += new System.EventHandler(this.AddFlowerButton_Click);
 			this.AddFlowerButton.DoubleClick += new System.EventHandler(this.AddFlowerButton_DoubleClick);
 			// 
-			// RemoveAccesoryButton
+			// RemoveAccessoryButton
 			// 
-			this.RemoveAccesoryButton.BackColor = System.Drawing.Color.Transparent;
-			this.RemoveAccesoryButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RemoveAccesoryButton.BackgroundImage")));
-			this.RemoveAccesoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.RemoveAccesoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.RemoveAccesoryButton.Location = new System.Drawing.Point(413, 263);
-			this.RemoveAccesoryButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.RemoveAccesoryButton.Name = "RemoveAccesoryButton";
-			this.RemoveAccesoryButton.Size = new System.Drawing.Size(89, 25);
-			this.RemoveAccesoryButton.TabIndex = 8;
-			this.RemoveAccesoryButton.TabStop = false;
-			this.RemoveAccesoryButton.Click += new System.EventHandler(this.RemoveAccessoryButton_Click);
+			this.RemoveAccessoryButton.BackColor = System.Drawing.Color.Transparent;
+			this.RemoveAccessoryButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RemoveAccessoryButton.BackgroundImage")));
+			this.RemoveAccessoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.RemoveAccessoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.RemoveAccessoryButton.Location = new System.Drawing.Point(413, 263);
+			this.RemoveAccessoryButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.RemoveAccessoryButton.Name = "RemoveAccessoryButton";
+			this.RemoveAccessoryButton.Size = new System.Drawing.Size(89, 25);
+			this.RemoveAccessoryButton.TabIndex = 8;
+			this.RemoveAccessoryButton.TabStop = false;
+			this.RemoveAccessoryButton.Click += new System.EventHandler(this.RemoveAccessoryButton_Click);
+			this.RemoveAccessoryButton.DoubleClick += new System.EventHandler(this.RemoveAccessoryButton_DoubleClick);
 			// 
 			// RemoveFlowerButton
 			// 
@@ -552,6 +553,7 @@ namespace Flower_shop
 			this.RemoveFlowerButton.TabIndex = 9;
 			this.RemoveFlowerButton.TabStop = false;
 			this.RemoveFlowerButton.Click += new System.EventHandler(this.RemoveFlowerButton_Click);
+			this.RemoveFlowerButton.DoubleClick += new System.EventHandler(this.RemoveFlowerButton_DoubleClick);
 			// 
 			// каталог_аксессуаровTableAdapter
 			// 
@@ -585,7 +587,7 @@ namespace Flower_shop
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(769, 545);
 			this.Controls.Add(this.RemoveFlowerButton);
-			this.Controls.Add(this.RemoveAccesoryButton);
+			this.Controls.Add(this.RemoveAccessoryButton);
 			this.Controls.Add(this.AddFlowerButton);
 			this.Controls.Add(this.AddAccessoryButton);
 			this.Controls.Add(this.pb_Dalee);
@@ -612,7 +614,7 @@ namespace Flower_shop
 			((System.ComponentModel.ISupportInitialize)(this.pb_Dalee)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.AddAccessoryButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.AddFlowerButton)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.RemoveAccesoryButton)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.RemoveAccessoryButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.RemoveFlowerButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource1)).EndInit();
 			this.ResumeLayout(false);
@@ -628,7 +630,7 @@ namespace Flower_shop
         private System.Windows.Forms.PictureBox pb_Dalee;
         private System.Windows.Forms.PictureBox AddAccessoryButton;
         private System.Windows.Forms.PictureBox AddFlowerButton;
-        private System.Windows.Forms.PictureBox RemoveAccesoryButton;
+        private System.Windows.Forms.PictureBox RemoveAccessoryButton;
         private System.Windows.Forms.PictureBox RemoveFlowerButton;
         private ЗаказыDataSet заказыDataSet;
         private System.Windows.Forms.BindingSource каталогаксессуаровBindingSource;

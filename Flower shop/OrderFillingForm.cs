@@ -50,6 +50,14 @@ namespace Flower_shop
 		private void AddFlowerButton_Click(object sender, EventArgs e) => AddFlower();
 		private void AddFlowerButton_DoubleClick(object sender, EventArgs e) => AddFlower();
 
+		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
+
+		private void RemoveAccessoryButton_DoubleClick(object sender, EventArgs e) { }
+
+		private void RemoveFlowerButton_Click(object sender, EventArgs e) => RemoveFlower();
+
+		private void RemoveFlowerButton_DoubleClick(object sender, EventArgs e) => RemoveFlower();
+
 		private void AddAccessory()
 		{
 			var accessoryInOrder = _accessoriesInOrder.SingleOrDefault(IsSameAccessory);
@@ -78,6 +86,25 @@ namespace Flower_shop
 				flowerInOrder.Количество++;
 				_flowersInOrder.ResetBindings();
 			}
+		}
+
+		private void RemoveFlower()
+		{
+			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSameFlower);
+
+			if (flowerInOrder is null)
+			{
+				return;
+			}
+
+			flowerInOrder.Количество--;
+
+			if (flowerInOrder.Количество <= 0)
+			{
+				_flowersInOrder.Remove(flowerInOrder);
+			}
+
+			_flowersInOrder.ResetBindings();
 		}
 
 		private bool IsSameAccessory(AccessoriesInOrderRow accessoryInOrder)
@@ -109,27 +136,6 @@ namespace Flower_shop
 
 		private FlowerRow SelectedFlowerFromCatalog()
 			=> заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
-
-		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
-
-		private void RemoveFlowerButton_Click(object sender, EventArgs e)
-		{
-			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSameFlower);
-
-			if (flowerInOrder is null)
-			{
-				return;
-			}
-
-			flowerInOrder.Количество--;
-
-			if (flowerInOrder.Количество <= 0)
-			{
-				_flowersInOrder.Remove(flowerInOrder);
-			}
-			
-			_flowersInOrder.ResetBindings();
-		}
 
 		private void SaveToDataBase()
 		{
