@@ -50,7 +50,7 @@ namespace Flower_shop
 		private void AddFlowerButton_Click(object sender, EventArgs e) => AddFlower();
 		private void AddFlowerButton_DoubleClick(object sender, EventArgs e) => AddFlower();
 
-		private void RemoveAccessoryButton_Click(object sender, EventArgs e) { }
+		private void RemoveAccessoryButton_Click(object sender, EventArgs e) => RemoveAccessory();
 		private void RemoveAccessoryButton_DoubleClick(object sender, EventArgs e) => RemoveAccessory();
 
 		private void RemoveFlowerButton_Click(object sender, EventArgs e) => RemoveFlower();
