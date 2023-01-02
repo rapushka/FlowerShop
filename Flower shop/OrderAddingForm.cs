@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Flower_shop
@@ -27,8 +28,8 @@ namespace Flower_shop
 				Дата_время_выполнения: receiptDateTimePicker.Value,
 				Адрес_доставки: customerAddressTextBox.Text
 			);
-			
-			var form = new OrderFillingForm();
+			var lastOrder = заказTableAdapter.GetData().Last();
+			var form = new OrderFillingForm(lastOrder.ID_заказа);
 			Hide();
 			form.ShowDialog();
 			Show();

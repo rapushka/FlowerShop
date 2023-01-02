@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -10,15 +8,12 @@ namespace Flower_shop
 {
 	public partial class OrderFillingForm : Form
 	{
-		private SqlConnection _sqlConnection = null;
+		private readonly int _orderId;
 
-		private SqlDataAdapter _adapter = null;
-
-		private DataTable _table = null;
-		int sum = 0;
-
-		public OrderFillingForm()
+		public OrderFillingForm(int orderId)
 		{
+			_orderId = orderId;
+
 			InitializeComponent();
 		}
 
@@ -46,21 +41,31 @@ namespace Flower_shop
 			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
-			// Необходио загружать данные из таблицы запросом select * from [имя_талицы] where ID_Заказа = [ID_ткещего заказа]
-			var accessories = заказыDataSet.Каталог_аксессуаров.ToList();
+			AddAccessory();
+		}
+
+		private void AddAccessory()
+		{
 			var accessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			accessory.Количество = 13;
-			accessory.ЗаказRow = заказыDataSet.Заказ.NewЗаказRow();
-			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров.First();
-			
+			accessory.Каталог_аксессуаровRow = заказыDataSet.Каталог_аксессуаров.Last();
+
 			var list = new List<ЗаказыDataSet.Аксессуары_в_заказеRow>();
 
 			var bindingList = new BindingList<ЗаказыDataSet.Аксессуары_в_заказеRow>(list);
 			var source = new BindingSource(bindingList, dataMember: null);
 			dataGrid_Aks_v_zak.DataSource = source;
 
-			аксессуары_в_заказеTableAdapter.Insert(accessory.Количество, 1, accessory.Каталог_аксессуаровRow.ID_аксессуара);
+			bindingList.Add(accessory);
 		}
+
+		private void InsertAccessoryInOrder(ЗаказыDataSet.Аксессуары_в_заказеRow accessory)
+			=> аксессуары_в_заказеTableAdapter.Insert
+			(
+				accessory.Количество,
+				_orderId,
+				accessory.Каталог_аксессуаровRow.ID_аксессуара
+			);
 
 		private void pb_Udal_Aks_Click(object sender, EventArgs e) { }
 

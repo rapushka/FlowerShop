@@ -19,10 +19,10 @@ namespace Flower_shop
 
         private void pb_Vernyt_Click(object sender, EventArgs e)
         {
-            OrderFillingForm f = new OrderFillingForm();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            // OrderFillingForm f = new OrderFillingForm();
+            // this.Hide();
+            // f.ShowDialog();
+            // this.Show();
         }
 
         private void pb_Dalee_Click(object sender, EventArgs e)
