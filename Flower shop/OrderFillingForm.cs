@@ -66,18 +66,24 @@ namespace Flower_shop
 
 		private void SaveToDataBase()
 		{
-			foreach (var accessory in _accessoriesInOrder)
-			{
-				InsertAccessoryInOrder(accessory);
-			}
+			_accessoriesInOrder.ForEach(InsertAccessory);
+			_flowersInOrder.ForEach(InsertFlower);
 		}
 
-		private void InsertAccessoryInOrder(AccessoriesInOrderRow accessory)
+		private void InsertAccessory(AccessoriesInOrderRow accessory)
 			=> аксессуары_в_заказеTableAdapter.Insert
 			(
-				accessory.Количество,
-				_orderId,
-				accessory.Каталог_аксессуаровRow.ID_аксессуара
+				Количество: accessory.Количество,
+				ID_заказа: _orderId,
+				ID_аксессуара: accessory.Каталог_аксессуаровRow.ID_аксессуара
+			);
+
+		private void InsertFlower(FlowersInOrderRow flower)
+			=> цветы_в_заказеTableAdapter.Insert
+			(
+				Количество: flower.Количество,
+				ID_заказа: _orderId,
+				ID_цветов: flower.Каталог_цветовRow.ID_цветов
 			);
 	}
 }
