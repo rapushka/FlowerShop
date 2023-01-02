@@ -93,6 +93,7 @@ namespace Flower_shop
 			// AccessoriesInOrderDataGrid
 			// 
 			this.AccessoriesInOrderDataGrid.AllowUserToAddRows = false;
+			this.AccessoriesInOrderDataGrid.AllowUserToDeleteRows = false;
 			this.AccessoriesInOrderDataGrid.AutoGenerateColumns = false;
 			this.AccessoriesInOrderDataGrid.BackgroundColor = System.Drawing.SystemColors.Info;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -120,6 +121,7 @@ namespace Flower_shop
 			this.AccessoriesInOrderDataGrid.Location = new System.Drawing.Point(664, 107);
 			this.AccessoriesInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.AccessoriesInOrderDataGrid.Name = "AccessoriesInOrderDataGrid";
+			this.AccessoriesInOrderDataGrid.ReadOnly = true;
 			this.AccessoriesInOrderDataGrid.RowHeadersVisible = false;
 			this.AccessoriesInOrderDataGrid.RowHeadersWidth = 51;
 			this.AccessoriesInOrderDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -132,6 +134,7 @@ namespace Flower_shop
 			this.iDзаказаDataGridViewTextBoxColumn.HeaderText = "ID_заказа";
 			this.iDзаказаDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.iDзаказаDataGridViewTextBoxColumn.Name = "iDзаказаDataGridViewTextBoxColumn";
+			this.iDзаказаDataGridViewTextBoxColumn.ReadOnly = true;
 			this.iDзаказаDataGridViewTextBoxColumn.Visible = false;
 			this.iDзаказаDataGridViewTextBoxColumn.Width = 125;
 			// 
@@ -144,6 +147,7 @@ namespace Flower_shop
 			this.Column2.HeaderText = "Наименование";
 			this.Column2.MinimumWidth = 6;
 			this.Column2.Name = "Column2";
+			this.Column2.ReadOnly = true;
 			this.Column2.ValueMember = "ID_аксессуара";
 			this.Column2.Width = 120;
 			// 
@@ -170,6 +174,7 @@ namespace Flower_shop
 			this.Column3.HeaderText = "Цвет";
 			this.Column3.MinimumWidth = 6;
 			this.Column3.Name = "Column3";
+			this.Column3.ReadOnly = true;
 			this.Column3.ValueMember = "ID_аксессуара";
 			this.Column3.Width = 125;
 			// 
@@ -181,6 +186,7 @@ namespace Flower_shop
 			// FlowersInOrderDataGrid
 			// 
 			this.FlowersInOrderDataGrid.AllowUserToAddRows = false;
+			this.FlowersInOrderDataGrid.AllowUserToDeleteRows = false;
 			this.FlowersInOrderDataGrid.AutoGenerateColumns = false;
 			this.FlowersInOrderDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.FlowersInOrderDataGrid.BackgroundColor = System.Drawing.SystemColors.Info;
@@ -211,6 +217,7 @@ namespace Flower_shop
 			this.FlowersInOrderDataGrid.Location = new System.Drawing.Point(664, 337);
 			this.FlowersInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.FlowersInOrderDataGrid.Name = "FlowersInOrderDataGrid";
+			this.FlowersInOrderDataGrid.ReadOnly = true;
 			this.FlowersInOrderDataGrid.RowHeadersVisible = false;
 			this.FlowersInOrderDataGrid.RowHeadersWidth = 51;
 			this.FlowersInOrderDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -223,6 +230,7 @@ namespace Flower_shop
 			this.iDцветоввзаказеDataGridViewTextBoxColumn.HeaderText = "ID_цветов_в_заказе";
 			this.iDцветоввзаказеDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.iDцветоввзаказеDataGridViewTextBoxColumn.Name = "iDцветоввзаказеDataGridViewTextBoxColumn";
+			this.iDцветоввзаказеDataGridViewTextBoxColumn.ReadOnly = true;
 			this.iDцветоввзаказеDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// Column1
@@ -234,6 +242,7 @@ namespace Flower_shop
 			this.Column1.HeaderText = "Наименование";
 			this.Column1.MinimumWidth = 6;
 			this.Column1.Name = "Column1";
+			this.Column1.ReadOnly = true;
 			this.Column1.ValueMember = "ID_цветов";
 			// 
 			// каталогцветовBindingSource
@@ -247,6 +256,7 @@ namespace Flower_shop
 			this.количествоDataGridViewTextBoxColumn1.HeaderText = "Количество";
 			this.количествоDataGridViewTextBoxColumn1.MinimumWidth = 6;
 			this.количествоDataGridViewTextBoxColumn1.Name = "количествоDataGridViewTextBoxColumn1";
+			this.количествоDataGridViewTextBoxColumn1.ReadOnly = true;
 			// 
 			// iDцветовDataGridViewTextBoxColumn
 			// 
@@ -254,6 +264,7 @@ namespace Flower_shop
 			this.iDцветовDataGridViewTextBoxColumn.HeaderText = "ID_цветов";
 			this.iDцветовDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.iDцветовDataGridViewTextBoxColumn.Name = "iDцветовDataGridViewTextBoxColumn";
+			this.iDцветовDataGridViewTextBoxColumn.ReadOnly = true;
 			this.iDцветовDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// iDзаказаDataGridViewTextBoxColumn1
@@ -262,6 +273,7 @@ namespace Flower_shop
 			this.iDзаказаDataGridViewTextBoxColumn1.HeaderText = "ID_заказа";
 			this.iDзаказаDataGridViewTextBoxColumn1.MinimumWidth = 6;
 			this.iDзаказаDataGridViewTextBoxColumn1.Name = "iDзаказаDataGridViewTextBoxColumn1";
+			this.iDзаказаDataGridViewTextBoxColumn1.ReadOnly = true;
 			this.iDзаказаDataGridViewTextBoxColumn1.Visible = false;
 			// 
 			// цветывзаказеBindingSource

@@ -35,8 +35,20 @@ namespace Flower_shop
 		private void LoadOrder()
 		{
 			_currentOrder = заказTableAdapter.GetData().Last();
-			UpdateSum();
 
+			UpdateSum();
+			TextBoxesFilling();
+			DataGridsFilling();
+		}
+
+		private void UpdateSum()
+		{
+			_currentOrder.Стоимость = _sum;
+			заказTableAdapter.Update(_currentOrder);
+		}
+
+		private void TextBoxesFilling()
+		{
 			CustomerNameTextBox.Text = _currentOrder.Имя_заказчика;
 			CustomerPhoneTextBox.Text = _currentOrder.Телефон_заказчика;
 			AddressTextBox.Text = _currentOrder.Адрес_доставки;
@@ -46,10 +58,9 @@ namespace Flower_shop
 			SumTextBox.Text = _currentOrder.Стоимость.ToString(CultureInfo.InvariantCulture);
 		}
 
-		private void UpdateSum()
+		private void DataGridsFilling()
 		{
-			_currentOrder.Стоимость = _sum;
-			заказTableAdapter.Update(_currentOrder);
+			
 		}
 	}
 }
