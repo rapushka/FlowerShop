@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
@@ -50,21 +51,53 @@ namespace Flower_shop
 			FlowersInOrderDataGrid.DataSource = _flowersInOrder;
 		}
 
-		private void AddAccessoryButton_DoubleClick(object sender, EventArgs e) => AddAccessory();
+		private void AddAccessoryButton_DoubleClick(object sender, EventArgs e)
+		{
+			AddAccessory();
+			UpdateLabelValue();
+		}
 
-		private void AddAccessoryButton_Click(object sender, EventArgs e) => AddAccessory();
+		private void AddAccessoryButton_Click(object sender, EventArgs e)
+		{
+			AddAccessory();
+			UpdateLabelValue();
+		}
 
-		private void AddFlowerButton_Click(object sender, EventArgs e) => AddFlower();
+		private void AddFlowerButton_Click(object sender, EventArgs e)
+		{
+			AddFlower();
+			UpdateLabelValue();
+		}
 
-		private void AddFlowerButton_DoubleClick(object sender, EventArgs e) => AddFlower();
+		private void AddFlowerButton_DoubleClick(object sender, EventArgs e)
+		{
+			AddFlower();
+			UpdateLabelValue();
+		}
 
-		private void RemoveAccessoryButton_Click(object sender, EventArgs e) => RemoveAccessory();
+		private void RemoveAccessoryButton_Click(object sender, EventArgs e)
+		{
+			RemoveAccessory();
+			UpdateLabelValue();
+		}
 
-		private void RemoveAccessoryButton_DoubleClick(object sender, EventArgs e) => RemoveAccessory();
+		private void RemoveAccessoryButton_DoubleClick(object sender, EventArgs e)
+		{
+			RemoveAccessory();
+			UpdateLabelValue();
+		}
 
-		private void RemoveFlowerButton_Click(object sender, EventArgs e) => RemoveFlower();
+		private void RemoveFlowerButton_Click(object sender, EventArgs e)
+		{
+			RemoveFlower();
+			UpdateLabelValue();
+		}
 
-		private void RemoveFlowerButton_DoubleClick(object sender, EventArgs e) => RemoveFlower();
+		private void RemoveFlowerButton_DoubleClick(object sender, EventArgs e)
+		{
+			RemoveFlower();
+			UpdateLabelValue();
+		}
 
 		private void AddAccessory()
 		{
@@ -83,11 +116,6 @@ namespace Flower_shop
 
 		private void AddFlower()
 		{
-			if (_flowersInOrder.Any() == false)
-			{
-				return;
-			}
-
 			var flowerInOrder = _flowersInOrder.SingleOrDefault(IsSame);
 
 			if (flowerInOrder is null)
@@ -122,6 +150,11 @@ namespace Flower_shop
 
 		private void RemoveFlower()
 		{
+			if (_flowersInOrder.Any() == false)
+			{
+				return;
+			}
+
 			var flowerInOrder = _flowersInOrder.Single(Selected);
 
 			flowerInOrder.Количество--;
@@ -185,5 +218,12 @@ namespace Flower_shop
 				ID_заказа: _orderId,
 				ID_цветов: flower.Каталог_цветовRow.ID_цветов
 			);
+
+		private void UpdateLabelValue()
+		{
+			TotalAmountLabel.Text = (_accessoriesInOrder.Sum((a) => a.Количество * a.Каталог_аксессуаровRow.Цена)
+			                         + _flowersInOrder.Sum((a) => a.Количество * a.Каталог_цветовRow.Цена))
+				.ToString(CultureInfo.InvariantCulture);
+		}
 	}
 }
