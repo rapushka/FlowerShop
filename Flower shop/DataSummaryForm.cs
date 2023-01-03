@@ -15,11 +15,6 @@ namespace Flower_shop
 {
 	public partial class DataSummaryForm : Form
 	{
-		private const int IndexOfColumnAccessoryInOrder = 0;
-		private const int IndexOfColumnAmount = 3;
-		private const int IndexOfColumnAccessoryId = 4;
-		private const int IndexOfColumnOrderId = 5;
-
 		private readonly decimal _sum;
 
 		private OrderRow _currentOrder;
@@ -73,28 +68,52 @@ namespace Flower_shop
 		private void DataGridsFilling()
 		{
 			AccessoriesInOrderDataGrid.DataSource = RowsToAccessories();
+			FlowersInOrderDataGrid.DataSource = RowsToFlowers();
 		}
 
 		private BindingList<AccessoriesInOrderRow> RowsToAccessories()
 		{
 			var accessories = new BindingList<AccessoriesInOrderRow>();
 
-			AccessoriesInOrderDataGrid.Rows.ForEach((r) => accessories.Add(AsAccessory(r)), @if: IsCurrentOrder);
+			AccessoriesInOrderDataGrid.Rows.ForEach(AddToList, @if: IsCurrentOrderForAccessory);
+			void AddToList(DataGridViewRow r) => accessories.Add(AsAccessory(r));
 
 			return accessories;
 		}
 
-		private bool IsCurrentOrder(DataGridViewRow row)
-			=> (int)row.Cells[IndexOfColumnOrderId].Value == _currentOrder.ID_заказа;
+		private BindingList<FlowersInOrderRow> RowsToFlowers()
+		{
+			var flowers = new BindingList<FlowersInOrderRow>();
+
+			FlowersInOrderDataGrid.Rows.ForEach(AddToList, @if: IsCurrentOrderForFlower);
+			void AddToList(DataGridViewRow r) => flowers.Add(AsFlower(r));
+
+			return flowers;
+		}
+
+		private bool IsCurrentOrderForAccessory(DataGridViewRow row)
+			=> (int)row.Cells[5].Value == _currentOrder.ID_заказа;
+
+		private bool IsCurrentOrderForFlower(DataGridViewRow row) => (int)row.Cells[4].Value == _currentOrder.ID_заказа;
 
 		private AccessoriesInOrderRow AsAccessory(DataGridViewRow row)
 		{
 			var newAccessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			newAccessory.ID_заказа = _currentOrder.ID_заказа;
-			newAccessory.ID_аксессуара = (int)row.Cells[IndexOfColumnAccessoryId].Value;
-			newAccessory.ID_аксессуаров_в_заказе = (int)row.Cells[IndexOfColumnAccessoryInOrder].Value;
-			newAccessory.Количество = (int)row.Cells[IndexOfColumnAmount].Value;
+			newAccessory.ID_аксессуара = (int)row.Cells[4].Value;
+			newAccessory.ID_аксессуаров_в_заказе = (int)row.Cells[0].Value;
+			newAccessory.Количество = (int)row.Cells[3].Value;
 			return newAccessory;
+		}
+
+		private FlowersInOrderRow AsFlower(DataGridViewRow row)
+		{
+			var newFlower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
+			newFlower.ID_заказа = _currentOrder.ID_заказа;
+			newFlower.ID_цветов = (int)row.Cells[3].Value;
+			newFlower.ID_цветов_в_заказе = (int)row.Cells[0].Value;
+			newFlower.Количество = (int)row.Cells[2].Value;
+			return newFlower;
 		}
 	}
 }
