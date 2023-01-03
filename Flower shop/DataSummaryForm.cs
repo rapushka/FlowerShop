@@ -15,8 +15,11 @@ namespace Flower_shop
 {
 	public partial class DataSummaryForm : Form
 	{
+		private const int IndexOfColumnAccessoryInOrder = 0;
+		private const int IndexOfColumnAmount = 3;
 		private const int IndexOfColumnAccessoryId = 4;
 		private const int IndexOfColumnOrderId = 5;
+
 		private readonly decimal _sum;
 
 		private OrderRow _currentOrder;
@@ -69,26 +72,29 @@ namespace Flower_shop
 
 		private void DataGridsFilling()
 		{
-			var list = new BindingList<AccessoriesInOrderRow>();
-			
-			foreach (DataGridViewRow row in AccessoriesInOrderDataGrid.Rows)
-			{
-				if ((int)row.Cells[IndexOfColumnOrderId].Value != _currentOrder.ID_заказа)
-				{
-					continue;
-				}
-
-				var newAccessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
-				newAccessory.ID_заказа = _currentOrder.ID_заказа;
-				newAccessory.ID_аксессуара = (int)row.Cells[IndexOfColumnAccessoryId].Value;
-				newAccessory.ID_аксессуаров_в_заказе = (int)row.Cells[0].Value;
-				newAccessory.Количество = (int)row.Cells[3].Value;
-				list.Add(newAccessory);
-			}
-
-			AccessoriesInOrderDataGrid.DataSource = list;
+			AccessoriesInOrderDataGrid.DataSource = RowsToAccessories();
 		}
 
-		private bool IsCurrentOrder(AccessoriesInOrderRow a) => a.ID_заказа == _currentOrder.ID_заказа;
+		private BindingList<AccessoriesInOrderRow> RowsToAccessories()
+		{
+			var accessories = new BindingList<AccessoriesInOrderRow>();
+
+			AccessoriesInOrderDataGrid.Rows.ForEach((r) => accessories.Add(AsAccessory(r)), @if: IsCurrentOrder);
+
+			return accessories;
+		}
+
+		private bool IsCurrentOrder(DataGridViewRow row)
+			=> (int)row.Cells[IndexOfColumnOrderId].Value == _currentOrder.ID_заказа;
+
+		private AccessoriesInOrderRow AsAccessory(DataGridViewRow row)
+		{
+			var newAccessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
+			newAccessory.ID_заказа = _currentOrder.ID_заказа;
+			newAccessory.ID_аксессуара = (int)row.Cells[IndexOfColumnAccessoryId].Value;
+			newAccessory.ID_аксессуаров_в_заказе = (int)row.Cells[IndexOfColumnAccessoryInOrder].Value;
+			newAccessory.Количество = (int)row.Cells[IndexOfColumnAmount].Value;
+			return newAccessory;
+		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace Flower_shop
 {
@@ -10,6 +11,22 @@ namespace Flower_shop
 			foreach (var item in @this)
 			{
 				@do.Invoke(item);
+			}
+		}
+
+		public static void ForEach
+		(
+			this DataGridViewRowCollection @this,
+			Action<DataGridViewRow> @do,
+			Func<DataGridViewRow, bool> @if
+		)
+		{
+			foreach (DataGridViewRow item in @this)
+			{
+				if (@if.Invoke(item))
+				{
+					@do.Invoke(item);
+				}
 			}
 		}
 	}
