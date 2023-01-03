@@ -69,12 +69,11 @@ namespace Flower_shop
 
 		private void DataGridsFilling()
 		{
-			return;
 			var list = new BindingList<AccessoriesInOrderRow>();
 			
 			foreach (DataGridViewRow row in AccessoriesInOrderDataGrid.Rows)
 			{
-				if ((int)row.Cells[IndexOfColumnOrderId].Value == _currentOrder.ID_заказа)
+				if ((int)row.Cells[IndexOfColumnOrderId].Value != _currentOrder.ID_заказа)
 				{
 					continue;
 				}
