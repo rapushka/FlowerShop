@@ -26,7 +26,12 @@ namespace Flower_shop
 			InitializeComponent();
 		}
 
-		private void NextButton_Click(object sender, EventArgs e) => Close();
+		private void NextButton_Click(object sender, EventArgs e)
+		{
+			Close();
+
+			SaveChanges();
+		}
 
 		private void DataSummaryForm_Load(object sender, EventArgs e)
 		{
@@ -51,7 +56,7 @@ namespace Flower_shop
 		private void UpdateSum()
 		{
 			_currentOrder.Стоимость = _sum;
-			заказTableAdapter.Update(_currentOrder);
+			UpdateCurrentOrder();
 		}
 
 		private void TextBoxesFilling()
@@ -115,5 +120,19 @@ namespace Flower_shop
 			newFlower.Количество = (int)row.Cells[2].Value;
 			return newFlower;
 		}
+
+		private void SaveChanges()
+		{
+			_currentOrder.Имя_заказчика = CustomerNameTextBox.Text;
+			_currentOrder.Телефон_заказчика = CustomerPhoneTextBox.Text;
+			_currentOrder.Адрес_доставки = AddressTextBox.Text;
+
+			_currentOrder.Дата_приема = ReceiptDateTimePicker.Value;
+			_currentOrder.Дата_время_выполнения = CompletionDateTimePicker.Value;
+
+			UpdateCurrentOrder();
+		}
+
+		private void UpdateCurrentOrder() => заказTableAdapter.Update(_currentOrder);
 	}
 }

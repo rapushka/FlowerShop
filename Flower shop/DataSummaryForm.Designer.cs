@@ -37,9 +37,15 @@ namespace Flower_shop
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.NextButton = new System.Windows.Forms.PictureBox();
 			this.AccessoriesInOrderDataGrid = new System.Windows.Forms.DataGridView();
+			this.ID_аксессуаров_в_заказе = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
 			this.каталогаксессуаровBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.заказыDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.заказыDataSet = new Flower_shop.ЗаказыDataSet();
+			this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+			this.Количество = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ID_аксессуара = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.iDзаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.аксессуарывзаказеBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.FlowersInOrderDataGrid = new System.Windows.Forms.DataGridView();
 			this.iDцветоввзаказеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,12 +67,6 @@ namespace Flower_shop
 			this.каталог_цветовTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_цветовTableAdapter();
 			this.заказBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.заказTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.ЗаказTableAdapter();
-			this.ID_аксессуаров_в_заказе = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-			this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-			this.Количество = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ID_аксессуара = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.iDзаказаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.NextButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.AccessoriesInOrderDataGrid)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).BeginInit();
@@ -134,6 +134,29 @@ namespace Flower_shop
 			this.AccessoriesInOrderDataGrid.Size = new System.Drawing.Size(432, 178);
 			this.AccessoriesInOrderDataGrid.TabIndex = 8;
 			// 
+			// ID_аксессуаров_в_заказе
+			// 
+			this.ID_аксессуаров_в_заказе.DataPropertyName = "ID_аксессуаров_в_заказе";
+			this.ID_аксессуаров_в_заказе.HeaderText = "ID_аксессуаров_в_заказе";
+			this.ID_аксессуаров_в_заказе.MinimumWidth = 6;
+			this.ID_аксессуаров_в_заказе.Name = "ID_аксессуаров_в_заказе";
+			this.ID_аксессуаров_в_заказе.ReadOnly = true;
+			this.ID_аксессуаров_в_заказе.Visible = false;
+			this.ID_аксессуаров_в_заказе.Width = 125;
+			// 
+			// Column2
+			// 
+			this.Column2.DataPropertyName = "ID_аксессуара";
+			this.Column2.DataSource = this.каталогаксессуаровBindingSource;
+			this.Column2.DisplayMember = "Наименование";
+			this.Column2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+			this.Column2.HeaderText = "Наименование";
+			this.Column2.MinimumWidth = 6;
+			this.Column2.Name = "Column2";
+			this.Column2.ReadOnly = true;
+			this.Column2.ValueMember = "ID_аксессуара";
+			this.Column2.Width = 120;
+			// 
 			// каталогаксессуаровBindingSource
 			// 
 			this.каталогаксессуаровBindingSource.DataMember = "Каталог_аксессуаров";
@@ -148,6 +171,47 @@ namespace Flower_shop
 			// 
 			this.заказыDataSet.DataSetName = "ЗаказыDataSet";
 			this.заказыDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// Column3
+			// 
+			this.Column3.DataPropertyName = "ID_аксессуара";
+			this.Column3.DataSource = this.каталогаксессуаровBindingSource;
+			this.Column3.DisplayMember = "Цвет";
+			this.Column3.HeaderText = "Цвет";
+			this.Column3.MinimumWidth = 6;
+			this.Column3.Name = "Column3";
+			this.Column3.ReadOnly = true;
+			this.Column3.ValueMember = "ID_аксессуара";
+			this.Column3.Width = 125;
+			// 
+			// Количество
+			// 
+			this.Количество.DataPropertyName = "Количество";
+			this.Количество.HeaderText = "Количество";
+			this.Количество.MinimumWidth = 6;
+			this.Количество.Name = "Количество";
+			this.Количество.ReadOnly = true;
+			this.Количество.Width = 125;
+			// 
+			// ID_аксессуара
+			// 
+			this.ID_аксессуара.DataPropertyName = "ID_аксессуара";
+			this.ID_аксессуара.HeaderText = "ID_аксессуара";
+			this.ID_аксессуара.MinimumWidth = 6;
+			this.ID_аксессуара.Name = "ID_аксессуара";
+			this.ID_аксессуара.ReadOnly = true;
+			this.ID_аксессуара.Visible = false;
+			this.ID_аксессуара.Width = 125;
+			// 
+			// iDзаказаDataGridViewTextBoxColumn
+			// 
+			this.iDзаказаDataGridViewTextBoxColumn.DataPropertyName = "ID_заказа";
+			this.iDзаказаDataGridViewTextBoxColumn.HeaderText = "ID_заказа";
+			this.iDзаказаDataGridViewTextBoxColumn.MinimumWidth = 6;
+			this.iDзаказаDataGridViewTextBoxColumn.Name = "iDзаказаDataGridViewTextBoxColumn";
+			this.iDзаказаDataGridViewTextBoxColumn.ReadOnly = true;
+			this.iDзаказаDataGridViewTextBoxColumn.Visible = false;
+			this.iDзаказаDataGridViewTextBoxColumn.Width = 125;
 			// 
 			// аксессуарывзаказеBindingSource
 			// 
@@ -303,6 +367,7 @@ namespace Flower_shop
 			this.SumTextBox.Location = new System.Drawing.Point(375, 462);
 			this.SumTextBox.Margin = new System.Windows.Forms.Padding(4);
 			this.SumTextBox.Name = "SumTextBox";
+			this.SumTextBox.ReadOnly = true;
 			this.SumTextBox.Size = new System.Drawing.Size(203, 26);
 			this.SumTextBox.TabIndex = 15;
 			// 
@@ -330,70 +395,6 @@ namespace Flower_shop
 			// заказTableAdapter
 			// 
 			this.заказTableAdapter.ClearBeforeFill = true;
-			// 
-			// ID_аксессуаров_в_заказе
-			// 
-			this.ID_аксессуаров_в_заказе.DataPropertyName = "ID_аксессуаров_в_заказе";
-			this.ID_аксессуаров_в_заказе.HeaderText = "ID_аксессуаров_в_заказе";
-			this.ID_аксессуаров_в_заказе.MinimumWidth = 6;
-			this.ID_аксессуаров_в_заказе.Name = "ID_аксессуаров_в_заказе";
-			this.ID_аксессуаров_в_заказе.ReadOnly = true;
-			this.ID_аксессуаров_в_заказе.Visible = false;
-			this.ID_аксессуаров_в_заказе.Width = 125;
-			// 
-			// Column2
-			// 
-			this.Column2.DataPropertyName = "ID_аксессуара";
-			this.Column2.DataSource = this.каталогаксессуаровBindingSource;
-			this.Column2.DisplayMember = "Наименование";
-			this.Column2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-			this.Column2.HeaderText = "Наименование";
-			this.Column2.MinimumWidth = 6;
-			this.Column2.Name = "Column2";
-			this.Column2.ReadOnly = true;
-			this.Column2.ValueMember = "ID_аксессуара";
-			this.Column2.Width = 120;
-			// 
-			// Column3
-			// 
-			this.Column3.DataPropertyName = "ID_аксессуара";
-			this.Column3.DataSource = this.каталогаксессуаровBindingSource;
-			this.Column3.DisplayMember = "Цвет";
-			this.Column3.HeaderText = "Цвет";
-			this.Column3.MinimumWidth = 6;
-			this.Column3.Name = "Column3";
-			this.Column3.ReadOnly = true;
-			this.Column3.ValueMember = "ID_аксессуара";
-			this.Column3.Width = 125;
-			// 
-			// Количество
-			// 
-			this.Количество.DataPropertyName = "Количество";
-			this.Количество.HeaderText = "Количество";
-			this.Количество.MinimumWidth = 6;
-			this.Количество.Name = "Количество";
-			this.Количество.ReadOnly = true;
-			this.Количество.Width = 125;
-			// 
-			// ID_аксессуара
-			// 
-			this.ID_аксессуара.DataPropertyName = "ID_аксессуара";
-			this.ID_аксессуара.HeaderText = "ID_аксессуара";
-			this.ID_аксессуара.MinimumWidth = 6;
-			this.ID_аксессуара.Name = "ID_аксессуара";
-			this.ID_аксессуара.ReadOnly = true;
-			this.ID_аксессуара.Visible = false;
-			this.ID_аксессуара.Width = 125;
-			// 
-			// iDзаказаDataGridViewTextBoxColumn
-			// 
-			this.iDзаказаDataGridViewTextBoxColumn.DataPropertyName = "ID_заказа";
-			this.iDзаказаDataGridViewTextBoxColumn.HeaderText = "ID_заказа";
-			this.iDзаказаDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.iDзаказаDataGridViewTextBoxColumn.Name = "iDзаказаDataGridViewTextBoxColumn";
-			this.iDзаказаDataGridViewTextBoxColumn.ReadOnly = true;
-			this.iDзаказаDataGridViewTextBoxColumn.Visible = false;
-			this.iDзаказаDataGridViewTextBoxColumn.Width = 125;
 			// 
 			// DataSummaryForm
 			// 
