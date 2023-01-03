@@ -392,7 +392,6 @@ namespace Flower_shop
 			this.iDзаказаDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.iDзаказаDataGridViewTextBoxColumn.Name = "iDзаказаDataGridViewTextBoxColumn";
 			this.iDзаказаDataGridViewTextBoxColumn.ReadOnly = true;
-			this.iDзаказаDataGridViewTextBoxColumn.Visible = false;
 			this.iDзаказаDataGridViewTextBoxColumn.Width = 125;
 			// 
 			// DataSummaryForm

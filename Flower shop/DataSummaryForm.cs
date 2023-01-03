@@ -1,13 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using OrderRow = Flower_shop.ЗаказыDataSet.ЗаказRow;
+using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
+using AccessoriesRow = Flower_shop.ЗаказыDataSet.Каталог_аксессуаровRow;
+using FlowersInOrderRow = Flower_shop.ЗаказыDataSet.Цветы_в_заказеRow;
+using FlowerRow = Flower_shop.ЗаказыDataSet.Каталог_цветовRow;
 
 namespace Flower_shop
 {
 	public partial class DataSummaryForm : Form
 	{
+		private const int IndexOfColumnAccessoryId = 4;
+		private const int IndexOfColumnOrderId = 5;
 		private readonly decimal _sum;
 
 		private OrderRow _currentOrder;
@@ -60,7 +69,27 @@ namespace Flower_shop
 
 		private void DataGridsFilling()
 		{
+			return;
+			var list = new BindingList<AccessoriesInOrderRow>();
 			
+			foreach (DataGridViewRow row in AccessoriesInOrderDataGrid.Rows)
+			{
+				if ((int)row.Cells[IndexOfColumnOrderId].Value == _currentOrder.ID_заказа)
+				{
+					continue;
+				}
+
+				var newAccessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
+				newAccessory.ID_заказа = _currentOrder.ID_заказа;
+				newAccessory.ID_аксессуара = (int)row.Cells[IndexOfColumnAccessoryId].Value;
+				newAccessory.ID_аксессуаров_в_заказе = (int)row.Cells[0].Value;
+				newAccessory.Количество = (int)row.Cells[3].Value;
+				list.Add(newAccessory);
+			}
+
+			AccessoriesInOrderDataGrid.DataSource = list;
 		}
+
+		private bool IsCurrentOrder(AccessoriesInOrderRow a) => a.ID_заказа == _currentOrder.ID_заказа;
 	}
 }
