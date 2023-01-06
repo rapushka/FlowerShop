@@ -16,7 +16,7 @@ namespace Flower_shop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Заказ());
+            Application.Run(new OrdersListForm());
         }
     }
 }

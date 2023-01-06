@@ -52,7 +52,7 @@ namespace Flower_shop
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Заказ f = new Заказ();
+            OrdersListForm f = new OrdersListForm();
             this.Hide();
             f.ShowDialog();
             this.Show();

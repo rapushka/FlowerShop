@@ -31,9 +31,9 @@ namespace Flower_shop
 				Дата_время_выполнения: completionDateTimePicker.Value,
 				Адрес_доставки: customerAddressTextBox.Text
 			);
-			var newOrder = заказTableAdapter.GetData().Last();
+			var currentOrder = заказTableAdapter.GetData().Last();
 
-			var form = new OrderFillingForm(newOrder.ID_заказа);
+			var form = new OrderFillingForm(currentOrder.ID_заказа);
 			Close();
 			form.ShowDialog();
 		}

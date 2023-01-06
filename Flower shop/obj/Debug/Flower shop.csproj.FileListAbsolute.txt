@@ -5,7 +5,6 @@ C:\Users\nikol\source\repos\Flower shop\Flower shop\bin\Debug\Flower shop.pdb
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.AssemblyReference.cache
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.SuggestedBindingRedirects.cache
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавл_аксессуар.resources
-C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.OrderAddingForm.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_вида.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_страны.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Добавление_цветов.resources
@@ -17,7 +16,6 @@ C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Изм
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Katalog_Cvetov.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.OrderFillingForm.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.DataSummaryForm.resources
-C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Заказ.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Properties.Resources.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Каталог_аксессуаров.resources
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.Справочник.resources
@@ -25,3 +23,5 @@ C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.csproj.CoreCompileInputs.cache
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.exe
 C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower shop.pdb
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.OrderEditForm.resources
+C:\Users\nikol\source\repos\Flower shop\Flower shop\obj\Debug\Flower_shop.OrdersListForm.resources
