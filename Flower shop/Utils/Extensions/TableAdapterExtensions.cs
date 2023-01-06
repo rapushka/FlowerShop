@@ -7,11 +7,23 @@ namespace Flower_shop
 {
 	public static class TableAdapterExtensions
 	{
-		public static void Delete(this Аксессуары_в_заказеTableAdapter @this, AccessoriesInOrderRow accessory) 
-			=> @this.Delete(accessory.ID_аксессуаров_в_заказе, null, null, null);
-		
-		public static void Delete(this Цветы_в_заказеTableAdapter @this, FlowersInOrderRow flower) 
-			=> @this.Delete(flower.ID_цветов_в_заказе, flower.Количество, null, null);
+		public static void Delete(this Аксессуары_в_заказеTableAdapter @this, AccessoriesInOrderRow accessory)
+			=> @this.Delete
+			(
+				Original_ID_аксессуаров_в_заказе: accessory.ID_аксессуаров_в_заказе,
+				Original_Количество: accessory.Количество,
+				Original_ID_заказа: accessory.ID_заказа,
+				Original_ID_аксессуара: accessory.ID_аксессуара
+			);
+
+		public static void Delete(this Цветы_в_заказеTableAdapter @this, FlowersInOrderRow flower)
+			=> @this.Delete
+			(
+				Original_ID_цветов_в_заказе: flower.ID_цветов_в_заказе,
+				Original_Количество: flower.Количество,
+				Original_ID_цветов: flower.ID_цветов,
+				Original_ID_заказа: flower.ID_заказа
+			);
 
 		public static void InsertOrUpdate(this Аксессуары_в_заказеTableAdapter @this, AccessoriesInOrderRow accessory)
 		{

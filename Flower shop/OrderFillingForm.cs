@@ -266,9 +266,9 @@ namespace Flower_shop
 		private bool IsCurrentOrder(FlowersInOrderRow row) => row.ID_заказа == _currentOrder.ID_заказа;
 
 		private bool IsNotInList(AccessoriesInOrderRow row)
-			=> _accessoriesInOrder.Any((aio) => aio.ID_аксессуаров_в_заказе == row.ID_аксессуаров_в_заказе);
+			=> _accessoriesInOrder.Any((aio) => aio.ID_аксессуаров_в_заказе == row.ID_аксессуаров_в_заказе) == false;
 		private bool IsNotInList(FlowersInOrderRow row)
-			=> _flowersInOrder.Any((fio) => fio.ID_цветов_в_заказе == row.ID_цветов_в_заказе);
+			=> _flowersInOrder.Any((fio) => fio.ID_цветов_в_заказе == row.ID_цветов_в_заказе) == false;
 
 		private void UpdateLabelValue()
 			=> TotalAmountLabel.Text = CalculateSum().ToString(CultureInfo.InvariantCulture);
