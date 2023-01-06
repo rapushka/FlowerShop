@@ -71,7 +71,7 @@ namespace Flower_shop
             this.cutomerNameTextBox.Name = "cutomerNameTextBox";
             this.cutomerNameTextBox.Size = new System.Drawing.Size(192, 24);
             this.cutomerNameTextBox.TabIndex = 2;
-            this.cutomerNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cutomerNameTextBox_KeyPress);
+            this.cutomerNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustomerNameTextBox_KeyPress);
             // 
             // customerPhoneTextBox
             // 

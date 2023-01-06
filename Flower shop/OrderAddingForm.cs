@@ -12,29 +12,12 @@ namespace Flower_shop
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
-			if (string.IsNullOrEmpty(cutomerNameTextBox.Text))
-            {
-				MessageBox.Show("Вы не ввели Имя заказчика",
-				  "Сообщение",
-				  MessageBoxButtons.OK,
-				  MessageBoxIcon.Information,
-				  MessageBoxDefaultButton.Button1);
-				return;
-            }
-
-			if (string.IsNullOrEmpty(customerPhoneTextBox.Text))
+			if (TextBoxesIsFilled() == false)
 			{
-				
-					MessageBox.Show("Вы не ввели Телефон заказчика",
-					  "Сообщение",
-					  MessageBoxButtons.OK,
-					  MessageBoxIcon.Information,
-					  MessageBoxDefaultButton.Button1);
-					return;			
+				return;
 			}
 
-
-				заказTableAdapter.InsertQuery
+			заказTableAdapter.InsertQuery
 			(
 				Дата_приема: receiptDateTimePicker.Value,
 				Имя_заказчика: cutomerNameTextBox.Text,
@@ -49,27 +32,45 @@ namespace Flower_shop
 			form.ShowDialog();
 		}
 
-        private void customerPhoneTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
+		private bool TextBoxesIsFilled()
+		{
+			if (string.IsNullOrEmpty(cutomerNameTextBox.Text))
+			{
+				MessageBoxUtils.ShowError("Вы не ввели Имя заказчика");
+				return false;
+			}
 
-           char number = e.KeyChar;
+			if (string.IsNullOrEmpty(customerPhoneTextBox.Text))
+			{
+				MessageBoxUtils.ShowError("Вы не ввели Телефон заказчика");
+				return false;
+			}
 
-			if (!Char.IsDigit(number) && number != 8 && number!=43)
+			return true;
+		}
+
+		private void customerPhoneTextBox_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			var number = e.KeyChar;
+
+			if (!char.IsDigit(number)
+			    && number != 8
+			    && number != 43)
 			{
 				e.Handled = true;
 			}
 		}
 
-        private void cutomerNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-			if (e.KeyChar.Equals('\b')) return;
-			//Разрешаем только буквы
-			e.Handled = !char.IsLetter(e.KeyChar);
+		private void CustomerNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar != '\b')
+			{
+				AllowOnlyLetters(e);
+			}
 		}
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-			Close();
-        }
-    }
+		private static void AllowOnlyLetters(KeyPressEventArgs e) => e.Handled = !char.IsLetter(e.KeyChar);
+
+		private void CancelButton_Click(object sender, EventArgs e) => Close();
+	}
 }

@@ -29,7 +29,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Utils\Extensions\DataGridExtensions.cs" />
     <Compile Include="Utils\Extensions\ForEachExtensions.cs" />
+    <Compile Include="Utils\MessageBoxUtils.cs" />
     <Compile Include="Добавл аксессуар.cs">
       <SubType>Form</SubType>
     </Compile>
