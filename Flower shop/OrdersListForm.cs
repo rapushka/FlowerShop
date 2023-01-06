@@ -8,6 +8,8 @@ namespace Flower_shop
 	{
 		public OrdersListForm() => InitializeComponent();
 
+		private OrderRow SelectedOrder => OrdersDataGrid.SelectedOrder(заказTableAdapter);
+
 		private void pictureBox2_Click(object sender, EventArgs e) => Close();
 
 		private void OrderListForm_Load(object sender, EventArgs e) => FillTables();
@@ -41,11 +43,7 @@ namespace Flower_shop
 
 		private void AddOrderButton_Click(object sender, EventArgs e) => EditOrder();
 
-		private void EditOrderButton_Click(object sender, EventArgs e)
-		{
-			var orderRow = OrdersDataGrid.SelectedOrder(заказTableAdapter);
-			EditOrder(orderRow);
-		}
+		private void EditOrderButton_Click(object sender, EventArgs e) => EditOrder(SelectedOrder);
 
 		private void EditOrder(OrderRow order = null)
 		{

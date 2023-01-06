@@ -41,7 +41,7 @@ namespace Flower_shop
 
 			var currentOrder = IsNewOrder ? InsertOrder() : UpdateOrder();
 
-			var form = new OrderFillingForm(currentOrder.ID_заказа);
+			var form = new OrderFillingForm(currentOrder);
 			Close();
 			form.ShowDialog();
 		}
@@ -56,8 +56,7 @@ namespace Flower_shop
 				Дата_время_выполнения: completionDateTimePicker.Value,
 				Адрес_доставки: customerAddressTextBox.Text
 			);
-			var currentOrder = OrderTableAdapter.GetData().Last();
-			return currentOrder;
+			return OrderTableAdapter.GetData().Last();
 		}
 
 		private OrderRow UpdateOrder()

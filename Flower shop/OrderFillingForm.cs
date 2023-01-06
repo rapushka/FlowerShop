@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
@@ -12,15 +13,14 @@ namespace Flower_shop
 {
 	public partial class OrderFillingForm : Form
 	{
-		private readonly int _orderId;
-		private readonly BindingList<AccessoriesInOrderRow> _accessoriesInOrder;
-		private readonly BindingList<FlowersInOrderRow> _flowersInOrder;
+		private readonly ЗаказыDataSet.ЗаказRow _currentOrder;
 
-		public OrderFillingForm(int orderId)
+		private BindingList<AccessoriesInOrderRow> _accessoriesInOrder;
+		private BindingList<FlowersInOrderRow> _flowersInOrder;
+
+		public OrderFillingForm(ЗаказыDataSet.ЗаказRow currentOrder)
 		{
-			_orderId = orderId;
-			_accessoriesInOrder = new BindingList<AccessoriesInOrderRow>();
-			_flowersInOrder = new BindingList<FlowersInOrderRow>();
+			_currentOrder = currentOrder;
 
 			InitializeComponent();
 		}
@@ -31,24 +31,38 @@ namespace Flower_shop
 		private FlowerRow SelectedFlowerFromCatalog
 			=> заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
 
-		private void NextButton_Click(object sender, EventArgs e)
-		{
-			var form = new DataSummaryForm(Sum());
-			SaveToDataBase();
-			Close();
-			form.ShowDialog();
-		}
-
 		private void OrderFillingForm_Load(object sender, EventArgs e)
 		{
+			заказTableAdapter.Fill(заказыDataSet.Заказ);
 			вид_цветовTableAdapter.Fill(заказыDataSet.Вид_цветов);
 			цветы_в_заказеTableAdapter.Fill(заказыDataSet.Цветы_в_заказе);
 			аксессуары_в_заказеTableAdapter.Fill(заказыDataSet.Аксессуары_в_заказе);
 			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
+			_accessoriesInOrder = new BindingList<AccessoriesInOrderRow>(GetAccessoriesInOrder());
+			_flowersInOrder = new BindingList<FlowersInOrderRow>(GetFlowersInOrder());
+
 			AccessoriesInOrderDataGrid.DataSource = _accessoriesInOrder;
 			FlowersInOrderDataGrid.DataSource = _flowersInOrder;
+		}
+
+		private IList<AccessoriesInOrderRow> GetAccessoriesInOrder()
+			=> аксессуары_в_заказеTableAdapter.GetData()
+			                                  .Where((aio) => aio.ID_заказа == _currentOrder.ID_заказа)
+			                                  .ToList();
+
+		private IList<FlowersInOrderRow> GetFlowersInOrder()
+			=> цветы_в_заказеTableAdapter.GetData()
+			                             .Where((fio) => fio.ID_заказа == _currentOrder.ID_заказа)
+			                             .ToList();
+
+		private void NextButton_Click(object sender, EventArgs e)
+		{
+			var form = new DataSummaryForm(Sum());
+			SaveToDataBase();
+			Close();
+			form.ShowDialog();
 		}
 
 #region Buttons
@@ -211,7 +225,7 @@ namespace Flower_shop
 			=> аксессуары_в_заказеTableAdapter.Insert
 			(
 				Количество: accessory.Количество,
-				ID_заказа: _orderId,
+				ID_заказа: _currentOrder.ID_заказа,
 				ID_аксессуара: accessory.Каталог_аксессуаровRow.ID_аксессуара
 			);
 
@@ -219,7 +233,7 @@ namespace Flower_shop
 			=> цветы_в_заказеTableAdapter.Insert
 			(
 				Количество: flower.Количество,
-				ID_заказа: _orderId,
+				ID_заказа: _currentOrder.ID_заказа,
 				ID_цветов: flower.Каталог_цветовRow.ID_цветов
 			);
 
