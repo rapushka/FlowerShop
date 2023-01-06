@@ -7,6 +7,12 @@ namespace Flower_shop
 {
 	public static class TableAdapterExtensions
 	{
+		public static void Delete(this Аксессуары_в_заказеTableAdapter @this, AccessoriesInOrderRow accessory) 
+			=> @this.Delete(accessory.ID_аксессуаров_в_заказе, null, null, null);
+		
+		public static void Delete(this Цветы_в_заказеTableAdapter @this, FlowersInOrderRow flower) 
+			=> @this.Delete(flower.ID_цветов_в_заказе, flower.Количество, null, null);
+
 		public static void InsertOrUpdate(this Аксессуары_в_заказеTableAdapter @this, AccessoriesInOrderRow accessory)
 		{
 			if (@this.GetData().Any(accessory.IsSame))

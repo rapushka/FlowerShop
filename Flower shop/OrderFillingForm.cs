@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using Flower_shop.ЗаказыDataSetTableAdapters;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
 using AccessoriesRow = Flower_shop.ЗаказыDataSet.Каталог_аксессуаровRow;
 using FlowersInOrderRow = Flower_shop.ЗаказыDataSet.Цветы_в_заказеRow;
@@ -34,12 +35,16 @@ namespace Flower_shop
 		private FlowerRow SelectedFlowerFromCatalog
 			=> заказыDataSet.Каталог_цветов[FlowersDataGrid.IndexOfSelectedRow()];
 
+		// ReSharper disable ConvertToAutoProperty - other part is in auto-generated file
+		private Аксессуары_в_заказеTableAdapter AccessoriesInOrderTableAdapter => аксессуары_в_заказеTableAdapter;
+		private Цветы_в_заказеTableAdapter      FlowersInOrderTableAdapter     => цветы_в_заказеTableAdapter;
+
 		private void OrderFillingForm_Load(object sender, EventArgs e)
 		{
 			заказTableAdapter.Fill(заказыDataSet.Заказ);
 			вид_цветовTableAdapter.Fill(заказыDataSet.Вид_цветов);
-			цветы_в_заказеTableAdapter.Fill(заказыDataSet.Цветы_в_заказе);
-			аксессуары_в_заказеTableAdapter.Fill(заказыDataSet.Аксессуары_в_заказе);
+			FlowersInOrderTableAdapter.Fill(заказыDataSet.Цветы_в_заказе);
+			AccessoriesInOrderTableAdapter.Fill(заказыDataSet.Аксессуары_в_заказе);
 			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
@@ -53,12 +58,12 @@ namespace Flower_shop
 		}
 
 		private IList<AccessoriesInOrderRow> GetAccessoriesInOrder()
-			=> аксессуары_в_заказеTableAdapter.GetData()
-			                                  .Where((aio) => aio.ID_заказа == _currentOrder.ID_заказа)
-			                                  .ToList();
+			=> AccessoriesInOrderTableAdapter.GetData()
+			                                 .Where((aio) => aio.ID_заказа == _currentOrder.ID_заказа)
+			                                 .ToList();
 
 		private IList<FlowersInOrderRow> GetFlowersInOrder()
-			=> цветы_в_заказеTableAdapter.GetData()
+			=> FlowersInOrderTableAdapter.GetData()
 			                             .Where((fio) => fio.ID_заказа == _currentOrder.ID_заказа)
 			                             .ToList();
 
@@ -226,9 +231,44 @@ namespace Flower_shop
 
 		private void SaveToDataBase()
 		{
-			_accessoriesInOrder.ForEach(аксессуары_в_заказеTableAdapter.InsertOrUpdate);
-			_flowersInOrder.ForEach(цветы_в_заказеTableAdapter.InsertOrUpdate);
+			DeleteFromDbRemovedAccessories();
+			DeleteFromDbRemovedFlowers();
+
+			_accessoriesInOrder.ForEach(AccessoriesInOrderTableAdapter.InsertOrUpdate);
+			_flowersInOrder.ForEach(FlowersInOrderTableAdapter.InsertOrUpdate);
 		}
+
+		private void DeleteFromDbRemovedAccessories()
+		{
+			foreach (var row in AccessoriesInOrderTableAdapter.GetData())
+			{
+				if (IsCurrentOrder(row)
+				    && IsNotInList(row))
+				{
+					AccessoriesInOrderTableAdapter.Delete(row);
+				}
+			}
+		}
+
+		private void DeleteFromDbRemovedFlowers()
+		{
+			foreach (var row in FlowersInOrderTableAdapter.GetData())
+			{
+				if (IsCurrentOrder(row)
+				    && IsNotInList(row))
+				{
+					FlowersInOrderTableAdapter.Delete(row);
+				}
+			}
+		}
+
+		private bool IsCurrentOrder(AccessoriesInOrderRow row) => row.ID_заказа == _currentOrder.ID_заказа;
+		private bool IsCurrentOrder(FlowersInOrderRow row) => row.ID_заказа == _currentOrder.ID_заказа;
+
+		private bool IsNotInList(AccessoriesInOrderRow row)
+			=> _accessoriesInOrder.Any((aio) => aio.ID_аксессуаров_в_заказе == row.ID_аксессуаров_в_заказе);
+		private bool IsNotInList(FlowersInOrderRow row)
+			=> _flowersInOrder.Any((fio) => fio.ID_цветов_в_заказе == row.ID_цветов_в_заказе);
 
 		private void UpdateLabelValue()
 			=> TotalAmountLabel.Text = CalculateSum().ToString(CultureInfo.InvariantCulture);
