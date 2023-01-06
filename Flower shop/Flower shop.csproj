@@ -75,11 +75,11 @@
     <Compile Include="Добавл аксессуар.Designer.cs">
       <DependentUpon>Добавл аксессуар.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderEditForm.cs">
+    <Compile Include="OrderPrimaryInformationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderEditForm.Designer.cs">
-      <DependentUpon>OrderEditForm.cs</DependentUpon>
+    <Compile Include="OrderPrimaryInformationForm.Designer.cs">
+      <DependentUpon>OrderPrimaryInformationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Добавление вида.cs">
       <SubType>Form</SubType>
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="Добавл аксессуар.resx">
       <DependentUpon>Добавл аксессуар.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderEditForm.resx">
-      <DependentUpon>OrderEditForm.cs</DependentUpon>
+    <EmbeddedResource Include="OrderPrimaryInformationForm.resx">
+      <DependentUpon>OrderPrimaryInformationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Добавление вида.resx">
       <DependentUpon>Добавление вида.cs</DependentUpon>

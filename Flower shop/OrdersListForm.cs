@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 using OrderRow = Flower_shop.ЗаказыDataSet.ЗаказRow;
 
@@ -12,7 +10,7 @@ namespace Flower_shop
 
 		private void pictureBox2_Click(object sender, EventArgs e) => Close();
 
-		private void Заказ_Load(object sender, EventArgs e) => FillTables();
+		private void OrderListForm_Load(object sender, EventArgs e) => FillTables();
 
 		private void FillTables()
 		{
@@ -51,7 +49,7 @@ namespace Flower_shop
 
 		private void EditOrder(OrderRow order = null)
 		{
-			var form = new OrderEditForm(order);
+			var form = new OrderPrimaryInformationForm(order);
 			Hide();
 			form.ShowDialog();
 

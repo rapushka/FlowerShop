@@ -6,11 +6,11 @@ using OrderRow = Flower_shop.ЗаказыDataSet.ЗаказRow;
 
 namespace Flower_shop
 {
-	public partial class OrderEditForm : Form
+	public partial class OrderPrimaryInformationForm : Form
 	{
 		private readonly OrderRow _currentOrder;
 
-		public OrderEditForm(ЗаказыDataSet.ЗаказRow currentOrder = null)
+		public OrderPrimaryInformationForm(ЗаказыDataSet.ЗаказRow currentOrder = null)
 		{
 			_currentOrder = currentOrder;
 			InitializeComponent();

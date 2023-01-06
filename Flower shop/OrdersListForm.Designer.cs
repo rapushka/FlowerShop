@@ -727,7 +727,7 @@ namespace Flower_shop
 			this.Name = "OrdersListForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
-			this.Load += new System.EventHandler(this.Заказ_Load);
+			this.Load += new System.EventHandler(this.OrderListForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.заказBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).EndInit();
