@@ -15,13 +15,11 @@ namespace Flower_shop
 {
 	public partial class DataSummaryForm : Form
 	{
-		private readonly decimal _sum;
+		private readonly OrderRow _currentOrder;
 
-		private OrderRow _currentOrder;
-
-		public DataSummaryForm(decimal sum)
+		public DataSummaryForm(OrderRow order)
 		{
-			_sum = sum;
+			_currentOrder = order;
 
 			InitializeComponent();
 		}
@@ -39,11 +37,9 @@ namespace Flower_shop
 
 		private void LoadOrder()
 		{
-			_currentOrder = заказTableAdapter.GetData().Last();
-
-			UpdateSum();
-			TextBoxesFilling();
-			DataGridsFilling();
+			UpdateCost();
+			FillTextBoxes();
+			FillDataGrids();
 		}
 
 		private void NextButton_Click(object sender, EventArgs e)
@@ -52,13 +48,7 @@ namespace Flower_shop
 			SaveChanges();
 		}
 
-		private void UpdateSum()
-		{
-			_currentOrder.Стоимость = _sum;
-			UpdateCurrentOrder();
-		}
-
-		private void TextBoxesFilling()
+		private void FillTextBoxes()
 		{
 			CustomerNameTextBox.Text = _currentOrder.Имя_заказчика;
 			CustomerPhoneTextBox.Text = _currentOrder.Телефон_заказчика;
@@ -69,7 +59,7 @@ namespace Flower_shop
 			SumTextBox.Text = _currentOrder.Стоимость.ToString(CultureInfo.InvariantCulture);
 		}
 
-		private void DataGridsFilling()
+		private void FillDataGrids()
 		{
 			AccessoriesInOrderDataGrid.DataSource = RowsToAccessories();
 			FlowersInOrderDataGrid.DataSource = RowsToFlowers();
@@ -129,9 +119,9 @@ namespace Flower_shop
 			_currentOrder.Дата_приема = ReceiptDateTimePicker.Value;
 			_currentOrder.Дата_время_выполнения = CompletionDateTimePicker.Value;
 
-			UpdateCurrentOrder();
+			UpdateCost();
 		}
 
-		private void UpdateCurrentOrder() => заказTableAdapter.Update(_currentOrder);
+		private void UpdateCost() => заказTableAdapter.Update(_currentOrder);
 	}
 }

@@ -69,7 +69,8 @@ namespace Flower_shop
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
-			var form = new DataSummaryForm(CalculateSum());
+			_currentOrder.Стоимость = CalculateCost();
+			var form = new DataSummaryForm(_currentOrder);
 			SaveToDataBase();
 			Close();
 			form.ShowDialog();
@@ -271,9 +272,9 @@ namespace Flower_shop
 			=> _flowersInOrder.Any((fio) => fio.ID_цветов_в_заказе == row.ID_цветов_в_заказе) == false;
 
 		private void UpdateLabelValue()
-			=> TotalAmountLabel.Text = CalculateSum().ToString(CultureInfo.InvariantCulture);
+			=> TotalAmountLabel.Text = CalculateCost().ToString(CultureInfo.InvariantCulture);
 
-		private decimal CalculateSum()
+		private decimal CalculateCost()
 			=> _accessoriesInOrder.Sum((a) => a.Количество * GetPrice(a))
 			   + _flowersInOrder.Sum((f) => f.Количество * GetPrice(f));
 
