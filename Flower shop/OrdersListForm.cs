@@ -44,9 +44,7 @@ namespace Flower_shop
 
 		private void EditOrderButton_Click(object sender, EventArgs e)
 		{
-			var selectedRow = OrdersDataGrid.SelectedRows[0];
-
-			var orderRow = заказTableAdapter.GetData().Single((r) => r.ID_заказа == (int)selectedRow.Cells[0].Value);
+			var orderRow = OrdersDataGrid.SelectedOrder(заказTableAdapter);
 			MessageBox.Show($"{orderRow.Имя_заказчика}\n");
 
 			EditOrder(isNewOrder: false);
