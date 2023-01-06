@@ -21,7 +21,16 @@ namespace Flower_shop
 		// ReSharper disable once ConvertToAutoProperty - another part is in auto-generated file
 		private ЗаказTableAdapter OrderTableAdapter => заказTableAdapter;
 
-		private void OrderAddingForm_Load(object sender, EventArgs e) => OrderTableAdapter.Fill(заказыDataSet.Заказ);
+		private void OrderAddingForm_Load(object sender, EventArgs e)
+		{
+			OrderTableAdapter.Fill(заказыDataSet.Заказ);
+
+			receiptDateTimePicker.Value = _currentOrder.Дата_приема;
+			customerPhoneTextBox.Text = _currentOrder.Телефон_заказчика;
+			completionDateTimePicker.Value = _currentOrder.Дата_время_выполнения;
+			cutomerNameTextBox.Text = _currentOrder.Имя_заказчика;
+			customerAddressTextBox.Text = _currentOrder.Адрес_доставки;
+		}
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
