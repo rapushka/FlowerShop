@@ -207,7 +207,7 @@ namespace Flower_shop
 			var newAccessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			newAccessory.Количество = 1;
 			newAccessory.Каталог_аксессуаровRow = SelectedAccessoryFromCatalog;
-			newAccessory.ЗаказRow = _currentOrder;
+			newAccessory.ID_заказа = _currentOrder.ID_заказа;
 			newAccessory.ID_аксессуара = SelectedAccessoryFromCatalog.ID_аксессуара;
 
 			_accessoriesInOrder.Add(newAccessory);
@@ -218,7 +218,7 @@ namespace Flower_shop
 			var newFlower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
 			newFlower.Количество = 1;
 			newFlower.Каталог_цветовRow = SelectedFlowerFromCatalog;
-			newFlower.ЗаказRow = _currentOrder;
+			newFlower.ID_заказа = _currentOrder.ID_заказа;
 			newFlower.ID_цветов = SelectedFlowerFromCatalog.ID_цветов;
 
 			_flowersInOrder.Add(newFlower);
@@ -226,8 +226,8 @@ namespace Flower_shop
 
 		private void SaveToDataBase()
 		{
-			_accessoriesInOrder.ForEach(аксессуары_в_заказеTableAdapter.Insert);
-			_flowersInOrder.ForEach(цветы_в_заказеTableAdapter.Insert);
+			_accessoriesInOrder.ForEach(аксессуары_в_заказеTableAdapter.InsertOrUpdate);
+			_flowersInOrder.ForEach(цветы_в_заказеTableAdapter.InsertOrUpdate);
 		}
 
 		private void UpdateLabelValue()
