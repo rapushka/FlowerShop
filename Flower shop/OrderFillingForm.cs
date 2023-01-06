@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using Flower_shop.ЗаказыDataSetTableAdapters;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
 using AccessoriesRow = Flower_shop.ЗаказыDataSet.Каталог_аксессуаровRow;
 using FlowersInOrderRow = Flower_shop.ЗаказыDataSet.Цветы_в_заказеRow;
@@ -56,26 +55,12 @@ namespace Flower_shop
 		private IList<AccessoriesInOrderRow> GetAccessoriesInOrder()
 			=> аксессуары_в_заказеTableAdapter.GetData()
 			                                  .Where((aio) => aio.ID_заказа == _currentOrder.ID_заказа)
-			                                  .Select(Initialize)
 			                                  .ToList();
-
-		private AccessoriesInOrderRow Initialize(AccessoriesInOrderRow aio)
-		{
-			aio.Каталог_аксессуаровRow = GetCatalogueRow(aio);
-			return aio;
-		}
 
 		private IList<FlowersInOrderRow> GetFlowersInOrder()
 			=> цветы_в_заказеTableAdapter.GetData()
 			                             .Where((fio) => fio.ID_заказа == _currentOrder.ID_заказа)
-			                             .Select(Initialize)
 			                             .ToList();
-		
-		private FlowersInOrderRow Initialize(FlowersInOrderRow fio)
-		{
-			fio.Каталог_цветовRow = GetCatalogueRow(fio);
-			return fio;
-		}
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
@@ -206,16 +191,16 @@ namespace Flower_shop
 		}
 
 		private bool Selected(AccessoriesInOrderRow accessory)
-			=> accessory.Каталог_аксессуаровRow.ID_аксессуара == AccessoriesInOrderDataGrid.SelectedAccessoryId();
+			=> accessory.ID_аксессуара == AccessoriesInOrderDataGrid.SelectedAccessoryId();
 
 		private bool Selected(FlowersInOrderRow flower)
-			=> flower.Каталог_цветовRow.ID_цветов == FlowersInOrderDataGrid.SelectedFlowerId();
+			=> flower.ID_цветов == FlowersInOrderDataGrid.SelectedFlowerId();
 
 		private bool IsSame(AccessoriesInOrderRow accessoryInOrder)
-			=> accessoryInOrder.Каталог_аксессуаровRow.ID_аксессуара == SelectedAccessoryFromCatalog.ID_аксессуара;
+			=> accessoryInOrder.ID_аксессуара == SelectedAccessoryFromCatalog.ID_аксессуара;
 
 		private bool IsSame(FlowersInOrderRow flowerInOrder)
-			=> flowerInOrder.Каталог_цветовRow.ID_цветов == SelectedFlowerFromCatalog.ID_цветов;
+			=> flowerInOrder.ID_цветов == SelectedFlowerFromCatalog.ID_цветов;
 
 		private void AddNewAccessory()
 		{
