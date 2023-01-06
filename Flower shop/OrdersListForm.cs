@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Flower_shop
@@ -44,8 +45,10 @@ namespace Flower_shop
 		private void EditOrderButton_Click(object sender, EventArgs e)
 		{
 			var selectedRow = OrdersDataGrid.SelectedRows[0];
-			var ordersDataTable = заказTableAdapter.GetData();
-			MessageBox.Show(string.Join(", ", ordersDataTable.Rows));
+
+			var orderRow = заказTableAdapter.GetData().Single((r) => r.ID_заказа == (int)selectedRow.Cells[0].Value);
+			MessageBox.Show($"{orderRow.Имя_заказчика}\n");
+
 			EditOrder(isNewOrder: false);
 		}
 

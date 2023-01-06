@@ -26,13 +26,6 @@ namespace Flower_shop
 			InitializeComponent();
 		}
 
-		private void NextButton_Click(object sender, EventArgs e)
-		{
-			Close();
-
-			SaveChanges();
-		}
-
 		private void DataSummaryForm_Load(object sender, EventArgs e)
 		{
 			заказTableAdapter.Fill(заказыDataSet.Заказ);
@@ -51,6 +44,12 @@ namespace Flower_shop
 			UpdateSum();
 			TextBoxesFilling();
 			DataGridsFilling();
+		}
+
+		private void NextButton_Click(object sender, EventArgs e)
+		{
+			Close();
+			SaveChanges();
 		}
 
 		private void UpdateSum()

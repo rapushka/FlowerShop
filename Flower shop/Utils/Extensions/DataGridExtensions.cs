@@ -11,9 +11,8 @@ namespace Flower_shop
 
 		public static int SelectedFlowerId(this DataGridView @this)
 			=> (int)@this.SelectedRows[0].Cells[IndexOfColumnFlowerId].Value;
-		
+
 		public static int SelectedAccessoryId(this DataGridView @this)
 			=> (int)@this.SelectedRows[0].Cells[IndexOfColumnAccessoryId].Value;
-		
 	}
 }

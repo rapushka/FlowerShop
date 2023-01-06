@@ -51,6 +51,8 @@ namespace Flower_shop
 			FlowersInOrderDataGrid.DataSource = _flowersInOrder;
 		}
 
+#region Buttons
+
 		private void AddAccessoryButton_DoubleClick(object sender, EventArgs e)
 		{
 			AddAccessory();
@@ -98,6 +100,8 @@ namespace Flower_shop
 			RemoveFlower();
 			UpdateLabelValue();
 		}
+
+#endregion
 
 		private void AddAccessory()
 		{
