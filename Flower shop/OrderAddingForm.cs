@@ -12,7 +12,29 @@ namespace Flower_shop
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
-			заказTableAdapter.InsertQuery
+			if (string.IsNullOrEmpty(cutomerNameTextBox.Text))
+            {
+				MessageBox.Show("Вы не ввели Имя заказчика",
+				  "Сообщение",
+				  MessageBoxButtons.OK,
+				  MessageBoxIcon.Information,
+				  MessageBoxDefaultButton.Button1);
+				return;
+            }
+
+			if (string.IsNullOrEmpty(customerPhoneTextBox.Text))
+			{
+				
+					MessageBox.Show("Вы не ввели Телефон заказчика",
+					  "Сообщение",
+					  MessageBoxButtons.OK,
+					  MessageBoxIcon.Information,
+					  MessageBoxDefaultButton.Button1);
+					return;			
+			}
+
+
+				заказTableAdapter.InsertQuery
 			(
 				Дата_приема: receiptDateTimePicker.Value,
 				Имя_заказчика: cutomerNameTextBox.Text,
@@ -26,5 +48,28 @@ namespace Flower_shop
 			Close();
 			form.ShowDialog();
 		}
-	}
+
+        private void customerPhoneTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+           char number = e.KeyChar;
+
+			if (!Char.IsDigit(number) && number != 8 && number!=43)
+			{
+				e.Handled = true;
+			}
+		}
+
+        private void cutomerNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+			if (e.KeyChar.Equals('\b')) return;
+			//Разрешаем только буквы
+			e.Handled = !char.IsLetter(e.KeyChar);
+		}
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+			Close();
+        }
+    }
 }

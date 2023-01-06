@@ -52,10 +52,7 @@ namespace Flower_shop
             this.Show();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
 
         private void Katalog_Cvetov_Load(object sender, EventArgs e)
         {
@@ -98,7 +95,6 @@ namespace Flower_shop
             Каталог_аксессуаров f = new Каталог_аксессуаров();
             this.Hide();
             f.ShowDialog();
-            this.Show();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

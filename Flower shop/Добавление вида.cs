@@ -24,23 +24,28 @@ namespace Flower_shop
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            string name = textBox1.Text;
+            if(name==String.Empty)
+            {
+                MessageBox.Show("Вы не ввели Наименование",
+                    "Сообщение",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1);
+                return;
+            }
 
             вид_цветовTableAdapter.InsertQuery(textBox1.Text);
 
             Справочник f = new Справочник();
             f.dataGridView1.DataSource = вид_цветовTableAdapter.GetData();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            Close();
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Справочник f = new Справочник();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            Close();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

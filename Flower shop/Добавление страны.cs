@@ -19,20 +19,29 @@ namespace Flower_shop
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            string name = textBox1.Text;
+            if (name == String.Empty)
+            {
+                MessageBox.Show("Вы не ввели Наименование",
+                    "Сообщение",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1);
+                return;
+            }
 
             страна_производительTableAdapter1.InsertQuery(textBox1.Text);
 
             Справочник f = new Справочник();
 
             f.dataGridView2.DataSource = страна_производительTableAdapter1.GetData();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+
+            Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -40,6 +49,11 @@ namespace Flower_shop
             if (e.KeyChar.Equals('\b')) return;
             //Разрешаем только буквы
             e.Handled = !char.IsLetter(e.KeyChar);
+        }
+
+        private void Добавление_страны_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

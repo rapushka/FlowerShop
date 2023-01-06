@@ -12,18 +12,28 @@ namespace Flower_shop
 {
     public partial class Изменение_заказа : Form
     {
+        
         public Изменение_заказа()
         {
             InitializeComponent();
         }
-
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
         private void Изменение_заказа_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Цветы_в_заказе". При необходимости она может быть перемещена или удалена.
-            this.цветы_в_заказеTableAdapter.Fill(this.заказыDataSet.Цветы_в_заказе);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "заказыDataSet.Аксессуары_в_заказе". При необходимости она может быть перемещена или удалена.
-            this.аксессуары_в_заказеTableAdapter.Fill(this.заказыDataSet.Аксессуары_в_заказе);
+           
+            заказTableAdapter.Fill(заказыDataSet.Заказ);
+            каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
+            каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
+            цветы_в_заказеTableAdapter.Fill(заказыDataSet.Цветы_в_заказе);
+            аксессуары_в_заказеTableAdapter.Fill(заказыDataSet.Аксессуары_в_заказе);
+
 
         }
+
+
+     
     }
 }

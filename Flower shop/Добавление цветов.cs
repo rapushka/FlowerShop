@@ -80,36 +80,28 @@ namespace Flower_shop
             каталог_цветовTableAdapter.InsertQuery(textBox1.Text, Convert.ToDecimal(textBox4.Text), Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(comboBox2.SelectedValue));
 
             Katalog_Cvetov f = new Katalog_Cvetov();
-
             f.DataGrid_Katalog_Cvetov.DataSource = каталог_цветовTableAdapter.GetData();
-
             this.Close();
             f.ShowDialog();
-            this.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Добавление_страны f = new Добавление_страны();
-            this.Close();
+           // this.Close();
             f.ShowDialog();
-            this.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Добавление_вида f = new Добавление_вида();
-            this.Close();
+            //this.Close();
             f.ShowDialog();
-            this.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Katalog_Cvetov f = new Katalog_Cvetov();
-            this.Close();
-            f.ShowDialog();
-            this.Show();
+            Close();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

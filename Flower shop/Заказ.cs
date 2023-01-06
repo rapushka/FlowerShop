@@ -88,5 +88,86 @@ namespace Flower_shop
 			f.ShowDialog();
 			Show();
 		}
-	}
+
+		private void pb_Udal_Zakaz_Click(object sender, EventArgs e)
+		{
+			DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo);
+			if (dialogResult == DialogResult.Yes)
+			{
+				заказTableAdapter.DeleteQuery(Convert.ToInt32(DataGrid_Zakaz[0, DataGrid_Zakaz.CurrentRow.Index].Value));
+				DataGrid_Zakaz.DataSource = заказTableAdapter.GetData();
+			}
+			else
+			{
+
+				this.Hide();
+			}
+		}
+
+		private void checkBox1_CheckedChanged(object sender, EventArgs e)
+		{
+			DateTime data = Convert.ToDateTime(dateTimePicker1.Value.ToString("d"));
+			DateTime data1 = Convert.ToDateTime(dateTimePicker2.Value.ToString("d"));
+
+			if (checkBox1.Checked == true)
+			{
+				if (dateTimePicker1.Value > dateTimePicker2.Value)
+				{
+					MessageBox.Show("Начало периода не может быть позже его конца","Сообщение",
+	                MessageBoxButtons.OK,
+					MessageBoxIcon.Information,
+					MessageBoxDefaultButton.Button1);
+					checkBox1.Checked = false;
+					return;
+				}
+				DataGrid_Zakaz.DataSource = заказTableAdapter.GetDataBy4(data, data1);
+			}
+			else { DataGrid_Zakaz.DataSource = заказTableAdapter.GetData(); }
+		}
+
+		private void checkBox2_CheckedChanged(object sender, EventArgs e)
+		{
+			DateTime data = Convert.ToDateTime(dateTimePicker4.Value.ToString("d"));
+			DateTime data1 = Convert.ToDateTime(dateTimePicker3.Value.ToString("d"));
+
+			if (checkBox2.Checked == true)
+			{
+				if (dateTimePicker4.Value > dateTimePicker3.Value)
+				{
+					MessageBox.Show("Начало периода не может быть позже его конца", "Сообщение",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Information,
+					MessageBoxDefaultButton.Button1);
+					checkBox2.Checked = false;
+					return;
+				}
+				DataGrid_Zakaz.DataSource = заказTableAdapter.GetDataBy2(data, data1);
+			}
+			else { DataGrid_Zakaz.DataSource = заказTableAdapter.GetData(); }
+		}
+
+		private void checkBox3_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkBox3.Checked == true)
+			{
+				DataGrid_Zakaz.DataSource = заказTableAdapter.GetDataBy_Done();
+			}
+			else
+			{
+				DataGrid_Zakaz.DataSource = заказTableAdapter.GetData();
+			}
+		}
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+			if (checkBox4.Checked == true)
+			{
+				DataGrid_Zakaz.DataSource = заказTableAdapter.GetDataBy__Not_ready();
+			}
+			else
+			{
+				DataGrid_Zakaz.DataSource = заказTableAdapter.GetData();
+			}
+		}
+    }
 }

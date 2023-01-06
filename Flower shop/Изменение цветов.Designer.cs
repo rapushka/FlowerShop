@@ -33,7 +33,11 @@ namespace Flower_shop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Изменение_цветов));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.видцветовBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.заказыDataSet1 = new Flower_shop.ЗаказыDataSet();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.каталогцветовBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.странапроизводительBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,23 +45,19 @@ namespace Flower_shop
             this.каталог_цветовBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.каталог_цветовTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_цветовTableAdapter();
             this.tableAdapterManager = new Flower_shop.ЗаказыDataSetTableAdapters.TableAdapterManager();
-            this.заказыDataSet1 = new Flower_shop.ЗаказыDataSet();
-            this.странапроизводительBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.страна_производительTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Страна_производительTableAdapter();
-            this.видцветовBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.вид_цветовTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Вид_цветовTableAdapter();
             this.каталогцветовЦветывзаказеBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.цветы_в_заказеTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Цветы_в_заказеTableAdapter();
-            this.каталогцветовBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.видцветовBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.каталогцветовBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.странапроизводительBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталог_цветовBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.странапроизводительBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.видцветовBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогцветовЦветывзаказеBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.каталогцветовBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -89,6 +89,16 @@ namespace Flower_shop
             this.comboBox2.TabIndex = 34;
             this.comboBox2.ValueMember = "ID_вида_цветов";
             // 
+            // видцветовBindingSource
+            // 
+            this.видцветовBindingSource.DataMember = "Вид_цветов";
+            this.видцветовBindingSource.DataSource = this.заказыDataSet1;
+            // 
+            // заказыDataSet1
+            // 
+            this.заказыDataSet1.DataSetName = "ЗаказыDataSet";
+            this.заказыDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBox1
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.каталогцветовBindingSource, "ID_страны_производителя", true));
@@ -105,6 +115,16 @@ namespace Flower_shop
             this.comboBox1.ValueMember = "ID_страны_производителя";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            // 
+            // каталогцветовBindingSource
+            // 
+            this.каталогцветовBindingSource.DataMember = "Каталог_цветов";
+            this.каталогцветовBindingSource.DataSource = this.заказыDataSet1;
+            // 
+            // странапроизводительBindingSource
+            // 
+            this.странапроизводительBindingSource.DataMember = "Страна_производитель";
+            this.странапроизводительBindingSource.DataSource = this.заказыDataSet1;
             // 
             // textBox4
             // 
@@ -166,24 +186,9 @@ namespace Flower_shop
             this.tableAdapterManager.Страна_производительTableAdapter = null;
             this.tableAdapterManager.Цветы_в_заказеTableAdapter = null;
             // 
-            // заказыDataSet1
-            // 
-            this.заказыDataSet1.DataSetName = "ЗаказыDataSet";
-            this.заказыDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // странапроизводительBindingSource
-            // 
-            this.странапроизводительBindingSource.DataMember = "Страна_производитель";
-            this.странапроизводительBindingSource.DataSource = this.заказыDataSet1;
-            // 
             // страна_производительTableAdapter
             // 
             this.страна_производительTableAdapter.ClearBeforeFill = true;
-            // 
-            // видцветовBindingSource
-            // 
-            this.видцветовBindingSource.DataMember = "Вид_цветов";
-            this.видцветовBindingSource.DataSource = this.заказыDataSet1;
             // 
             // вид_цветовTableAdapter
             // 
@@ -198,11 +203,6 @@ namespace Flower_shop
             // 
             this.цветы_в_заказеTableAdapter.ClearBeforeFill = true;
             // 
-            // каталогцветовBindingSource
-            // 
-            this.каталогцветовBindingSource.DataMember = "Каталог_цветов";
-            this.каталогцветовBindingSource.DataSource = this.заказыDataSet1;
-            // 
             // Изменение_цветов
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,19 +216,20 @@ namespace Flower_shop
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Изменение_цветов";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Изменение_цветов";
             this.Load += new System.EventHandler(this.Изменение_цветов_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.видцветовBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.каталогцветовBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.странапроизводительBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталог_цветовBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.странапроизводительBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.видцветовBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.каталогцветовЦветывзаказеBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.каталогцветовBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
