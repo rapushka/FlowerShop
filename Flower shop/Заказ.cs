@@ -12,7 +12,7 @@ namespace Flower_shop
 
 		private void pb_Dod_Zakaz_Click(object sender, EventArgs e)
 		{
-			OrderAddingForm f = new OrderAddingForm();
+			OrderEditForm f = new OrderEditForm();
 			Hide();
 			f.ShowDialog();
 			Show();
@@ -71,21 +71,17 @@ namespace Flower_shop
 			Show();
 		}
 
-		private void pb_Dod_Cvety_Click(object sender, EventArgs e)
+		private void AddOrderButton_Click(object sender, EventArgs e) => EditOrder();
+
+		private void EditOrderButton_Click(object sender, EventArgs e) => EditOrder(isNewOrder: false);
+
+		private void EditOrder(bool isNewOrder = true)
 		{
-			OrderAddingForm f = new OrderAddingForm();
+			var form = new OrderEditForm(isNewOrder);
 			Hide();
-			f.ShowDialog();
+			form.ShowDialog();
 
 			FillTables();
-			Show();
-		}
-
-		private void pb_izm_zakaz_Click(object sender, EventArgs e)
-		{
-			Изменение_заказа f = new Изменение_заказа();
-			Hide();
-			f.ShowDialog();
 			Show();
 		}
 

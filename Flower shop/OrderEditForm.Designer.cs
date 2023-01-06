@@ -1,7 +1,7 @@
 ﻿
 namespace Flower_shop
 {
-    partial class OrderAddingForm
+    partial class OrderEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Flower_shop
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderAddingForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderEditForm));
             this.NextButton = new System.Windows.Forms.PictureBox();
             this.cutomerNameTextBox = new System.Windows.Forms.TextBox();
             this.customerPhoneTextBox = new System.Windows.Forms.TextBox();
@@ -160,7 +160,7 @@ namespace Flower_shop
             this.CancelButton.TabStop = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // OrderAddingForm
+            // OrderEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,9 +178,9 @@ namespace Flower_shop
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "OrderAddingForm";
+            this.Name = "OrderEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderAddingForm";
+            this.Text = "OrderEditForm";
             this.Load += new System.EventHandler(this.OrderAddingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NextButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыDataSet)).EndInit();

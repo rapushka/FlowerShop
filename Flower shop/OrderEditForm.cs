@@ -4,9 +4,15 @@ using System.Windows.Forms;
 
 namespace Flower_shop
 {
-	public partial class OrderAddingForm : Form
+	public partial class OrderEditForm : Form
 	{
-		public OrderAddingForm() => InitializeComponent();
+		private bool _isNewOrder;
+
+		public OrderEditForm(bool isNewOrder = true)
+		{
+			_isNewOrder = isNewOrder;
+			InitializeComponent();
+		}
 
 		private void OrderAddingForm_Load(object sender, EventArgs e) => заказTableAdapter.Fill(заказыDataSet.Заказ);
 
