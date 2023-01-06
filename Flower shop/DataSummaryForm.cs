@@ -50,6 +50,8 @@ namespace Flower_shop
 
 		private void FillTextBoxes()
 		{
+			OrderStatusCheckBox.Checked = _currentOrder.Статус;
+			
 			CustomerNameTextBox.Text = _currentOrder.Имя_заказчика;
 			CustomerPhoneTextBox.Text = _currentOrder.Телефон_заказчика;
 			AddressTextBox.Text = _currentOrder.Адрес_доставки;
@@ -112,6 +114,8 @@ namespace Flower_shop
 
 		private void SaveChanges()
 		{
+			_currentOrder.Статус = OrderStatusCheckBox.Checked;
+
 			_currentOrder.Имя_заказчика = CustomerNameTextBox.Text;
 			_currentOrder.Телефон_заказчика = CustomerPhoneTextBox.Text;
 			_currentOrder.Адрес_доставки = AddressTextBox.Text;

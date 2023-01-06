@@ -69,6 +69,7 @@ namespace Flower_shop
 			this.каталог_цветовTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.Каталог_цветовTableAdapter();
 			this.заказBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.заказTableAdapter = new Flower_shop.ЗаказыDataSetTableAdapters.ЗаказTableAdapter();
+			this.OrderStatusCheckBox = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.NextButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.AccessoriesInOrderDataGrid)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.каталогаксессуаровBindingSource)).BeginInit();
@@ -128,7 +129,7 @@ namespace Flower_shop
 			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.AccessoriesInOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
 			this.AccessoriesInOrderDataGrid.Location = new System.Drawing.Point(711, 124);
-			this.AccessoriesInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.AccessoriesInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.AccessoriesInOrderDataGrid.Name = "AccessoriesInOrderDataGrid";
 			this.AccessoriesInOrderDataGrid.ReadOnly = true;
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -256,7 +257,7 @@ namespace Flower_shop
 			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
 			this.FlowersInOrderDataGrid.DefaultCellStyle = dataGridViewCellStyle5;
 			this.FlowersInOrderDataGrid.Location = new System.Drawing.Point(711, 441);
-			this.FlowersInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.FlowersInOrderDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.FlowersInOrderDataGrid.Name = "FlowersInOrderDataGrid";
 			this.FlowersInOrderDataGrid.ReadOnly = true;
 			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -389,7 +390,7 @@ namespace Flower_shop
 			this.SumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.SumTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.SumTextBox.Location = new System.Drawing.Point(397, 567);
-			this.SumTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.SumTextBox.Margin = new System.Windows.Forms.Padding(4);
 			this.SumTextBox.Name = "SumTextBox";
 			this.SumTextBox.ReadOnly = true;
 			this.SumTextBox.Size = new System.Drawing.Size(203, 26);
@@ -420,6 +421,16 @@ namespace Flower_shop
 			// 
 			this.заказTableAdapter.ClearBeforeFill = true;
 			// 
+			// OrderStatusCheckBox
+			// 
+			this.OrderStatusCheckBox.AutoSize = true;
+			this.OrderStatusCheckBox.Location = new System.Drawing.Point(397, 124);
+			this.OrderStatusCheckBox.Name = "OrderStatusCheckBox";
+			this.OrderStatusCheckBox.Size = new System.Drawing.Size(73, 20);
+			this.OrderStatusCheckBox.TabIndex = 16;
+			this.OrderStatusCheckBox.Text = "статус";
+			this.OrderStatusCheckBox.UseVisualStyleBackColor = true;
+			// 
 			// DataSummaryForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -427,6 +438,7 @@ namespace Flower_shop
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1319, 780);
+			this.Controls.Add(this.OrderStatusCheckBox);
 			this.Controls.Add(this.SumTextBox);
 			this.Controls.Add(this.CompletionDateTimePicker);
 			this.Controls.Add(this.ReceiptDateTimePicker);
@@ -439,7 +451,7 @@ namespace Flower_shop
 			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "DataSummaryForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "DataSummaryForm";
@@ -493,5 +505,6 @@ namespace Flower_shop
         private System.Windows.Forms.DataGridViewTextBoxColumn Количество;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_аксессуара;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDзаказаDataGridViewTextBoxColumn;
-    }
+		private System.Windows.Forms.CheckBox OrderStatusCheckBox;
+	}
 }
