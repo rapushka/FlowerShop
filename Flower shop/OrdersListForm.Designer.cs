@@ -148,6 +148,7 @@ namespace Flower_shop
 			this.OrdersDataGrid.Location = new System.Drawing.Point(41, 91);
 			this.OrdersDataGrid.Margin = new System.Windows.Forms.Padding(4);
 			this.OrdersDataGrid.Name = "OrdersDataGrid";
+			this.OrdersDataGrid.ReadOnly = true;
 			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
 			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -171,6 +172,7 @@ namespace Flower_shop
 			this.iDзаказаDataGridViewTextBoxColumn.HeaderText = "Номер заказа";
 			this.iDзаказаDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.iDзаказаDataGridViewTextBoxColumn.Name = "iDзаказаDataGridViewTextBoxColumn";
+			this.iDзаказаDataGridViewTextBoxColumn.ReadOnly = true;
 			this.iDзаказаDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// датаприемаDataGridViewTextBoxColumn
@@ -184,6 +186,7 @@ namespace Flower_shop
 			this.датаприемаDataGridViewTextBoxColumn.HeaderText = "Дата приема";
 			this.датаприемаDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.датаприемаDataGridViewTextBoxColumn.Name = "датаприемаDataGridViewTextBoxColumn";
+			this.датаприемаDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// имязаказчикаDataGridViewTextBoxColumn
 			// 
@@ -192,6 +195,7 @@ namespace Flower_shop
 			this.имязаказчикаDataGridViewTextBoxColumn.HeaderText = "Имя заказчика";
 			this.имязаказчикаDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.имязаказчикаDataGridViewTextBoxColumn.Name = "имязаказчикаDataGridViewTextBoxColumn";
+			this.имязаказчикаDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// телефонзаказчикаDataGridViewTextBoxColumn
 			// 
@@ -200,6 +204,7 @@ namespace Flower_shop
 			this.телефонзаказчикаDataGridViewTextBoxColumn.HeaderText = "Телефон заказчика";
 			this.телефонзаказчикаDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.телефонзаказчикаDataGridViewTextBoxColumn.Name = "телефонзаказчикаDataGridViewTextBoxColumn";
+			this.телефонзаказчикаDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// датавремявыполненияDataGridViewTextBoxColumn
 			// 
@@ -208,6 +213,7 @@ namespace Flower_shop
 			this.датавремявыполненияDataGridViewTextBoxColumn.HeaderText = "Дата и время выполнения";
 			this.датавремявыполненияDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.датавремявыполненияDataGridViewTextBoxColumn.Name = "датавремявыполненияDataGridViewTextBoxColumn";
+			this.датавремявыполненияDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// стоимостьDataGridViewTextBoxColumn
 			// 
@@ -218,6 +224,7 @@ namespace Flower_shop
 			this.стоимостьDataGridViewTextBoxColumn.HeaderText = "Стоимость, BYN";
 			this.стоимостьDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.стоимостьDataGridViewTextBoxColumn.Name = "стоимостьDataGridViewTextBoxColumn";
+			this.стоимостьDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// статусDataGridViewCheckBoxColumn
 			// 
@@ -226,6 +233,7 @@ namespace Flower_shop
 			this.статусDataGridViewCheckBoxColumn.HeaderText = "Статус";
 			this.статусDataGridViewCheckBoxColumn.MinimumWidth = 6;
 			this.статусDataGridViewCheckBoxColumn.Name = "статусDataGridViewCheckBoxColumn";
+			this.статусDataGridViewCheckBoxColumn.ReadOnly = true;
 			// 
 			// адресдоставкиDataGridViewTextBoxColumn
 			// 
@@ -234,6 +242,7 @@ namespace Flower_shop
 			this.адресдоставкиDataGridViewTextBoxColumn.HeaderText = "Адрес доставки";
 			this.адресдоставкиDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.адресдоставкиDataGridViewTextBoxColumn.Name = "адресдоставкиDataGridViewTextBoxColumn";
+			this.адресдоставкиDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// заказBindingSource
 			// 
