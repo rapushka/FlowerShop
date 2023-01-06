@@ -1,20 +1,27 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using Flower_shop.ЗаказыDataSetTableAdapters;
+using OrderRow = Flower_shop.ЗаказыDataSet.ЗаказRow;
 
 namespace Flower_shop
 {
 	public partial class OrderEditForm : Form
 	{
-		private bool _isNewOrder;
+		private readonly OrderRow _currentOrder;
 
-		public OrderEditForm(bool isNewOrder = true)
+		public OrderEditForm(ЗаказыDataSet.ЗаказRow currentOrder = null)
 		{
-			_isNewOrder = isNewOrder;
+			_currentOrder = currentOrder;
 			InitializeComponent();
 		}
 
-		private void OrderAddingForm_Load(object sender, EventArgs e) => заказTableAdapter.Fill(заказыDataSet.Заказ);
+		private bool IsNewOrder => _currentOrder is null;
+
+		// ReSharper disable once ConvertToAutoProperty - another part is in auto-generated file
+		private ЗаказTableAdapter OrderTableAdapter => заказTableAdapter;
+
+		private void OrderAddingForm_Load(object sender, EventArgs e) => OrderTableAdapter.Fill(заказыDataSet.Заказ);
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
@@ -23,7 +30,16 @@ namespace Flower_shop
 				return;
 			}
 
-			заказTableAdapter.InsertQuery
+			var currentOrder = IsNewOrder ? InsertOrder() : UpdateOrder();
+
+			var form = new OrderFillingForm(currentOrder.ID_заказа);
+			Close();
+			form.ShowDialog();
+		}
+
+		private OrderRow InsertOrder()
+		{
+			OrderTableAdapter.InsertQuery
 			(
 				Дата_приема: receiptDateTimePicker.Value,
 				Имя_заказчика: cutomerNameTextBox.Text,
@@ -31,11 +47,20 @@ namespace Flower_shop
 				Дата_время_выполнения: completionDateTimePicker.Value,
 				Адрес_доставки: customerAddressTextBox.Text
 			);
-			var currentOrder = заказTableAdapter.GetData().Last();
+			var currentOrder = OrderTableAdapter.GetData().Last();
+			return currentOrder;
+		}
 
-			var form = new OrderFillingForm(currentOrder.ID_заказа);
-			Close();
-			form.ShowDialog();
+		private OrderRow UpdateOrder()
+		{
+			_currentOrder.Дата_приема = receiptDateTimePicker.Value;
+			_currentOrder.Телефон_заказчика = customerPhoneTextBox.Text;
+			_currentOrder.Дата_время_выполнения = completionDateTimePicker.Value;
+			_currentOrder.Имя_заказчика = cutomerNameTextBox.Text;
+			_currentOrder.Адрес_доставки = customerAddressTextBox.Text;
+
+			OrderTableAdapter.Update(_currentOrder);
+			return _currentOrder;
 		}
 
 		private bool TextBoxesIsFilled()

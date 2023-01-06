@@ -2,6 +2,7 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using OrderRow = Flower_shop.ЗаказыDataSet.ЗаказRow;
 
 namespace Flower_shop
 {
@@ -45,14 +46,12 @@ namespace Flower_shop
 		private void EditOrderButton_Click(object sender, EventArgs e)
 		{
 			var orderRow = OrdersDataGrid.SelectedOrder(заказTableAdapter);
-			MessageBox.Show($"{orderRow.Имя_заказчика}\n");
-
-			EditOrder(isNewOrder: false);
+			EditOrder(orderRow);
 		}
 
-		private void EditOrder(bool isNewOrder = true)
+		private void EditOrder(OrderRow order = null)
 		{
-			var form = new OrderEditForm(isNewOrder);
+			var form = new OrderEditForm(order);
 			Hide();
 			form.ShowDialog();
 
