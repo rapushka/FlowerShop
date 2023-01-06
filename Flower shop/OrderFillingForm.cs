@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using Flower_shop.ЗаказыDataSetTableAdapters;
 using AccessoriesInOrderRow = Flower_shop.ЗаказыDataSet.Аксессуары_в_заказеRow;
 using AccessoriesRow = Flower_shop.ЗаказыDataSet.Каталог_аксессуаровRow;
 using FlowersInOrderRow = Flower_shop.ЗаказыDataSet.Цветы_в_заказеRow;
@@ -15,12 +16,15 @@ namespace Flower_shop
 	{
 		private readonly ЗаказыDataSet.ЗаказRow _currentOrder;
 
-		private BindingList<AccessoriesInOrderRow> _accessoriesInOrder;
-		private BindingList<FlowersInOrderRow> _flowersInOrder;
+		private readonly BindingList<AccessoriesInOrderRow> _accessoriesInOrder;
+		private readonly BindingList<FlowersInOrderRow> _flowersInOrder;
 
 		public OrderFillingForm(ЗаказыDataSet.ЗаказRow currentOrder)
 		{
 			_currentOrder = currentOrder;
+
+			_accessoriesInOrder = new BindingList<AccessoriesInOrderRow>();
+			_flowersInOrder = new BindingList<FlowersInOrderRow>();
 
 			InitializeComponent();
 		}
@@ -40,26 +44,42 @@ namespace Flower_shop
 			каталог_цветовTableAdapter.Fill(заказыDataSet.Каталог_цветов);
 			каталог_аксессуаровTableAdapter.Fill(заказыDataSet.Каталог_аксессуаров);
 
-			_accessoriesInOrder = new BindingList<AccessoriesInOrderRow>(GetAccessoriesInOrder());
-			_flowersInOrder = new BindingList<FlowersInOrderRow>(GetFlowersInOrder());
+			_accessoriesInOrder.AddRange(GetAccessoriesInOrder());
+			_flowersInOrder.AddRange(GetFlowersInOrder());
 
 			AccessoriesInOrderDataGrid.DataSource = _accessoriesInOrder;
 			FlowersInOrderDataGrid.DataSource = _flowersInOrder;
+
+			UpdateLabelValue();
 		}
 
 		private IList<AccessoriesInOrderRow> GetAccessoriesInOrder()
 			=> аксессуары_в_заказеTableAdapter.GetData()
 			                                  .Where((aio) => aio.ID_заказа == _currentOrder.ID_заказа)
+			                                  .Select(Initialize)
 			                                  .ToList();
+
+		private AccessoriesInOrderRow Initialize(AccessoriesInOrderRow aio)
+		{
+			aio.Каталог_аксессуаровRow = GetCatalogueRow(aio);
+			return aio;
+		}
 
 		private IList<FlowersInOrderRow> GetFlowersInOrder()
 			=> цветы_в_заказеTableAdapter.GetData()
 			                             .Where((fio) => fio.ID_заказа == _currentOrder.ID_заказа)
+			                             .Select(Initialize)
 			                             .ToList();
+		
+		private FlowersInOrderRow Initialize(FlowersInOrderRow fio)
+		{
+			fio.Каталог_цветовRow = GetCatalogueRow(fio);
+			return fio;
+		}
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
-			var form = new DataSummaryForm(Sum());
+			var form = new DataSummaryForm(CalculateSum());
 			SaveToDataBase();
 			Close();
 			form.ShowDialog();
@@ -202,6 +222,8 @@ namespace Flower_shop
 			var newAccessory = заказыDataSet.Аксессуары_в_заказе.NewАксессуары_в_заказеRow();
 			newAccessory.Количество = 1;
 			newAccessory.Каталог_аксессуаровRow = SelectedAccessoryFromCatalog;
+			newAccessory.ЗаказRow = _currentOrder;
+			newAccessory.ID_аксессуара = SelectedAccessoryFromCatalog.ID_аксессуара;
 
 			_accessoriesInOrder.Add(newAccessory);
 		}
@@ -211,6 +233,8 @@ namespace Flower_shop
 			var newFlower = заказыDataSet.Цветы_в_заказе.NewЦветы_в_заказеRow();
 			newFlower.Количество = 1;
 			newFlower.Каталог_цветовRow = SelectedFlowerFromCatalog;
+			newFlower.ЗаказRow = _currentOrder;
+			newFlower.ID_цветов = SelectedFlowerFromCatalog.ID_цветов;
 
 			_flowersInOrder.Add(newFlower);
 		}
@@ -226,7 +250,7 @@ namespace Flower_shop
 			(
 				Количество: accessory.Количество,
 				ID_заказа: _currentOrder.ID_заказа,
-				ID_аксессуара: accessory.Каталог_аксессуаровRow.ID_аксессуара
+				ID_аксессуара: accessory.ID_аксессуара
 			);
 
 		private void InsertFlower(FlowersInOrderRow flower)
@@ -234,13 +258,28 @@ namespace Flower_shop
 			(
 				Количество: flower.Количество,
 				ID_заказа: _currentOrder.ID_заказа,
-				ID_цветов: flower.Каталог_цветовRow.ID_цветов
+				ID_цветов: flower.ID_цветов
 			);
 
-		private void UpdateLabelValue() => TotalAmountLabel.Text = Sum().ToString(CultureInfo.InvariantCulture);
+		private void UpdateLabelValue()
+			=> TotalAmountLabel.Text = CalculateSum().ToString(CultureInfo.InvariantCulture);
 
-		private decimal Sum()
-			=> _accessoriesInOrder.Sum((a) => a.Количество * a.Каталог_аксессуаровRow.Цена)
-			   + _flowersInOrder.Sum((a) => a.Количество * a.Каталог_цветовRow.Цена);
+		private decimal CalculateSum()
+			=> _accessoriesInOrder.Sum((a) => a.Количество * GetPrice(a))
+			   + _flowersInOrder.Sum((f) => f.Количество * GetPrice(f));
+
+		private decimal GetPrice(AccessoriesInOrderRow accessory)
+			=> accessory.Каталог_аксессуаровRow?.Цена ?? GetCatalogueRow(accessory).Цена;
+
+		private decimal GetPrice(FlowersInOrderRow flower)
+			=> flower.Каталог_цветовRow?.Цена ?? GetCatalogueRow(flower).Цена;
+
+		private FlowerRow GetCatalogueRow(FlowersInOrderRow flower)
+			=> каталог_цветовTableAdapter.GetData()
+			                             .Single((a) => a.ID_цветов == flower.ID_цветов);
+
+		private AccessoriesRow GetCatalogueRow(AccessoriesInOrderRow accessory)
+			=> каталог_аксессуаровTableAdapter.GetData()
+			                                  .Single((a) => a.ID_аксессуара == accessory.ID_аксессуара);
 	}
 }

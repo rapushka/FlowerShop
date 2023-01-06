@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
@@ -12,6 +13,15 @@ namespace Flower_shop
 			{
 				@do.Invoke(item);
 			}
+		}
+		public static IEnumerable<T> ForEach<T>(this IEnumerable<T> @this, Action<T> @do)
+		{
+			foreach (var item in @this)
+			{
+				@do.Invoke(item);
+			}
+
+			return @this;
 		}
 
 		public static void ForEach
