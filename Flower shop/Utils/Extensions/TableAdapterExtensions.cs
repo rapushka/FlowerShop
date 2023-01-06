@@ -11,7 +11,7 @@ namespace Flower_shop
 			(
 				Количество: flower.Количество,
 				ID_заказа: flower.ID_заказа,
-				ID_цветов: flower.Каталог_цветовRow.ID_цветов
+				ID_цветов: flower.ID_цветов
 			);
 
 		public static void Insert(this Аксессуары_в_заказеTableAdapter @this, AccessoriesInOrderRow accessory)
@@ -19,7 +19,7 @@ namespace Flower_shop
 			(
 				Количество: accessory.Количество,
 				ID_заказа: accessory.ID_заказа,
-				ID_аксессуара: accessory.Каталог_аксессуаровRow.ID_аксессуара
+				ID_аксессуара: accessory.ID_аксессуара
 			);
 	}
 }

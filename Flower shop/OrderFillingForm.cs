@@ -241,25 +241,9 @@ namespace Flower_shop
 
 		private void SaveToDataBase()
 		{
-			_accessoriesInOrder.ForEach(InsertAccessory);
-			_flowersInOrder.ForEach(InsertFlower);
+			_accessoriesInOrder.ForEach(аксессуары_в_заказеTableAdapter.Insert);
+			_flowersInOrder.ForEach(цветы_в_заказеTableAdapter.Insert);
 		}
-
-		private void InsertAccessory(AccessoriesInOrderRow accessory)
-			=> аксессуары_в_заказеTableAdapter.Insert
-			(
-				Количество: accessory.Количество,
-				ID_заказа: _currentOrder.ID_заказа,
-				ID_аксессуара: accessory.ID_аксессуара
-			);
-
-		private void InsertFlower(FlowersInOrderRow flower)
-			=> цветы_в_заказеTableAdapter.Insert
-			(
-				Количество: flower.Количество,
-				ID_заказа: _currentOrder.ID_заказа,
-				ID_цветов: flower.ID_цветов
-			);
 
 		private void UpdateLabelValue()
 			=> TotalAmountLabel.Text = CalculateSum().ToString(CultureInfo.InvariantCulture);
